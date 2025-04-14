@@ -44,11 +44,9 @@
 }
 
 .navbar__item:hover .navbar__text,
-.navbar__item:hover .navbar__icon,
-.navbar__item:active .navbar__text,
-.navbar__item:active .navbar__icon {
-  color: var(--blue-primary);
-  fill: var(--blue-primary); 
+.navbar__item:active .navbar__text {
+    color: var(--blue-primary);
+    fill: var(--blue-primary);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
