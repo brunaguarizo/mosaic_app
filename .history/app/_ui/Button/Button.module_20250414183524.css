@@ -1,0 +1,90 @@
+.button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    padding-top: var(--space-small);
+    padding-left: var(--space-regular);
+    padding-right: var(--space-regular);
+    padding-bottom: var(--space-small);
+    border-radius: 100px;
+    align-items: center;
+    border: none;
+
+    &:hover {
+        background-color: #18348b;
+        color: white;
+    }
+}
+
+.primary {
+    background: #2b5ffc;
+    color: white;
+}
+
+.secondary {
+    background-color: white;
+    border: 1px solid #2b5ffc;
+    color: #2b5ffc;
+}
+
+.disabled {
+    pointer-events: none;
+    color: white;
+    background-color: #7194fd;
+}
+
+.small {
+    font-size: 12px;
+    padding: 8px;
+    align-items: center;
+}
+
+.large {
+    font-size: 20px;
+    padding: 12px;
+}
+
+.error {
+    background-color: #ff5e09;
+}
+
+/* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
+:root {
+    /* ----- COLORS ----- */
+    --blue-primary: rgb(43, 95, 252);
+    --blue-50: rgb(234, 239, 255);
+    --blue-900: rgb(18, 40, 106);
+    --white: #ffffff;
+    --black: rgb(20, 20, 20);
+    --grey-400: rgb(67, 67, 67);
+    --yellow-secondary: rgb(255, 218, 1);
+    --orange-secondary: rgb(255, 94, 9);
+    --green-secondary: rgb(0, 193, 79);
+    --purple-secondary: rgb(154, 65, 255);
+
+    /* ----- TYPE ----- */
+    --font-family: "Open Sans", sans-serif;
+
+    --header-xxlarge-size: 88px;
+    --title-section-font-size: 30px;
+    --button-font-size: 24px;
+    --body-text-font-size: 20px;
+    --menu-font-size: 16px;
+    --label-font-size: 12px;
+
+    --font-style-normal: normal;
+    --font-weight-bold: bold;
+
+    --line-height-xxlarge: 100px;
+    --line-height-large: 36px;
+    --line-height-medium: 28px;
+    --line-height-small: 20px;
+
+    /* ----- SPACING ----- */
+    --space-small: 8px;
+    --space-regular: 16px;
+    --space-medium: 32px;
+    --space-large: 48px;
+    --space-extra-large: 140px;
+}

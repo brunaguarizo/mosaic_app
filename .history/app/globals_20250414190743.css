@@ -1,0 +1,176 @@
+/* ------------------------------------------------------ GENERAL STYLES ------------------------------------------------------ */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    width: 393px;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 393px;
+    height: 100%;
+    margin: var(--space-regular);
+    background-color: gainsboro;
+}
+
+.container {
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-large);
+}
+
+.header-xxlarge {
+}
+
+.title-section {
+}
+
+.body-text {
+}
+
+.label {
+}
+
+/* ----- NAV BAR ----- */
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0 var(--space-large);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-large);
+}
+
+/* ----- BUTTONS ----- */
+.button-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-large);
+    width: 100%;
+    box-sizing: border-box;
+    margin: var(--space-large) auto;
+    padding: 0 var(--space-large);
+    overflow: hidden;
+    max-width: 1512px;
+}
+
+.button-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-medium);
+    background-color: var(--blue-primary);
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-radius: 8px;
+    height: var(--space-large);
+    flex: 1 1 calc(50% - 24px);
+}
+
+.button-content:hover {
+    background-color: var(--blue-900);
+    transform: scale(1.1);
+}
+
+.button-content img {
+    width: 20px;
+    height: 20px;
+}
+
+.button-content p {
+    color: var(--white);
+    font-size: var(--menu-font-size);
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0 var(--space-large);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-900);
+}
+
+.footer .two-column {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-text {
+    color: var(--white);
+    text-align: right;
+    margin-left: auto;
+}
+
+/* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
+:root {
+    /* ----- COLORS ----- */
+    --blue-primary: rgb(43, 95, 252);
+    --blue-50: rgb(234, 239, 255);
+    --blue-900: rgb(18, 40, 106);
+    --white: #ffffff;
+    --black: rgb(20, 20, 20);
+    --grey-400: rgb(67, 67, 67);
+    --yellow-secondary: rgb(255, 218, 1);
+    --orange-secondary: rgb(255, 94, 9);
+    --green-secondary: rgb(0, 193, 79);
+    --purple-secondary: rgb(154, 65, 255);
+
+    /* ----- TYPE ----- */
+    --font-family: "Open Sans", sans-serif;
+
+    --header-xxlarge-size: 88px;
+    --title-section-font-size: 30px;
+    --button-font-size: 24px;
+    --body-text-font-size: 20px;
+    --menu-font-size: 16px;
+    --label-font-size: 12px;
+
+    --font-style-normal: normal;
+    --font-weight-bold: bold;
+
+    --line-height-xxlarge: 100px;
+    --line-height-large: 36px;
+    --line-height-medium: 28px;
+    --line-height-small: 20px;
+
+    /* ----- SPACING ----- */
+    --space-small: 8px;
+    --space-regular: 16px;
+    --space-medium: 32px;
+    --space-large: 48px;
+    --space-extra-large: 140px;
+}
