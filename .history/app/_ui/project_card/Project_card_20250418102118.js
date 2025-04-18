@@ -43,7 +43,8 @@ function ProjectCard() {
                     </div>
                 )}
             </div>
-            <ProgressCircle percentage={30} />
+
+            <ProgressCircle />
 
             <p className={styles.card__title}>Eggs and Bacon</p>
             <Tag />

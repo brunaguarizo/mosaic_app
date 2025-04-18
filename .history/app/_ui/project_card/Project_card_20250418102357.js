@@ -3,7 +3,6 @@ import { useState } from "react";
 import styles from "./Project_card.module.css";
 import Button from "../Button/Button";
 import Tag from "../Tag/Tag";
-import ProgressCircle from "../Circle_Progress/Circle_Progress";
 
 function ProjectCard() {
     // Control visibility - menu dropdown
@@ -43,7 +42,6 @@ function ProjectCard() {
                     </div>
                 )}
             </div>
-            <ProgressCircle percentage={30} />
 
             <p className={styles.card__title}>Eggs and Bacon</p>
             <Tag />

@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./Project_card.module.css";
 import Button from "../Button/Button";
 import Tag from "../Tag/Tag";
-import ProgressCircle from "../Circle_Progress/Circle_Progress";
+import ProgressCircle from "../_ui/Circle_Progress/Circle_Progress";
 
 function ProjectCard() {
     // Control visibility - menu dropdown

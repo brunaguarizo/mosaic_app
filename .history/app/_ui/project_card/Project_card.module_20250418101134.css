@@ -40,10 +40,7 @@
     cursor: pointer;
     font-size: var(--font-size-regular);
     transition: background-color 0.2s;
-}
-
-.dropdown__item:not(:last-child) {
-    border-bottom: 1px solid black;
+    border-radius: 8px;
 }
 
 .dropdown__item:hover {
