@@ -32,10 +32,7 @@ export default function Home() {
                 type='heading'
             />
             <ProgressBar CompletionAmount={100} />
-            <SingleInput
-                inputName='Name'
-                placeholder='Placeholder'
-            />
+            <SingleInput type='secondary' />
             <NotificationBox
                 type='primary'
                 notificationHeading='Heading'

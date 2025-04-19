@@ -1,34 +1,26 @@
 .primary {
     border: 1px solid var(--black);
-    padding: var(--space-small);
 
-    display: flex;
-    flex-direction: row;
+    border-radius: 100px;
     width: 361px;
-    border-radius: var(--border-radius-large);
+}
+
+.hidden {
+    display: none;
 }
 
 .secondary {
     border: 1px solid var(--black);
-    border-radius: var(--border-radius-large);
-    width: var(--space-regular);
-    box-sizing: content-box;
+    padding: 8px;
+    margin-top: var(--space-regular);
+    border-radius: 100px;
+    width: 361px;
 }
 
-.visible {
-    border: none;
-}
-.invisible {
-    display: none;
-}
-
-.search_item {
-    border: none;
-}
-
-.search_item:focus {
-    outline: none;
-    box-shadow: none;
+.input_name {
+    font-family: var(--font-family);
+    font-size: var(--label-font-size);
+    color: var(--black);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
@@ -45,9 +37,6 @@
     --orange-secondary: rgb(255, 94, 9);
     --green-secondary: rgb(0, 193, 79);
     --purple-secondary: rgb(154, 65, 255);
-
-    /* ----- BORDER RADIUS ----- */
-    --border-radius-large: 100px;
 
     /* ----- TYPE ----- */
     --font-family: "Open Sans", sans-serif;

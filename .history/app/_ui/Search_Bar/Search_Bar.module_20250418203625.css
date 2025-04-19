@@ -1,18 +1,18 @@
 .primary {
     border: 1px solid var(--black);
     padding: var(--space-small);
-
+    box-sizing: content-box;
     display: flex;
     flex-direction: row;
-    width: 361px;
     border-radius: var(--border-radius-large);
+    width: 361px;
 }
 
 .secondary {
     border: 1px solid var(--black);
     border-radius: var(--border-radius-large);
     width: var(--space-regular);
-    box-sizing: content-box;
+    width: 361px;
 }
 
 .visible {

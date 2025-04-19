@@ -1,0 +1,11 @@
+.input_box {
+    border: 1px solid var(--black);
+    padding: 8px;
+    margin-top: var(--space-regular);
+    border-radius: 100px;
+    width: 361px;
+}
+
+.hidden {
+    display: none;
+}

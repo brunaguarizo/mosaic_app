@@ -1,10 +1,9 @@
 .primary {
     border: 1px solid var(--black);
     padding: var(--space-small);
-
+    box-sizing: content-box;
     display: flex;
     flex-direction: row;
-    width: 361px;
     border-radius: var(--border-radius-large);
 }
 
@@ -12,14 +11,15 @@
     border: 1px solid var(--black);
     border-radius: var(--border-radius-large);
     width: var(--space-regular);
-    box-sizing: content-box;
 }
 
 .visible {
     border: none;
+    width: 361px;
 }
 .invisible {
     display: none;
+    width: 361px;
 }
 
 .search_item {
