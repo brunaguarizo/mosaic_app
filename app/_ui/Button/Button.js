@@ -21,6 +21,7 @@ export default function Button({
         [styles.large]: size === "large",
         [styles.primary]: type === "primary",
         [styles.secondary]: type === "secondary",
+        [styles.terciary]: type === "terciary",
         [styles.disabled]: isDisabled,
         [styles.error]: type === "warning",
     });
