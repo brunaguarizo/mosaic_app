@@ -12,18 +12,8 @@ export default function Home() {
             <CreateProject />
             <DescriptionBox
                 title='Title goes here'
-                description='This contains some sort of description'
+                Description='This contains some sort of description'
                 useCase='primary'
-            />
-            <DescriptionBox
-                title='Title goes here'
-                description='This contains some sort of description'
-                useCase='secondary'
-            />
-            <DescriptionBox
-                title='Title goes here'
-                description='This contains some sort of description'
-                useCase='conditions'
             />
             <DateCard />
         </div>
