@@ -24,10 +24,6 @@ export default function Home() {
                 heading='Heading'
                 type='search'
             />
-            <Headingbar
-                heading='Heading'
-                type='heading'
-            />
             <Searchbar type='primary' />
             <Searchbar
                 type='secondary'

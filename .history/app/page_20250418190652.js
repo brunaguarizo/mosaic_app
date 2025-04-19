@@ -13,20 +13,8 @@ export default function Home() {
     return (
         <div className={Styles.container}>
             <Headingbar
-                heading='Heading'
+                heading={App}
                 type='navigation'
-            />
-            <Headingbar
-                heading='Heading'
-                type='pagination'
-            />
-            <Headingbar
-                heading='Heading'
-                type='search'
-            />
-            <Headingbar
-                heading='Heading'
-                type='heading'
             />
             <Searchbar type='primary' />
             <Searchbar

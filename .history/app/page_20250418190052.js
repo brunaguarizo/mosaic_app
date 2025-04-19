@@ -1,4 +1,3 @@
-import Styles from "@/app/page.module.css";
 import Navbar from "@/app/_ui/navbar/navbar";
 import ProjectCard from "./_ui/Project_card/Project_card";
 import Button from "./_ui/Button/Button";
@@ -11,23 +10,8 @@ import Headingbar from "./_ui/Heading_Bar/Heading_Bar";
 
 export default function Home() {
     return (
-        <div className={Styles.container}>
-            <Headingbar
-                heading='Heading'
-                type='navigation'
-            />
-            <Headingbar
-                heading='Heading'
-                type='pagination'
-            />
-            <Headingbar
-                heading='Heading'
-                type='search'
-            />
-            <Headingbar
-                heading='Heading'
-                type='heading'
-            />
+        <div>
+            <Headingbar />
             <Searchbar type='primary' />
             <Searchbar
                 type='secondary'

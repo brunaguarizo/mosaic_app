@@ -18,15 +18,7 @@ export default function Home() {
             />
             <Headingbar
                 heading='Heading'
-                type='pagination'
-            />
-            <Headingbar
-                heading='Heading'
-                type='search'
-            />
-            <Headingbar
-                heading='Heading'
-                type='heading'
+                type='navigation'
             />
             <Searchbar type='primary' />
             <Searchbar

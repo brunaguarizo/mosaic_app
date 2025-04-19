@@ -11,23 +11,8 @@ import Headingbar from "./_ui/Heading_Bar/Heading_Bar";
 
 export default function Home() {
     return (
-        <div className={Styles.container}>
-            <Headingbar
-                heading='Heading'
-                type='navigation'
-            />
-            <Headingbar
-                heading='Heading'
-                type='pagination'
-            />
-            <Headingbar
-                heading='Heading'
-                type='search'
-            />
-            <Headingbar
-                heading='Heading'
-                type='heading'
-            />
+        <div className={Styles}>
+            <Headingbar />
             <Searchbar type='primary' />
             <Searchbar
                 type='secondary'
