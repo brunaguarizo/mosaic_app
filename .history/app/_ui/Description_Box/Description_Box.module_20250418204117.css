@@ -1,58 +1,58 @@
-.contentInner {
+.project_primary {
     display: flex;
     flex-direction: column;
-    gap: var(--space-regular);
-    width: 361;
+    border-radius: var(--space-small);
+    text-align: left;
+    padding: var(--space-regular);
+    text-align: left;
+    box-sizing: content-box;
+    margin-top: var(--space-regular);
+    margin-bottom: var(--space-regular);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-.row {
+.project_secondary {
     display: flex;
-    align-items: center;
-}
-
-.heading {
-    flex-grow: 1;
-    text-align: center;
-    font-weight: var(--font-weight-normal);
-    font-size: var(--button-font-size);
-}
-
-.icon {
-    color: var(--blue-50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.visible {
-    display: flex;
-}
-
-.hidden {
-    display: none;
-}
-
-.iconButton {
-    background: none;
-    border: none;
-    color: var(--blue-50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-small);
-}
-
-.iconButton:hover {
+    flex-direction: column;
+    border-radius: var(--space-small);
+    text-align: left;
+    padding: var(--space-regular);
+    text-align: left;
+    margin-top: var(--space-regular);
     background-color: var(--blue-50);
-    border-radius: var(--border-radius-large);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.description_heading {
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--black);
+    padding: 0px;
+    border: 0px;
+    box-sizing: content-box;
+    margin-top: var(--space-regular);
+    margin-bottom: 0px;
+}
+.description_body {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--menu-font-size);
+    font-style: var(--font-weight-normal);
+    color: var(--black);
+    margin-top: var(--space-regular);
+    margin-bottom: 0px;
 }
 
-.pagination {
-    flex-grow: 1;
-    text-align: right;
-    color: var(--black);
-    font-size: var(--menu-font-size);
-    padding-right: var(--space-small);
+.conditions {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--space-small);
+    align-items: center;
+    padding: var(--space-regular);
+    text-align: center;
+    background-color: var(--blue-50);
+    margin-top: var(--space-regular);
 }
+
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
     /* ----- COLORS ----- */
@@ -67,9 +67,6 @@
     --orange-secondary: rgb(255, 94, 9);
     --green-secondary: rgb(0, 193, 79);
     --purple-secondary: rgb(154, 65, 255);
-
-    /* ----- BORDER RADIUS ----- */
-    --border-radius-large: 100px;
 
     /* ----- TYPE ----- */
     --font-family: "Open Sans", sans-serif;

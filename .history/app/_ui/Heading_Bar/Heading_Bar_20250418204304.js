@@ -50,8 +50,10 @@ function Headingbar({ heading, type }) {
                 <div className={styles.heading}>{heading}</div>
             </div>
 
+            {/* Second heading row */}
             <div className={headingRowClasses}>
                 <div className={styles.heading}>{heading}</div>
+                {/* Custom Search SVG */}
                 <button className={styles.iconButton}>
                     <Searchbar
                         type='secondary'
@@ -60,9 +62,10 @@ function Headingbar({ heading, type }) {
                 </button>
             </div>
 
+            {/* Third heading row with close button */}
             <div className={searchRowClasses}>
                 <div className={styles.heading}>{heading}</div>
-
+                {/* Custom X SVG */}
                 <button className={styles.iconButton}>
                     <svg
                         width='16'
@@ -79,7 +82,9 @@ function Headingbar({ heading, type }) {
                 </button>
             </div>
 
+            {/* Pagination row */}
             <div className={paginationRowClasses}>
+                {/* Custom ChevronLeft SVG */}
                 <div className={styles.icon}>
                     <svg
                         width='32'

@@ -79,7 +79,9 @@ function Headingbar({ heading, type }) {
                 </button>
             </div>
 
+            {/* Pagination row */}
             <div className={paginationRowClasses}>
+                {/* Custom ChevronLeft SVG */}
                 <div className={styles.icon}>
                     <svg
                         width='32'
