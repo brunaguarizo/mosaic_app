@@ -17,6 +17,13 @@ export default function Home() {
                 heading='Heading'
                 type='navigation'
             />
+            <NotificationBox
+                type='primary'
+                notificationHeading='Heading'
+                notificationBody='some text to describe notification'
+                image='mosaic-favicon'
+                time='now'
+            />
             <Headingbar
                 heading='Heading'
                 type='pagination'
@@ -28,20 +35,6 @@ export default function Home() {
             <Headingbar
                 heading='Heading'
                 type='heading'
-            />
-            <NotificationBox
-                type='primary'
-                notificationHeading='Heading'
-                notificationBody='some text to describe notification'
-                image='mosaic-favicon'
-                time='now'
-            />
-            <NotificationBox
-                type='secondary'
-                notificationHeading='Heading'
-                notificationBody='some text to describe notification'
-                image='mosaic-favicon'
-                time='now'
             />
             <Searchbar type='primary' />
             <Searchbar

@@ -33,14 +33,7 @@ export default function Home() {
                 type='primary'
                 notificationHeading='Heading'
                 notificationBody='some text to describe notification'
-                image='mosaic-favicon'
-                time='now'
-            />
-            <NotificationBox
-                type='secondary'
-                notificationHeading='Heading'
-                notificationBody='some text to describe notification'
-                image='mosaic-favicon'
+                image='home'
                 time='now'
             />
             <Searchbar type='primary' />

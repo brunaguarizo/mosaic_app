@@ -8,7 +8,6 @@ import CreateProject from "./_ui/Create_Project_Button/Create_Project_Button";
 import DescriptionBox from "./_ui/Description_Box/Description_Box";
 import Searchbar from "./_ui/Search_Bar/Search_Bar";
 import Headingbar from "./_ui/Heading_Bar/Heading_Bar";
-import NotificationBox from "./_ui/Notification_Box/Notification_Box";
 
 export default function Home() {
     return (
@@ -28,20 +27,6 @@ export default function Home() {
             <Headingbar
                 heading='Heading'
                 type='heading'
-            />
-            <NotificationBox
-                type='primary'
-                notificationHeading='Heading'
-                notificationBody='some text to describe notification'
-                image='mosaic-favicon'
-                time='now'
-            />
-            <NotificationBox
-                type='secondary'
-                notificationHeading='Heading'
-                notificationBody='some text to describe notification'
-                image='mosaic-favicon'
-                time='now'
             />
             <Searchbar type='primary' />
             <Searchbar

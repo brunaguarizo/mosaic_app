@@ -13,6 +13,7 @@ import NotificationBox from "./_ui/Notification_Box/Notification_Box";
 export default function Home() {
     return (
         <div className={Styles.container}>
+            <NotificationBox type='primary' />
             <Headingbar
                 heading='Heading'
                 type='navigation'
@@ -28,20 +29,6 @@ export default function Home() {
             <Headingbar
                 heading='Heading'
                 type='heading'
-            />
-            <NotificationBox
-                type='primary'
-                notificationHeading='Heading'
-                notificationBody='some text to describe notification'
-                image='mosaic-favicon'
-                time='now'
-            />
-            <NotificationBox
-                type='secondary'
-                notificationHeading='Heading'
-                notificationBody='some text to describe notification'
-                image='mosaic-favicon'
-                time='now'
             />
             <Searchbar type='primary' />
             <Searchbar

@@ -37,7 +37,7 @@ export default function Home() {
                 time='now'
             />
             <NotificationBox
-                type='secondary'
+                type='primary'
                 notificationHeading='Heading'
                 notificationBody='some text to describe notification'
                 image='mosaic-favicon'
