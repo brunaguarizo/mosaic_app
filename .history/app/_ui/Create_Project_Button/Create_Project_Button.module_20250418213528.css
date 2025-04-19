@@ -1,27 +1,44 @@
-.primary {
+.button_background {
+    background-color: var(--blue-primary);
+    border-radius: var(--space-small);
+    border: none;
+    width: 361px;
+    height: 200px;
     display: flex;
     flex-direction: column;
+    margin-top: var(--space-regular);
 }
 
-.hidden {
-    display: none;
+.button_icon {
+    width: 42px;
+    height: 42px;
+    align-self: center;
+    box-sizing: content-box;
+    margin-top: var(--space-regular);
 }
 
-.input_name {
-    font-family: var(--font-family);
-    font-size: var(--font-size-small);
+.button_heading {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-bold);
+    color: white;
+    padding: 0px;
+    border: 0px;
+    margin-top: var(--space-regular);
+    margin-bottom: 0px;
 }
 
-.input_box {
-    font-family: var(--font-family);
-    font-size: var(--font-size-small);
-    color: var(--black);
-    padding: 8px;
-    border-radius: 100px;
-    width: 361px;
-    border: 1px solid var(--black);
+.button_description {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--menu-font-size);
+    font-style: var(--font-weight-normal);
+    color: white;
+    border: 0px;
+    padding: 0px;
+    margin-top: var(--space-regular);
+    margin-bottom: 0px;
 }
-
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
     /* ----- COLORS ----- */

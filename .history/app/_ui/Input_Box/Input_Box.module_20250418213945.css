@@ -9,12 +9,12 @@
 
 .input_name {
     font-family: var(--font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--label-font-size);
 }
 
 .input_box {
     font-family: var(--font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--label-font-size);
     color: var(--black);
     padding: 8px;
     border-radius: 100px;
@@ -27,9 +27,9 @@
     /* ----- COLORS ----- */
     --blue-primary: rgb(43, 95, 252);
     --blue-50: rgb(234, 239, 255);
-    --blue-100: #bdcdfe;
     --blue-900: rgb(18, 40, 106);
     --white: #ffffff;
+    --grey-50: #e8e8e8;
     --black: rgb(20, 20, 20);
     --grey-400: rgb(67, 67, 67);
     --yellow-secondary: rgb(255, 218, 1);
@@ -37,14 +37,18 @@
     --green-secondary: rgb(0, 193, 79);
     --purple-secondary: rgb(154, 65, 255);
 
+    /* ----- BORDER RADIUS ----- */
+    --border-radius-large: 100px;
+
     /* ----- TYPE ----- */
     --font-family: "Open Sans", sans-serif;
 
-    --font-size-extra-large: 30px;
-    --font-size-large: 24px;
-    --font-size-medium: 20px;
-    --font-size-regular: 16px;
-    --font-size-small: 12px;
+    --header-xxlarge-size: 88px;
+    --title-section-font-size: 30px;
+    --button-font-size: 24px;
+    --body-text-font-size: 20px;
+    --menu-font-size: 16px;
+    --label-font-size: 12px;
 
     --font-style-normal: normal;
     --font-weight-bold: bold;

@@ -33,7 +33,20 @@ export default function Home() {
                 heading='Heading'
                 type='heading'
             />
-
+            <TaskDropDown
+                sections={[
+                    {
+                        index: 1,
+                        title: "Task One",
+                        items: ["Step A", "Step B", "Step C"],
+                    },
+                    {
+                        index: 2,
+                        title: "Task Two",
+                        items: ["Step X", "Step Y"],
+                    },
+                ]}
+            />
             <ProgressBar CompletionAmount={100} />
             <SingleInput
                 inputName='Name'
@@ -74,20 +87,6 @@ export default function Home() {
                 title='Title goes here'
                 description='This contains some sort of description'
                 useCase='conditions'
-            />
-            <TaskDropDown
-                sections={[
-                    {
-                        index: 1,
-                        title: "Task One",
-                        items: ["Step A", "Step B", "Step C"],
-                    },
-                    {
-                        index: 2,
-                        title: "Task Two",
-                        items: ["Step X", "Step Y"],
-                    },
-                ]}
             />
             <DateCard />
             <Navbar />

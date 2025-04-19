@@ -1,25 +1,43 @@
-.primary {
-    display: flex;
-    flex-direction: column;
-}
-
-.hidden {
-    display: none;
-}
-
-.input_name {
+.dropdown {
+    padding: var(--space-regular);
+    border-radius: var(--space-small);
     font-family: var(--font-family);
     font-size: var(--font-size-small);
-}
-
-.input_box {
-    font-family: var(--font-family);
-    font-size: var(--font-size-small);
-    color: var(--black);
-    padding: 8px;
-    border-radius: 100px;
     width: 361px;
-    border: 1px solid var(--black);
+}
+
+.section {
+    margin-bottom: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: var(--space-small);
+    font-size: var(--font-size-regular);
+    font-family: var(--font-family);
+}
+
+.index {
+    margin-right: var(--space-small);
+}
+
+.title {
+    flex: 1;
+}
+
+.content {
+}
+
+.content ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.divider {
+    border-bottom: 1px solid #b0b0b0;
+    margin: 4px 0;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */

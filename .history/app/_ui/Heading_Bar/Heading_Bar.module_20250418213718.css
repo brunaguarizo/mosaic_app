@@ -1,27 +1,58 @@
-.primary {
+.contentInner {
     display: flex;
     flex-direction: column;
+    gap: var(--space-regular);
+    width: 361;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-large);
+}
+
+.icon {
+    color: var(--blue-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.visible {
+    display: flex;
 }
 
 .hidden {
     display: none;
 }
 
-.input_name {
-    font-family: var(--font-family);
-    font-size: var(--font-size-small);
+.iconButton {
+    background: none;
+    border: none;
+    color: var(--blue-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-small);
 }
 
-.input_box {
-    font-family: var(--font-family);
-    font-size: var(--font-size-small);
+.iconButton:hover {
+    background-color: var(--blue-50);
+    border-radius: var(--border-radius-large);
+}
+
+.pagination {
+    flex-grow: 1;
+    text-align: right;
     color: var(--black);
-    padding: 8px;
-    border-radius: 100px;
-    width: 361px;
-    border: 1px solid var(--black);
+    font-size: var(--menu-font-size);
+    padding-right: var(--space-small);
 }
-
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
     /* ----- COLORS ----- */
@@ -60,4 +91,7 @@
     --space-medium: 32px;
     --space-large: 48px;
     --space-extra-large: 140px;
+
+    /* ----- BORDER RADIUS ----- */
+    --border-radius-large: 100px;
 }

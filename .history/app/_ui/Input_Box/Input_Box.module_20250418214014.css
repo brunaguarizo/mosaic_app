@@ -9,12 +9,12 @@
 
 .input_name {
     font-family: var(--font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--label-font-size);
 }
 
 .input_box {
     font-family: var(--font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--font-s);
     color: var(--black);
     padding: 8px;
     border-radius: 100px;

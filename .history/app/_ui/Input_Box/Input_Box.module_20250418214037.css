@@ -14,7 +14,7 @@
 
 .input_box {
     font-family: var(--font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-regular);
     color: var(--black);
     padding: 8px;
     border-radius: 100px;

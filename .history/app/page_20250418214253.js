@@ -75,20 +75,6 @@ export default function Home() {
                 description='This contains some sort of description'
                 useCase='conditions'
             />
-            <TaskDropDown
-                sections={[
-                    {
-                        index: 1,
-                        title: "Task One",
-                        items: ["Step A", "Step B", "Step C"],
-                    },
-                    {
-                        index: 2,
-                        title: "Task Two",
-                        items: ["Step X", "Step Y"],
-                    },
-                ]}
-            />
             <DateCard />
             <Navbar />
         </div>
