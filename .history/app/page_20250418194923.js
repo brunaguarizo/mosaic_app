@@ -14,6 +14,8 @@ import ProgressBar from "./_ui/Progress_Bar/Progress_Bar";
 export default function Home() {
     return (
         <div className={Styles.container}>
+            <ProgressBar />
+
             <Headingbar
                 heading='Heading'
                 type='navigation'
@@ -30,7 +32,6 @@ export default function Home() {
                 heading='Heading'
                 type='heading'
             />
-            <ProgressBar CompletionAmount={100} />
             <NotificationBox
                 type='primary'
                 notificationHeading='Heading'

@@ -1,0 +1,87 @@
+.background {
+    background-color: var(--blue-50);
+    display: flex;
+    flex-direction: row;
+    border-radius: var(--space-small);
+    align-items: center;
+    padding: 16px;
+    width: 361px;
+    height: 80px;
+    margin-top: var(--space-regular);
+}
+.icon {
+    color: var(--blue-primary);
+}
+
+.content_row {
+    display: flex;
+    flex-direction: column;
+}
+
+.bar_text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bar_completion,
+.bar_amount {
+    font-family: var(--font-family);
+}
+.bar_completion {
+    color: var(--grey-400);
+}
+.bar_amount {
+    font-size: var(--menu-font-size);
+    padding-right: 4px;
+}
+.bar_text {
+    padding-left: var(--space-small);
+}
+
+.bar {
+    background-color: var(--blue-primary);
+    width: 281px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+/* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
+:root {
+    /* ----- COLORS ----- */
+    --blue-primary: rgb(43, 95, 252);
+    --blue-50: rgb(234, 239, 255);
+    --blue-900: rgb(18, 40, 106);
+    --white: #ffffff;
+    --grey-50: #e8e8e8;
+    --black: rgb(20, 20, 20);
+    --grey-400: rgb(67, 67, 67);
+    --yellow-secondary: rgb(255, 218, 1);
+    --orange-secondary: rgb(255, 94, 9);
+    --green-secondary: rgb(0, 193, 79);
+    --purple-secondary: rgb(154, 65, 255);
+
+    /* ----- TYPE ----- */
+    --font-family: "Open Sans", sans-serif;
+
+    --header-xxlarge-size: 88px;
+    --title-section-font-size: 30px;
+    --button-font-size: 24px;
+    --body-text-font-size: 20px;
+    --menu-font-size: 16px;
+    --label-font-size: 12px;
+
+    --font-style-normal: normal;
+    --font-weight-bold: bold;
+
+    --line-height-xxlarge: 100px;
+    --line-height-large: 36px;
+    --line-height-medium: 28px;
+    --line-height-small: 20px;
+
+    /* ----- SPACING ----- */
+    --space-small: 8px;
+    --space-regular: 16px;
+    --space-medium: 32px;
+    --space-large: 48px;
+    --space-extra-large: 140px;
+}

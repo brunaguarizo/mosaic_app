@@ -30,7 +30,7 @@ export default function Home() {
                 heading='Heading'
                 type='heading'
             />
-            <ProgressBar CompletionAmount={100} />
+            <ProgressBar />
             <NotificationBox
                 type='primary'
                 notificationHeading='Heading'
