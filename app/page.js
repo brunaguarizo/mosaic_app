@@ -13,6 +13,9 @@ import NotificationBox from "./_ui/Notification_Box/Notification_Box";
 import ProgressBar from "./_ui/Progress_Bar/Progress_Bar";
 import SingleInput from "./_ui/Input_Box/Input_Box";
 import TaskDropDown from "./_ui/Task_Dropdown/Task_Dropdown";
+import LinkButton from "./_ui/Link_Button/Link_Button";
+import AvatarPicker from "./_ui/Profile_Avatar_PopUp/Profile_Avatar_PopUp";
+import ProfileCover from "./_ui/Profile_Cover_Box/Profile_Cover_Box";
 import PopUp from "./_ui/PopUp/PopUp";
 import InterestChip from "./_ui/Interest_Chip/Interest_Chip";
 
