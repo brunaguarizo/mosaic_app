@@ -28,6 +28,11 @@
     color: var(--blue-primary);
 }
 
+.terciary {
+    background: var(--blue-100);
+    color: var(--black);
+}
+
 .disabled {
     pointer-events: none;
     color: var(--white);

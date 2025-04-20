@@ -1,13 +1,62 @@
-/* NEW PAGE STYLES */
-.container {
+.chip {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-regular);
-    padding: var(--space-regular);
-    max-width: 393px;
-    min-height: 852px;
-    margin: 0px;
-    background-color: var(--grey-400);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-small);
+    padding: var(--space-small) var(--space-regular);
+    border-radius: 100px;
+    border: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    cursor: pointer;
+}
+
+.label {
+    display: inline-block;
+}
+
+.icon {
+    display: inline-flex;
+}
+
+.selected {
+    opacity: 1;
+}
+
+.unselected {
+    opacity: 0.4;
+}
+
+.chip svg {
+    width: 14px;
+    height: auto;
+    fill: var(--black);
+}
+
+.design {
+    background-color: var(--orange-secondary);
+    color: var(--black);
+}
+
+.marketing {
+    background-color: var(--yellow-secondary);
+    color: var(--black);
+}
+
+.uxui {
+    background-color: var(--green-secondary);
+    color: var(--black);
+}
+
+.frontend {
+    background-color: var(--blue-primary);
+    color: var(--white);
+}
+
+.backend {
+    background-color: var(--purple-secondary);
+    color: var(--white);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */

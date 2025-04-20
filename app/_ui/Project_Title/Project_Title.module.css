@@ -1,13 +1,37 @@
-/* NEW PAGE STYLES */
-.container {
+.project_primary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: var(--space-small);
+    padding: var(--space-regular);
+    background-color: var(--blue-primary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    gap: var(--space-regular);
+}
+
+.project_content {
     display: flex;
     flex-direction: column;
-    gap: var(--space-regular);
-    padding: var(--space-regular);
-    max-width: 393px;
-    min-height: 852px;
-    margin: 0px;
-    background-color: var(--grey-400);
+    text-align: left;
+    padding-left: var(--space-regular);
+}
+
+.description_heading {
+    text-align: left;
+    font-family: var(--font-family);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--white);
+    padding: 0px;
+    border: 0px;
+    box-sizing: content-box;
+}
+
+.description_body {
+    font-family: var(--font-family);
+    font-size: var(--menu-font-size);
+    font-style: var(--font-weight-normal);
+    color: var(--white);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
@@ -15,9 +39,9 @@
     /* ----- COLORS ----- */
     --blue-primary: rgb(43, 95, 252);
     --blue-50: rgb(234, 239, 255);
-    --blue-100: #bdcdfe;
     --blue-900: rgb(18, 40, 106);
     --white: #ffffff;
+    --grey-50: #e8e8e8;
     --black: rgb(20, 20, 20);
     --grey-400: rgb(67, 67, 67);
     --yellow-secondary: rgb(255, 218, 1);
@@ -28,11 +52,12 @@
     /* ----- TYPE ----- */
     --font-family: "Open Sans", sans-serif;
 
-    --font-size-extra-large: 30px;
-    --font-size-large: 24px;
-    --font-size-medium: 20px;
-    --font-size-regular: 16px;
-    --font-size-small: 12px;
+    --header-xxlarge-size: 88px;
+    --title-section-font-size: 30px;
+    --button-font-size: 24px;
+    --body-text-font-size: 20px;
+    --menu-font-size: 16px;
+    --label-font-size: 12px;
 
     --font-style-normal: normal;
     --font-weight-bold: bold;

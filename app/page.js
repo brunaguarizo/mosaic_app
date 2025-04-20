@@ -16,7 +16,24 @@ import TaskDropDown from "./_ui/Task_Dropdown/Task_Dropdown";
 import LinkButton from "./_ui/Link_Button/Link_Button";
 import AvatarPicker from "./_ui/Profile_Avatar_PopUp/Profile_Avatar_PopUp";
 import ProfileCover from "./_ui/Profile_Cover_Box/Profile_Cover_Box";
+import PopUp from "./_ui/PopUp/PopUp";
+import InterestChip from "./_ui/Interest_Chip/Interest_Chip";
 
 export default function Home() {
-    return <div></div>;
+    return (
+        <div className={Styles.container}>
+            <InterestChip
+                interest='design'
+                type='icon'
+            />
+            <InterestChip
+                interest='marketing'
+                type='icon'
+            />
+            <InterestChip
+                interest='frontend'
+                type='icon'
+            />
+        </div>
+    );
 }
