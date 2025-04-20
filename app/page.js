@@ -18,22 +18,12 @@ import AvatarPicker from "./_ui/Profile_Avatar_PopUp/Profile_Avatar_PopUp";
 import ProfileCover from "./_ui/Profile_Cover_Box/Profile_Cover_Box";
 import PopUp from "./_ui/PopUp/PopUp";
 import InterestChip from "./_ui/Interest_Chip/Interest_Chip";
+import SettingsOptions from "./_ui/Settings_Options/Settings_Options";
 
 export default function Home() {
     return (
         <div className={Styles.container}>
-            <InterestChip
-                interest='design'
-                type='icon'
-            />
-            <InterestChip
-                interest='marketing'
-                type='icon'
-            />
-            <InterestChip
-                interest='frontend'
-                type='icon'
-            />
+            <SettingsOptions />
         </div>
     );
 }

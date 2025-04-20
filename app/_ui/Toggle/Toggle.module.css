@@ -3,12 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--space-regular);
 }
 
 .toggleButton {
-    width: 60px;
-    height: 32px;
+    width: 45px;
+    height: 24px;
     border-radius: 100px;
     border: none;
     background-color: var(--blue-100);
@@ -24,8 +23,8 @@
 }
 
 .circle {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     background-color: var(--white);
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -33,7 +32,7 @@
 }
 
 .toggled .circle {
-    transform: translateX(28px); /* 60 - 24 - 4*2 = 28px */
+    transform: translateX(21px); /* 45 - 16 - 4x2 = 21 */
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
