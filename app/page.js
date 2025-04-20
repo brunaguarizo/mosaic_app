@@ -14,12 +14,9 @@ import ProgressBar from "./_ui/Progress_Bar/Progress_Bar";
 import SingleInput from "./_ui/Input_Box/Input_Box";
 import TaskDropDown from "./_ui/Task_Dropdown/Task_Dropdown";
 import LinkButton from "./_ui/Link_Button/Link_Button";
+import AvatarPicker from "./_ui/Profile_Avatar_PopUp/Profile_Avatar_PopUp";
+import ProfileCover from "./_ui/Profile_Cover_Box/Profile_Cover_Box";
 
 export default function Home() {
-    return (
-        <LinkButton
-            linkDirectory='/homepage'
-            LinkText='Link to Homepage'
-        />
-    );
+    return <div></div>;
 }
