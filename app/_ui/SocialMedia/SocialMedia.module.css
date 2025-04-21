@@ -1,38 +1,38 @@
-.chip {
-    display: inline-block;
-    padding: var(--space-extra-small) var(--space-small);
-    border-radius: var(--space-regular);
-    font-size: var(--font-size-small);
-    text-align: center;
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-regular);
+    width: 100%;
+    max-width: 361px;
+    font-family: var(--font-family);
 }
 
-.label {
-    display: inline-block;
-}
-
-.design {
-    background-color: var(--orange-secondary);
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-regular);
     color: var(--black);
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
 }
 
-.marketing {
-    background-color: var(--yellow-secondary);
-    color: var(--black);
+.left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-small);
 }
 
-.uxui {
-    background-color: var(--green-secondary);
-    color: var(--black);
+.icon {
+    fill: currentColor;
+    transition: fill 0.2s ease;
 }
 
-.frontend {
-    background-color: var(--blue-primary);
-    color: var(--white);
-}
-
-.backend {
-    background-color: var(--purple-secondary);
-    color: var(--white);
+.text {
+    transition: color 0.2s ease;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
@@ -68,7 +68,6 @@
     --line-height-small: 20px;
 
     /* ----- SPACING ----- */
-    --space-extra-small: 4px;
     --space-small: 8px;
     --space-regular: 16px;
     --space-medium: 32px;

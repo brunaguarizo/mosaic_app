@@ -1,7 +1,19 @@
 import styles from "./Tag.module.css";
 
-function Tag() {
-    return <p className={styles.tag}>Design</p>;
-}
+const labels = {
+    design: "Design",
+    marketing: "Marketing",
+    uxui: "UX/UI",
+    frontend: "Frontend",
+    backend: "Backend",
+};
 
-export default Tag;
+export default function Tag({ interest = "design" }) {
+    const className = `${styles.chip} ${styles[interest]}`;
+
+    return (
+        <div className={className}>
+            <span className={styles.label}>{labels[interest]}</span>
+        </div>
+    );
+}

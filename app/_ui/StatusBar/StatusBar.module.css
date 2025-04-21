@@ -1,38 +1,21 @@
-.chip {
-    display: inline-block;
-    padding: var(--space-extra-small) var(--space-small);
-    border-radius: var(--space-regular);
-    font-size: var(--font-size-small);
-    text-align: center;
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.label {
-    display: inline-block;
+.right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-extra-small);
 }
 
-.design {
-    background-color: var(--orange-secondary);
-    color: var(--black);
-}
-
-.marketing {
-    background-color: var(--yellow-secondary);
-    color: var(--black);
-}
-
-.uxui {
-    background-color: var(--green-secondary);
-    color: var(--black);
-}
-
-.frontend {
-    background-color: var(--blue-primary);
-    color: var(--white);
-}
-
-.backend {
-    background-color: var(--purple-secondary);
-    color: var(--white);
+.icon {
+    fill: var(--black);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
@@ -40,7 +23,6 @@
     /* ----- COLORS ----- */
     --blue-primary: rgb(43, 95, 252);
     --blue-50: rgb(234, 239, 255);
-    --blue-100: #bdcdfe;
     --blue-900: rgb(18, 40, 106);
     --white: #ffffff;
     --black: rgb(20, 20, 20);
@@ -53,11 +35,12 @@
     /* ----- TYPE ----- */
     --font-family: "Open Sans", sans-serif;
 
-    --font-size-extra-large: 30px;
-    --font-size-large: 24px;
-    --font-size-medium: 20px;
-    --font-size-regular: 16px;
-    --font-size-small: 12px;
+    --header-xxlarge-size: 88px;
+    --title-section-font-size: 30px;
+    --button-font-size: 24px;
+    --body-text-font-size: 20px;
+    --menu-font-size: 16px;
+    --label-font-size: 12px;
 
     --font-style-normal: normal;
     --font-weight-bold: bold;

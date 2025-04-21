@@ -19,11 +19,16 @@ import ProfileCover from "./_ui/Profile_Cover_Box/Profile_Cover_Box";
 import PopUp from "./_ui/PopUp/PopUp";
 import InterestChip from "./_ui/Interest_Chip/Interest_Chip";
 import SettingsOptions from "./_ui/Settings_Options/Settings_Options";
+import LogOut from "./_ui/LogOut/LogOut";
+import SocialMedia from "./_ui/SocialMedia/SocialMedia";
+import StatusBar from "./_ui/StatusBar/StatusBar";
+import PortfolioCard from "./_ui/Portfolio_Card/Portfolio_Card";
+import Tag from "./_ui/Tag/Tag";
 
 export default function Home() {
     return (
         <div className={Styles.container}>
-            <SettingsOptions />
+            <PortfolioCard />
         </div>
     );
 }
