@@ -24,11 +24,12 @@ import SocialMedia from "./_ui/SocialMedia/SocialMedia";
 import StatusBar from "./_ui/StatusBar/StatusBar";
 import PortfolioCard from "./_ui/Portfolio_Card/Portfolio_Card";
 import Tag from "./_ui/Tag/Tag";
+import UserInfo from "./_ui/User_Info/User_Info";
 
 export default function Home() {
     return (
         <div className={Styles.container}>
-            <PortfolioCard />
+            <UserInfo />
         </div>
     );
 }
