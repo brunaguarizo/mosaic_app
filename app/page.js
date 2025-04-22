@@ -25,6 +25,11 @@ import StatusBar from "./_ui/StatusBar/StatusBar";
 import PortfolioCard from "./_ui/Portfolio_Card/Portfolio_Card";
 import Tag from "./_ui/Tag/Tag";
 import UserInfo from "./_ui/User_Info/User_Info";
+import TaskList from "./_ui/Task_List/Task_List";
+import RadioItemList from "./_ui/Radio_Item_List/Radio_Item_List";
+import CheckBoxItem from "./_ui/Checkbox_Item_List/Checkbox_Item_List";
+import CheckboxItemList from "./_ui/Checkbox_Item_List/Checkbox_Item_List";
+import InfoBanner from "./_ui/Info_Banner/Info_Banner";
 
 export default function Home() {
     return (
