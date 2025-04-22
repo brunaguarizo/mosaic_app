@@ -5,7 +5,9 @@
     font-size: var(--font-size-small);
     text-decoration: underline;
 }
-
+.container {
+    display: inline;
+}
 .link:hover {
     font-weight: var(--font-weight-bold);
 }
