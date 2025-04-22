@@ -1,9 +1,7 @@
-.link {
-    display: inline;
-}
 .info_container {
     font-family: var(--font-family);
     font-size: var(--font-size-small);
+    text-align: center;
 }
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {

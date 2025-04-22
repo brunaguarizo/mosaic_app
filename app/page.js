@@ -36,6 +36,11 @@ export default function Home() {
     return (
         <div className={Styles.container}>
             <UserInfo />
+            <InfoBanner
+                prefix='By signing up to Mosaic, you agree to our '
+                linkText='terms of use'
+                suffix=', and to the collection of your personal information.'
+            />
             <CodeBox />
         </div>
     );
