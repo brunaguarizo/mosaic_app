@@ -25,11 +25,19 @@ import StatusBar from "./_ui/StatusBar/StatusBar";
 import PortfolioCard from "./_ui/Portfolio_Card/Portfolio_Card";
 import Tag from "./_ui/Tag/Tag";
 import UserInfo from "./_ui/User_Info/User_Info";
+import TaskList from "./_ui/Task_List/Task_List";
 
 export default function Home() {
     return (
         <div className={Styles.container}>
             <UserInfo />
+            <TaskList
+                Tasks={[
+                    "Get Inspired",
+                    "Sketch a Draft",
+                    "Do the First Version",
+                ]}
+            />
         </div>
     );
 }
