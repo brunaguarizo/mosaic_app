@@ -39,7 +39,7 @@ function ProfileCover({ username, city, province, location, type }) {
                 </svg>
             </a>
             <div />
-            <div className={styles.profile_info}>
+            <div className={ProfileInfoClasses}>
                 <p className={styles.username}>{username}</p>
                 <p className={styles.location}>
                     {city}, {province}
