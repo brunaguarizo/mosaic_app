@@ -11,6 +11,7 @@
     height: 192px;
 }
 .edit_icon {
+    width: 20px;
     position: relative;
     bottom: 160px;
     left: 360px;
@@ -41,6 +42,20 @@
     grid-template-rows: 1fr 1fr;
 }
 
+.secondary {
+    background-color: var(--blue-primary);
+    height: 320px;
+}
+
+.edit_background {
+    width: 40px;
+    position: relative;
+    left: 240px;
+    top: -150px;
+    background-color: var(--white);
+    padding: var(--space-small);
+    border-radius: 4px;
+}
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
     /* ----- COLORS ----- */
