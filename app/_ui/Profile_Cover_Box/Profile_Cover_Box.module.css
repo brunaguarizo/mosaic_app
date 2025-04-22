@@ -46,7 +46,9 @@
     background-color: var(--blue-primary);
     height: 320px;
 }
-
+.hidden {
+    display: none;
+}
 .edit_background {
     width: 40px;
     position: relative;

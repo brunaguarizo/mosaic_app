@@ -36,7 +36,6 @@ export default function Home() {
     return (
         <div className={Styles.container}>
             <UserInfo />
-            <CodeBox />
         </div>
     );
 }
