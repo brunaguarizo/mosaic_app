@@ -1,34 +1,16 @@
-.radio_container {
-    padding: var(--space-regular) 0;
-    font-family: var(--font-family);
+.box {
+    height: 44px;
+    width: 60px;
+    border-radius: var(--space-small);
+    border: 1px solid var(--black);
+}
+.code_container {
+    padding: var(--space-regular);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-small);
 }
 
-.radio_question {
-    font-size: var(--font-size-large);
-    font-style: var(--font-style-normal);
-    margin-bottom: var(--space-small);
-}
-.radio_selection_box {
-    border: 1px solid var(--black);
-    width: 18px;
-    height: 18px;
-    padding: 0 auto;
-    margin: 0;
-}
-.radio_option_container {
-    padding-bottom: var(--space-small);
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-regular);
-}
-.selection_text {
-    font-size: var(--font-size-regular);
-    line-height: 1.2;
-}
-.radio_selection_box:checked {
-    background-color: var(--blue-primary);
-    border-color: var(--blue-primary);
-}
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
     /* ----- COLORS ----- */

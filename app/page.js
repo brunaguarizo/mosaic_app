@@ -30,11 +30,13 @@ import RadioItemList from "./_ui/Radio_Item_List/Radio_Item_List";
 import CheckBoxItem from "./_ui/Checkbox_Item_List/Checkbox_Item_List";
 import CheckboxItemList from "./_ui/Checkbox_Item_List/Checkbox_Item_List";
 import InfoBanner from "./_ui/Info_Banner/Info_Banner";
+import CodeBox from "./_ui/Code_Box/Code_Box";
 
 export default function Home() {
     return (
         <div className={Styles.container}>
             <UserInfo />
+            <CodeBox />
         </div>
     );
 }
