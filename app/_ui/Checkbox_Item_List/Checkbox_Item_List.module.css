@@ -1,21 +1,21 @@
-.radio_container {
+.checkbox_container {
     padding: 16px 0;
     font-family: var(--font-family);
 }
 
-.radio_question {
+.checkbox_question {
     font-size: var(--font-size-large);
     font-style: var(--font-style-normal);
     margin-bottom: 8px;
 }
-.radio_selection_box {
+.checkbox_selection_box {
     border: 1px solid var(--black);
     width: 18px;
     height: 18px;
     padding: 0 auto;
     margin: 0;
 }
-.radio_option_container {
+.checkbox_option_container {
     padding-bottom: 8px;
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@
     font-size: var(--font-size-regular);
     line-height: 1.2;
 }
-.radio_selection_box:checked {
+.checkbox_selection_box:checked {
     background-color: var(--blue-primary);
     border-color: var(--blue-primary);
 }
