@@ -3,6 +3,7 @@
     width: 60px;
     border-radius: var(--space-small);
     border: 1px solid var(--black);
+    text-align: center;
 }
 .code_container {
     padding: var(--space-regular);
