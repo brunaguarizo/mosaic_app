@@ -26,11 +26,22 @@ import PortfolioCard from "./_ui/Portfolio_Card/Portfolio_Card";
 import Tag from "./_ui/Tag/Tag";
 import UserInfo from "./_ui/User_Info/User_Info";
 import TaskList from "./_ui/Task_List/Task_List";
+import RadioItemList from "./_ui/Radio_Item_List/Radio_Item_List";
 
 export default function Home() {
     return (
         <div className={Styles.container}>
             <UserInfo />
+            <RadioItemList
+                Question='What is this project for?'
+                OptionTextArray={[
+                    "Graphic Design",
+                    "Marketing",
+                    "UX/UI",
+                    "Frontend",
+                    "Backend",
+                ]}
+            />
             <TaskList
                 Tasks={[
                     "Get Inspired",
