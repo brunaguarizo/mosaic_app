@@ -5,6 +5,7 @@
     border: 1px solid var(--black);
 }
 .code_container {
+    padding: var(--space-regular);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: var(--space-small);

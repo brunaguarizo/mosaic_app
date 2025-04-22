@@ -1,12 +1,12 @@
 .checkbox_container {
-    padding: 16px 0;
+    padding: var(--space-regular) 0;
     font-family: var(--font-family);
 }
 
 .checkbox_question {
     font-size: var(--font-size-large);
     font-style: var(--font-style-normal);
-    margin-bottom: 8px;
+    margin-bottom: var(--space-small);
 }
 .checkbox_selection_box {
     border: 1px solid var(--black);
@@ -19,7 +19,7 @@
     padding-bottom: 8px;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: var(--space-regular);
 }
 .selection_text {
     font-size: var(--font-size-regular);
