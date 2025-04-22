@@ -6,23 +6,23 @@ function CodeBox() {
     return (
         <div className={styles.code_container}>
             <input
-                type='number'
+                type='text'
                 className={styles.box}
             />
             <input
-                type='number'
+                type='text'
                 className={styles.box}
             />
             <input
-                type='number'
+                type='text'
                 className={styles.box}
             />
             <input
-                type='number'
+                type='text'
                 className={styles.box}
             />
             <input
-                type='number'
+                type='text'
                 className={styles.box}
             />
         </div>
