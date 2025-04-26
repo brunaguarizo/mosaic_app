@@ -72,9 +72,13 @@
     --line-height-small: 20px;
 
     /* ----- SPACING ----- */
+    --space-extra-small: 4px;
     --space-small: 8px;
     --space-regular: 16px;
     --space-medium: 32px;
     --space-large: 48px;
     --space-extra-large: 140px;
+
+    /* ----- BORDER RADIUS ----- */
+    --border-radius-large: 100px;
 }

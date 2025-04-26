@@ -23,6 +23,7 @@
     /* ----- COLORS ----- */
     --blue-primary: rgb(43, 95, 252);
     --blue-50: rgb(234, 239, 255);
+    --blue-100: #bdcdfe;
     --blue-900: rgb(18, 40, 106);
     --white: #ffffff;
     --black: rgb(20, 20, 20);
@@ -35,12 +36,11 @@
     /* ----- TYPE ----- */
     --font-family: "Open Sans", sans-serif;
 
-    --header-xxlarge-size: 88px;
-    --title-section-font-size: 30px;
-    --button-font-size: 24px;
-    --body-text-font-size: 20px;
-    --menu-font-size: 16px;
-    --label-font-size: 12px;
+    --font-size-extra-large: 30px;
+    --font-size-large: 24px;
+    --font-size-medium: 20px;
+    --font-size-regular: 16px;
+    --font-size-small: 12px;
 
     --font-style-normal: normal;
     --font-weight-bold: bold;
@@ -57,4 +57,7 @@
     --space-medium: 32px;
     --space-large: 48px;
     --space-extra-large: 140px;
+
+    /* ----- BORDER RADIUS ----- */
+    --border-radius-large: 100px;
 }
