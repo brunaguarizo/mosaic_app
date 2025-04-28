@@ -46,8 +46,12 @@
 }
 
 .large {
-    font-size: var(--font-size-large);
-    padding: var(--space-regular);
+    justify-content: center;
+    height: 48px;
+    display: flex;
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-bold);
+    padding: 0 auto;
 }
 
 .error {
