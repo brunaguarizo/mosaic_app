@@ -32,9 +32,16 @@ export default function Dashboard() {
                 <p>Archived Projects</p>
             </div>
 
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            <ProjectCard
+                ProjectDescription='A set of logos and posters for a new, trendy brunch cafe who’s main market is millennials in Vancouver.'
+                ProjectName='Eggs and Bacon'
+                Interest='design'
+            />
+            <ProjectCard
+                ProjectDescription='A social media campaign for a new fashion brand for the upcoming spring/summer season.'
+                ProjectName='Trendsetter'
+                Interest='marketing'
+            />
 
             <div className={styles.navigation_bar}>
                 <Navbar />
