@@ -7,6 +7,7 @@ import SingleInput from "../_ui/Input_Box/Input_Box";
 import InterestChip from "../_ui/Interest_Chip/Interest_Chip";
 import SocialMedia from "../_ui/SocialMedia/SocialMedia";
 import Button from "../_ui/Button/Button";
+import LongInput from "../_ui/Long_Input_Box/Long_Input_Box";
 
 export default function StepOne() {
     const router = useRouter();
@@ -63,6 +64,7 @@ export default function StepOne() {
                     </div>
                 </div>
             </div>
+            <LongInput placeholder='About me' />
             <SingleInput
                 inputName='Location'
                 placeholder='Location'
