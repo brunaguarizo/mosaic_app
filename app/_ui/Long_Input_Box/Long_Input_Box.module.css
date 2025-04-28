@@ -1,26 +1,9 @@
-.primary {
-    display: flex;
-    flex-direction: column;
-}
-
-.hidden {
-    display: none;
-}
-
-.input_name {
-    font-family: var(--font-family);
-    font-size: var(--font-size-regular);
-    font-weight: var(--font-style-normal);
-}
-
-.input_box {
+.input_area {
+    width: 361px;
+    height: 188px;
     font-family: var(--font-family);
     font-size: var(--font-size-small);
     color: var(--grey-400);
-    padding: 8px;
-    border-radius: 100px;
-    width: 361px;
-    border: 1px solid var(--black);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
