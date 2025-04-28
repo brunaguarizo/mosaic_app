@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import styles from "./StepThree.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
+import Image from "next/image";
 
 export default function StepOne() {
     const router = useRouter();
@@ -39,38 +40,14 @@ export default function StepOne() {
 
             {/* Illustration */}
             <div className={styles.illustrationWrapper}>
-                <svg
-                    className={styles.illustration}
-                    width='361'
-                    height='460'
-                    viewBox='0 0 361 460'
-                    fill='none'
-                    xmlns='http://www.w3.org/2000/svg'
-                    xmlnsXlink='http://www.w3.org/1999/xlink'>
-                    <rect
-                        width='361'
-                        height='460'
-                        fill='url(#pattern0_793_4549)'
-                    />
-                    <defs>
-                        <pattern
-                            id='pattern0_793_4549'
-                            patternContentUnits='objectBoundingBox'
-                            width='1'
-                            height='1'>
-                            <use
-                                xlinkHref='#image0_793_4549'
-                                transform='matrix(0.0019305 0 0 0.00151502 0 0.0538253)'
-                            />
-                        </pattern>
-                        <image
-                            id='image0_793_4549'
-                            width='518'
-                            height='589'
-                            xlinkHref='/onboarding/Image_03.png'
-                        />
-                    </defs>
-                </svg>
+                <Image
+                    src='/onboarding/Image_03.png'
+                    quality={100}
+                    unoptimized={true}
+                    width={361}
+                    height={460}
+                    alt='Graphics'
+                />
             </div>
 
             {/* Progress Dots */}
