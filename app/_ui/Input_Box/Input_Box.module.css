@@ -9,7 +9,8 @@
 
 .input_name {
     font-family: var(--font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-style-normal);
 }
 
 .input_box {
