@@ -13,7 +13,7 @@
 .heading {
     flex-grow: 1;
     text-align: center;
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-style-normal);
     font-size: var(--font-size-large);
 }
 
