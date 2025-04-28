@@ -28,8 +28,8 @@ function CreateProject() {
             <h2 className={styles.button_heading}>Create a project</h2>
             <p className={styles.button_description}>
                 {" "}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum pellentesque.
+                Fill out a questionnaire and then receiving a customized
+                scenario and task list catered to your needs.
             </p>
         </button>
     );

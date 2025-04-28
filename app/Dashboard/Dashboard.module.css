@@ -1,43 +1,24 @@
-.button_background {
-    background-color: var(--blue-primary);
-    border-radius: var(--space-small);
-    border: none;
-    width: 361px;
-    height: 200px;
+.container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-regular);
     padding: var(--space-regular);
+    max-width: 393px;
+    min-width: 393px;
+    min-height: 852px;
+    max-height: 852px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin-top: 50%;
+    margin-bottom: 15%;
 }
-
-.button_icon {
-    width: 42px;
-    height: 42px;
-    align-self: center;
-    box-sizing: content-box;
-    margin-top: var(--space-regular);
-}
-
-.button_heading {
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
-    font-size: var(--font-size-regular);
-    font-weight: var(--font-weight-bold);
-    color: white;
-    padding: 0px;
-    border: 0px;
-    margin-top: var(--space-regular);
-    margin-bottom: 0px;
-}
-
-.button_description {
-    font-family: "Open Sans", sans-serif;
-    font-size: var(--font-size-regular);
-    font-style: var(--font-weight-normal);
-    color: white;
-    border: 0px;
-    padding: 0px;
-    margin-top: var(--space-regular);
-    margin-bottom: 0px;
+.navigation_bar {
+    background-color: var(--white);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
