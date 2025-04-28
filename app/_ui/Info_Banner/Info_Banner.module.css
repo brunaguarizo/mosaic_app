@@ -3,6 +3,18 @@
     font-size: var(--font-size-small);
     text-align: center;
 }
+.link {
+    color: var(--blue-primary);
+    font-weight: var(--font-style-normal);
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    text-decoration: underline;
+    display: inline;
+}
+
+.link:hover {
+    font-weight: var(--font-weight-bold);
+}
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
     /* ----- COLORS ----- */
