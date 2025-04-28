@@ -84,25 +84,24 @@ const labels = {
     backend: "Backend",
 };
 
-export default function InterestChip({ type = "text", interest }) {
-    const [selected, setSelected] = useState(false);
-
-    const handleClick = () => {
-        setSelected((prev) => !prev);
-    };
-
+export default function InterestChip({
+    type = "text",
+    interest,
+    isSelected,
+    onClick,
+}) {
     const chipClass = [
         styles.chip,
         styles[interest],
         styles[type],
-        selected ? styles.selected : styles.unselected,
+        isSelected ? styles.selected : styles.unselected,
     ].join(" ");
 
     return (
         <button
             className={chipClass}
-            onClick={handleClick}
-            aria-pressed={selected}>
+            onClick={onClick}
+            aria-pressed={isSelected}>
             <span className={styles.label}>{labels[interest]}</span>
             {type === "icon" && icons[interest] && (
                 <span className={styles.icon}>{icons[interest]}</span>

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import styles from "./Input_Box.module.css";
 
-function SingleInput({ inputName, placeholder, type }) {
+function SingleInput({ inputName, placeholder, type, value, onChange }) {
     const InputHeaderClasses = classNames(styles.input_name, {
         [styles.hidden]: type === "secondary",
     });
@@ -14,7 +14,9 @@ function SingleInput({ inputName, placeholder, type }) {
             <input
                 className={styles.input_box}
                 type='text'
-                defaultValue={placeholder}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
             />
         </div>
     );

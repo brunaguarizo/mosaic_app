@@ -1,5 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 import styles from "./CreateProfile.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Profile_Cover_Box from "../_ui/Profile_Cover_Box/Profile_Cover_Box";
@@ -8,10 +10,42 @@ import InterestChip from "../_ui/Interest_Chip/Interest_Chip";
 import SocialMedia from "../_ui/SocialMedia/SocialMedia";
 import Button from "../_ui/Button/Button";
 import LongInput from "../_ui/Long_Input_Box/Long_Input_Box";
+import PopUp from "../_ui/PopUp/PopUp";
 
-export default function StepOne() {
+export default function CreateProfile() {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [username, setUsername] = useState("");
+    const [aboutMe, setAboutMe] = useState("");
+    const [location, setLocation] = useState("");
+    const [selectedInterests, setSelectedInterests] = useState([]);
+
     const router = useRouter();
-
+    const handleSave = () => {
+        if (
+            !firstName ||
+            !lastName ||
+            !username ||
+            !aboutMe ||
+            !location ||
+            selectedInterests.length === 0
+        ) {
+            alert("Please fill out all fields before proceeding.");
+            return;
+        } else router.push("/Dashboard");
+    };
+    const handleCancel = () => {
+        router.push("/SignUp");
+    };
+    const handleInterestClick = (interest) => {
+        setSelectedInterests((prev) => {
+            if (prev.includes(interest)) {
+                return prev.filter((item) => item !== interest);
+            } else {
+                return [...prev, interest];
+            }
+        });
+    };
     return (
         <div className={styles.container}>
             {/* Status Bar */}
@@ -20,14 +54,20 @@ export default function StepOne() {
             <SingleInput
                 type='secondary'
                 placeholder='First Name'
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
             />
             <SingleInput
                 type='secondary'
                 placeholder='Last Name'
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
             />
             <SingleInput
                 type='secondary'
                 placeholder='Username'
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
             />
             <div className={styles.content_box}>
                 <div className={styles.content_info}>
@@ -42,32 +82,47 @@ export default function StepOne() {
                         <InterestChip
                             type='icon'
                             interest='design'
+                            isSelected={selectedInterests.includes("design")}
+                            onClick={() => handleInterestClick("design")}
                         />
                         <InterestChip
                             type='icon'
                             interest='uxui'
+                            isSelected={selectedInterests.includes("uxui")}
+                            onClick={() => handleInterestClick("uxui")}
                         />
                         <InterestChip
                             type='icon'
                             interest='marketing'
+                            isSelected={selectedInterests.includes("marketing")}
+                            onClick={() => handleInterestClick("marketing")}
                         />
                     </div>
                     <div className={styles.Two_column}>
                         <InterestChip
                             type='icon'
                             interest='frontend'
+                            isSelected={selectedInterests.includes("frontend")}
+                            onClick={() => handleInterestClick("frontend")}
                         />
                         <InterestChip
                             type='icon'
                             interest='backend'
+                            isSelected={selectedInterests.includes("backend")}
+                            onClick={() => handleInterestClick("backend")}
                         />
                     </div>
                 </div>
             </div>
-            <LongInput placeholder='About me' />
+            <LongInput
+                placeholder='About me'
+                onChange={(e) => setAboutMe(e.target.value)}
+            />
             <SingleInput
                 inputName='Location'
                 placeholder='Location'
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
             />
             <div className={styles.social_media}>
                 <SocialMedia />
@@ -78,7 +133,7 @@ export default function StepOne() {
                         type='terciary'
                         size='large'
                         value='Save'
-                        isDisabled={true}
+                        onClick={handleSave}
                     />
                 </div>
                 <div className={styles.button}>
@@ -86,6 +141,7 @@ export default function StepOne() {
                         type='secondary'
                         size='large'
                         value='Cancel'
+                        onClick={handleCancel}
                     />
                 </div>
             </div>
