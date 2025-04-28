@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import Tag from "../Tag/Tag";
 import ProgressCircle from "../Circle_Progress/Circle_Progress";
 
-function ProjectCard() {
+function ProjectCard({ ProjectName, ProjectDescription, Interest, onClick }) {
     // Control visibility - menu dropdown
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -45,13 +45,12 @@ function ProjectCard() {
             </div>
             <ProgressCircle percentage={30} />
 
-            <p className={styles.card__title}>Eggs and Bacon</p>
-            <Tag />
+            <p className={styles.card__title}>{ProjectName}</p>
+            <div className={styles.project_chips}>
+                <Tag interest={Interest} />
+            </div>
 
-            <p className={styles.card__text}>
-                A set of logos and posters for a new, trendy brunch cafe who's
-                main market is millennials in Vancouver.
-            </p>
+            <p className={styles.card__text}>{ProjectDescription}</p>
             <div className={styles.date}>
                 <svg
                     className={styles.date__icon}
@@ -65,9 +64,9 @@ function ProjectCard() {
                 <p className={styles.card__text}>01 May, 2025 - 15 May, 2025</p>
             </div>
             <Button
-                value='Primary Button'
+                value='Open Project'
                 type='primary'
-                //onClick={}
+                onClick={onClick}
             />
         </div>
     );
