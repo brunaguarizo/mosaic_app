@@ -12,7 +12,7 @@ export default function StepOne() {
         router.replace("/Onboarding/StepTwo");
     };
     const handleSkip = () => {
-        router.replace("/SingIn/SingIn");
+        router.replace("/SignIn/SignIn");
     };
 
     return (

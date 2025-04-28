@@ -1,29 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import styles from "./PopUp.module.css";
 import Button from "../Button/Button";
 
-export default function PopUp({ startDate, endDate }) {
-    return (
-        <div className={styles.popup}>
-            <h2 className={styles.popup_header}>New verification code sent</h2>
-            <p className={styles.popup_text}>
-                In a few minutes you will receive the verification code in your
-                email.
-            </p>
-            <div className={styles.popup_buttons}>
-                <Button
-                    value='Ok'
-                    type='terciary'
-                    //onClick={}
-                />
-                <Button
-                    value='Ok'
-                    type='primary'
-                    //onClick={}
-                />
+export default function PopUp({
+    onClose,
+    children,
+    buttonText = "Ok",
+    buttonType = "primary",
+}) {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+        return () => setMounted(false);
+    }, []);
+
+    if (!mounted) return null;
+
+    return createPortal(
+        <>
+            <div
+                className={styles.popup_overlay}
+                onClick={onClose}></div>
+            <div className={styles.popup}>
+                {children}
+                <div className={styles.popup_buttons}>
+                    <Button
+                        value={buttonText}
+                        type={buttonType}
+                        onClick={onClose}
+                    />
+                </div>
             </div>
-        </div>
+        </>,
+        document.body
     );
 }
