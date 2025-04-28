@@ -1,63 +1,64 @@
-.button {
-    font-family: var(--font-family);
-    font-size: var(--font-size-regular);
-    font-weight: var(--font-weight-bold);
-    width: 100%;
-    padding-top: var(--space-small);
-    padding-left: var(--space-regular);
-    padding-right: var(--space-regular);
-    padding-bottom: var(--space-small);
-    border-radius: 100px;
-    align-items: center;
-    border: none;
-
-    &:hover {
-        background-color: var(--blue-900);
-        color: var(--white);
-    }
-}
-
-.primary {
-    background: var(--blue-primary);
-    color: var(--white);
-}
-
-.secondary {
-    background-color: var(--white);
-    border: 1px solid var(--blue-primary);
-    color: var(--blue-primary);
-}
-
-.terciary {
-    background: var(--blue-100);
-    color: var(--black);
-}
-
-.disabled {
-    pointer-events: none;
-    color: var(--white);
-    background-color: var(--blue-100);
-}
-
-.small {
-    font-size: var(--font-size-small);
-    padding: var(--space-small);
-    align-items: center;
-}
-
-.large {
-    justify-content: center;
-    height: 48px;
+.container {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-regular);
+    padding: var(--space-regular);
+    max-width: 393px;
+    min-width: 393px;
+    min-height: 852px;
+    max-height: 852px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin: 0;
+    margin-top: 50%;
+}
+.chips_container {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: var(--space-regular);
+}
+.content_header {
     font-size: var(--font-size-regular);
-    font-weight: var(--font-weight-bold);
-    padding: 0 auto;
+    font-weight: var(--font-style-normal);
+    padding: 0px;
+    margin-bottom: 0px;
 }
-
-.error {
-    background-color: var(--orange-secondary);
+.content_description {
+    padding: 0px;
+    margin-top: 0px;
+    font-size: var(--font-size-small);
 }
-
+.content_info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-small);
+    font-family: var(--font-family);
+}
+.social_media {
+    display: flex;
+    align-items: flex-start;
+}
+.Three_column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-regular);
+}
+.Two_column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-regular);
+}
+.button_column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-small);
+}
+.button {
+    width: 361px;
+    height: 48px;
+}
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
     /* ----- COLORS ----- */

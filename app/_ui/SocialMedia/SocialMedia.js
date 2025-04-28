@@ -7,6 +7,7 @@ export default function SocialMedia() {
     return (
         <div className={styles.container}>
             <p className={styles.text}>Linked Social Media Accounts</p>
+
             <div className={styles.list}>
                 <div className={styles.left}>
                     <svg
