@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: var(--space-regular);
+
     width: 100%;
     max-width: 361px;
     font-family: var(--font-family);
@@ -23,6 +23,7 @@
 .left {
     display: flex;
     align-items: center;
+    padding-right: 180px;
     gap: var(--space-small);
 }
 
