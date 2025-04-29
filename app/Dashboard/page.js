@@ -15,6 +15,7 @@ import Headingbar from "../_ui/Heading_Bar/Heading_Bar";
 import CreateProject from "../_ui/Create_Project_Button/Create_Project_Button";
 import ProjectCard from "../_ui/Project_card/Project_card";
 import Navbar from "../_ui/navbar/navbar";
+import Searchbar from "../_ui/Search_Bar/Search_Bar";
 
 export default function Dashboard() {
     const router = useRouter();

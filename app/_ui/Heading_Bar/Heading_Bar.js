@@ -29,6 +29,9 @@ function Headingbar({ heading, type }) {
         [styles.visible]: isVisible("pagination"),
         [styles.hidden]: !isVisible("pagination"),
     });
+    const handleSearchIconClick = () => {
+        router.replace("/Onboarding/StepTwo");
+    };
 
     return (
         <div className={styles.contentInner}>
