@@ -10,6 +10,9 @@ export default function PopUp({
     children,
     buttonText = "Ok",
     buttonType = "primary",
+    secondaryButtonText,
+    secondaryButtonType = "orange",
+    onSecondaryButtonClick,
 }) {
     const [mounted, setMounted] = useState(false);
 
@@ -28,6 +31,13 @@ export default function PopUp({
             <div className={styles.popup}>
                 {children}
                 <div className={styles.popup_buttons}>
+                    {secondaryButtonText && (
+                        <Button
+                            value={secondaryButtonText}
+                            type={secondaryButtonType}
+                            onClick={onSecondaryButtonClick}
+                        />
+                    )}
                     <Button
                         value={buttonText}
                         type={buttonType}

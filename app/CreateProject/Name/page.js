@@ -22,7 +22,7 @@ export default function ProjectName() {
             {/* heading */}
             <Headingbar
                 type='navigation'
-                pagination='1/10'
+                pagination='0/10'
             />
             {/* progress */}
             <ProgressBar CompletionAmount={0} />

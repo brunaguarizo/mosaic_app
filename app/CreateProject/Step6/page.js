@@ -1,11 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
-import styles from "./Step1.module.css";
+import styles from "./Step6.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Headingbar from "@/app/_ui/Heading_Bar/Heading_Bar";
 import ProgressBar from "@/app/_ui/Progress_Bar/Progress_Bar";
 import SingleInput from "@/app/_ui/Input_Box/Input_Box";
 import RadioItemList from "@/app/_ui/Radio_Item_List/Radio_Item_List";
+import CheckboxItemList from "@/app/_ui/Checkbox_Item_List/Checkbox_Item_List";
 import Button from "@/app/_ui/Button/Button";
 import Navbar from "@/app/_ui/navbar/navbar";
 import Image from "next/image";
@@ -17,7 +18,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/CreateProject/Step2");
+        router.replace("/CreateProject/Step7");
     };
     const handleLater = () => {
         router.replace("/Dashboard");
@@ -26,17 +27,16 @@ export default function ProjectName() {
         setShowDeletePopup(true);
     };
     const handleConfirmDelete = () => {
-        // Add any delete logic here if needed
         setShowDeletePopup(false);
         router.replace("/Dashboard");
     };
 
     const options = [
-        "Graphic Design",
-        "Marketing",
-        "UX/UI",
-        "Frontend",
-        "Backend",
+        "Figma",
+        "Wordpress",
+        "Adobe Creative Suite",
+        "Vue",
+        "Other",
     ];
 
     return (
@@ -46,14 +46,14 @@ export default function ProjectName() {
             {/* heading */}
             <Headingbar
                 type='navigation'
-                pagination='1/10'
+                pagination='6/10'
             />
             {/* progress */}
-            <ProgressBar CompletionAmount={10} />
+            <ProgressBar CompletionAmount={60} />
             {/* Image */}
             <img
                 className={styles.image}
-                src='/createproject/image_03.png'
+                src='/createproject/image_08.png'
                 quality={100}
                 width={361}
                 height={460}
@@ -62,8 +62,10 @@ export default function ProjectName() {
 
             {/* Content */}
             <div className={styles.content}>
-                <p className={styles.title}>What is this project for?</p>
-                <RadioItemList OptionTextArray={options} />
+                <p className={styles.title}>
+                    Which platforms would you like to use?
+                </p>
+                <CheckboxItemList OptionTextArray={options} />
             </div>
 
             {/* Button */}
