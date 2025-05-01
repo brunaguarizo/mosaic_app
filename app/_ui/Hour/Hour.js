@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import styles from "./Hour.module.css";
 
@@ -12,9 +13,10 @@ const Hour = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const formattedTime = currentTime.toLocaleTimeString([], {
+    const formattedTime = currentTime.toLocaleTimeString("en-US", {
         hour: "2-digit",
         minute: "2-digit",
+        hour12: true,
     });
 
     return <div className={styles.hour}>{formattedTime}</div>;

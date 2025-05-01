@@ -1,39 +1,47 @@
-.primary {
-    display: flex;
-    flex-direction: column;
-}
-
-.hidden {
-    display: none;
-}
-
 .container {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: var(--space-small);
-}
-
-.input_name {
-    font-family: var(--font-family);
-    font-size: var(--font-size-regular);
-    font-weight: var(--font-style-normal);
-}
-
-.input_box {
-    font-family: var(--font-family);
-    font-size: var(--font-size-regular);
-    color: var(--grey-400);
-    border: 1px solid var(--black);
-    width: 100%;
-    box-sizing: border-box;
-    padding-top: var(--space-small);
-    padding-left: var(--space-regular);
-    padding-right: var(--space-regular);
-    padding-bottom: var(--space-small);
-    border-radius: 100px;
+    justify-content: space-between;
     align-items: center;
+    gap: var(--space-regular);
+    padding: var(--space-regular);
+    max-width: 393px;
+    min-width: 393px;
+    min-height: 852px;
+    max-height: 852px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.image {
+    width: 80%;
+    height: auto;
+    padding: 0;
+}
+
+.title {
+    font-size: var(--space-regular);
+    font-weight: var(--font-weight-bold);
+    padding: 0px;
+    margin-top: auto;
+    text-align: left;
+}
+
+.description {
+    font-size: var(--font-size-regular);
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    margin-bottom: var(--space-regular);
+}
+
+.nav {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-small);
+    box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */

@@ -24,7 +24,7 @@
     font-size: var(--font-size-regular);
     padding: 0px;
     margin: 0px;
-    text-align: center;
+    text-align: left;
     margin-bottom: var(--space-regular);
 }
 
