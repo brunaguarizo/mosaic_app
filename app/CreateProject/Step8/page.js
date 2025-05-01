@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import styles from "./Step1.module.css";
+import styles from "./Step8.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Headingbar from "@/app/_ui/Heading_Bar/Heading_Bar";
 import ProgressBar from "@/app/_ui/Progress_Bar/Progress_Bar";
@@ -17,7 +17,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/CreateProject/Step2");
+        router.replace("/CreateProject/Step9");
     };
     const handleLater = () => {
         router.replace("/Dashboard");
@@ -26,18 +26,11 @@ export default function ProjectName() {
         setShowDeletePopup(true);
     };
     const handleConfirmDelete = () => {
-        // Add any delete logic here if needed
         setShowDeletePopup(false);
         router.replace("/Dashboard");
     };
 
-    const options = [
-        "Graphic Design",
-        "Marketing",
-        "UX/UI",
-        "Frontend",
-        "Backend",
-    ];
+    const options = ["Diverse", "Limited"];
 
     return (
         <div className={styles.container}>
@@ -46,14 +39,14 @@ export default function ProjectName() {
             {/* heading */}
             <Headingbar
                 type='navigation'
-                pagination='1/10'
+                pagination='8/10'
             />
             {/* progress */}
-            <ProgressBar CompletionAmount={10} />
+            <ProgressBar CompletionAmount={80} />
             {/* Image */}
             <img
                 className={styles.image}
-                src='/createproject/image_03.png'
+                src='/createproject/image_10.png'
                 quality={100}
                 width={361}
                 height={460}
@@ -62,7 +55,9 @@ export default function ProjectName() {
 
             {/* Content */}
             <div className={styles.content}>
-                <p className={styles.title}>What is this project for?</p>
+                <p className={styles.title}>
+                    Is your target audience diverse or limited?
+                </p>
                 <RadioItemList OptionTextArray={options} />
             </div>
 
