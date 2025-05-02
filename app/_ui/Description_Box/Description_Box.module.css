@@ -6,8 +6,6 @@
     padding: var(--space-regular);
     text-align: left;
     width: 361px;
-    margin-top: var(--space-regular);
-    margin-bottom: var(--space-regular);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .project_secondary {
@@ -17,7 +15,6 @@
     text-align: left;
     padding: var(--space-regular);
     text-align: left;
-    margin-top: var(--space-regular);
     background-color: var(--blue-50);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -40,6 +37,7 @@
     color: var(--black);
     margin-top: var(--space-regular);
     margin-bottom: 0px;
+    white-space: pre-line;
 }
 
 .conditions {
