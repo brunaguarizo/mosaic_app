@@ -1,17 +1,57 @@
 "use client";
+
 import { useState } from "react";
 import styles from "./Project_card.module.css";
 import Button from "../Button/Button";
 import Tag from "../Tag/Tag";
 import ProgressCircle from "../Circle_Progress/Circle_Progress";
+import PopUp from "../PopUp/PopUp";
+import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
+import { useRouter } from "next/navigation";
 
-function ProjectCard({ ProjectName, ProjectDescription, Interest, onClick }) {
+function ProjectCard({
+    ProjectName,
+    ProjectDescription,
+    Interest,
+    onClick,
+    onAddToPortfolioClick,
+    onDeleteProjectClick,
+    MenuItem1,
+    MenuItem2,
+}) {
+    const router = useRouter();
+
     // Control visibility - menu dropdown
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    //control visibility of pop-ups
+    const [showAddedToPortfolio, setShowAddedToPortfolio] = useState("false");
+    const [showDeleteProject, setShowDeleteProject] = useState("false");
+    const [showAddedToPortfolioPopup, setShowAddedToPortfolioPopup] =
+        useState(false);
+    const [showDeleteProjectPopup, setShowDeleteProjectPopup] = useState(false);
 
     // Switch visibility - menu dropdown
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    //Handle pop-up actions
+    const handleConfirm = () => {
+        router.push("/Portfolio");
+    };
+
+    const handleCancel = () => {
+        setShowAddedToPortfolioPopup(false);
+        setShowDeleteProject(false);
+    };
+
+    const handleAddToPortfolio = () => {
+        setShowAddedToPortfolioPopup(true);
+    };
+
+    const handleDeleteProject = () => {
+        setShowDeleteProject(true);
     };
 
     return (
@@ -33,11 +73,15 @@ function ProjectCard({ ProjectName, ProjectDescription, Interest, onClick }) {
                 {isMenuOpen && (
                     <div className={styles.dropdown__menu}>
                         <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                                Add to Portfolio
+                            <li
+                                className={styles.dropdown__item}
+                                onClick={handleAddToPortfolio}>
+                                {MenuItem1}
                             </li>
-                            <li className={styles.dropdown__item}>
-                                Delete Project
+                            <li
+                                className={styles.dropdown__item}
+                                onClick={handleDeleteProject}>
+                                {MenuItem2}
                             </li>
                         </ul>
                     </div>
@@ -68,6 +112,36 @@ function ProjectCard({ ProjectName, ProjectDescription, Interest, onClick }) {
                 type='primary'
                 onClick={onClick}
             />
+            {showAddedToPortfolioPopup && (
+                <PopUp
+                    onClose={handleConfirm}
+                    buttonText='Confirm'
+                    buttonType='primary'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='secondary'
+                    onSecondaryButtonClick={handleCancel}>
+                    <h2 className={popupStyles.popup_header}>
+                        Project added to portfolio
+                    </h2>
+                    <p className={popupStyles.popup_text}>
+                        You have successfully added this project to your
+                        portfolio
+                    </p>
+                </PopUp>
+            )}
+            {showDeleteProject && (
+                <PopUp
+                    onClose={handleCancel}
+                    buttonText='Confirm'
+                    buttonType='primary'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='secondary'
+                    onSecondaryButtonClick={handleCancel}>
+                    <h2 className={popupStyles.popup_header}>
+                        Do you wish to delete this project permanently?
+                    </h2>
+                </PopUp>
+            )}
         </div>
     );
 }

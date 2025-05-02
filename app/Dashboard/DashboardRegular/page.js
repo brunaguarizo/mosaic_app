@@ -19,12 +19,22 @@ import Searchbar from "../../_ui/Search_Bar/Search_Bar";
 
 export default function Dashboard() {
     const router = useRouter();
+
     const handleEggsAndBaconClick = () => {
         router.push("/ProjectSteps/EggsAndBacon/Task1");
     };
     const handleTrendsetterClick = () => {
         router.push("/ProjectSteps/Trendsetter/Task1");
     };
+
+    const handleDeleteProject = (projectName) => {
+        console.log(`Deleting project: ${projectName}`);
+    };
+
+    const handleAddToPortfolio = (projectName) => {
+        console.log(`Adding project to portfolio: ${projectName}`);
+    };
+
     return (
         <div className={styles.container}>
             {/* Status Bar */}
@@ -43,12 +53,20 @@ export default function Dashboard() {
                 ProjectName='Eggs and Bacon'
                 Interest='design'
                 onClick={handleEggsAndBaconClick}
+                onDelete={() => handleDeleteProject("Eggs and Bacon")}
+                onAddToPortfolio={() => handleAddToPortfolio("Eggs and Bacon")}
+                MenuItem1='Add to Portfolio'
+                MenuItem2='Delete Project'
             />
             <ProjectCard
                 ProjectDescription='A social media campaign for a new fashion brand for the upcoming spring/summer season.'
                 ProjectName='Trendsetter'
                 Interest='marketing'
                 onClick={handleTrendsetterClick}
+                onDelete={() => handleDeleteProject("Trendsetter")}
+                onAddToPortfolio={() => handleAddToPortfolio("Trendsetter")}
+                MenuItem1='Add to Portfolio'
+                MenuItem2='Delete Project'
             />
 
             <div className={styles.navigation_bar}>
