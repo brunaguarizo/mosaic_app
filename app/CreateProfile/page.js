@@ -11,6 +11,7 @@ import SocialMedia from "../_ui/SocialMedia/SocialMedia";
 import Button from "../_ui/Button/Button";
 import LongInput from "../_ui/Long_Input_Box/Long_Input_Box";
 import PopUp from "../_ui/PopUp/PopUp";
+import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
 
 export default function CreateProfile() {
     const [firstName, setFirstName] = useState("");
@@ -19,8 +20,10 @@ export default function CreateProfile() {
     const [aboutMe, setAboutMe] = useState("");
     const [location, setLocation] = useState("");
     const [selectedInterests, setSelectedInterests] = useState([]);
+    const [showCancelPopup, setShowCancelPopup] = useState(false);
 
     const router = useRouter();
+
     const handleSave = () => {
         if (
             !firstName ||
@@ -35,7 +38,13 @@ export default function CreateProfile() {
         } else router.push("/Dashboard");
     };
     const handleCancel = () => {
-        router.push("/SignUp");
+        setShowCancelPopup(true);
+    };
+    const UndoPopup = () => {
+        setShowCancelPopup(false);
+    };
+    const ConfirmPopup = () => {
+        router.push(".../SignIn");
     };
     const handleInterestClick = (interest) => {
         setSelectedInterests((prev) => {
@@ -145,6 +154,24 @@ export default function CreateProfile() {
                     />
                 </div>
             </div>
+            {/* Cancel Profile Creation PopUp */}
+            {showCancelPopup && (
+                <PopUp
+                    onClose={ConfirmPopup}
+                    buttonText='Confirm'
+                    buttonType='primary'
+                    secondaryButtonText='Cancel'
+                    secondaryButtonType='secondary'
+                    onSecondaryButtonClick={UndoPopup}>
+                    <h2 className={popupStyles.popup_header}>
+                        Do you wish to cancel your profile creation?
+                    </h2>
+                    <p className={popupStyles.popup_text}>
+                        To continue using Mosaic App, you must have a profile to
+                        save your projects.
+                    </p>
+                </PopUp>
+            )}
         </div>
     );
 }
