@@ -44,11 +44,13 @@ export default function ProjectName() {
             />
             {/* Progress */}
             <ProjectTitle
-                title='WanderWorks'
-                description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
+                title='Trendsetter'
+                description='A set of social media advertisements for a new fashion brand for the upcoming spring/summer season.'
                 percentage={100}
                 variant='secondary'
+                className={styles.project_title}
             />
+
             {/* Congrats */}
             <div className={styles.task_content}>
                 <h2>Congratulations!</h2>
@@ -56,12 +58,15 @@ export default function ProjectName() {
                     You completed all the tasksand finished your project.
                 </p>
             </div>
+
             {/* Content */}
             <DescriptionBox
                 title='Description'
-                description={
-                    "- Sustainability  \n - Adventure \n- Empowerment through travel  \n - Community building \n- Education on environmental conservation"
-                }
+                description={`- Sustainability
+- Adventure
+- Empowerment through travel
+- Community building
+- Education on environmental conservation`}
                 useCase='secondary'
             />
 
@@ -70,13 +75,6 @@ export default function ProjectName() {
                 startDate={3}
                 endDate={13}
             />
-
-            {/* Task */}
-            <div className={styles.task_content}>
-                <h2>1. Define Brand Elements </h2>
-                <h2>2. Design the Visual Assets</h2>
-                <h2>3. Apply Branding to Marketing Materials</h2>
-            </div>
 
             {/* Button */}
             <Button

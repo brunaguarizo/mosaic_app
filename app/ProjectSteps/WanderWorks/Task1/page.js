@@ -43,8 +43,9 @@ export default function ProjectName() {
             <ProjectTitle
                 title='WanderWorks'
                 description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
-                percentage={0}
+                percentage={33}
                 variant='secondary'
+                className={styles.project_title}
             />
 
             {/* Content */}
@@ -67,7 +68,7 @@ export default function ProjectName() {
                 <h2>1. Define Brand Elements</h2>
                 <ul className={styles.task_item}>
                     <li>
-                        Establish the brand’s mission, vision, and values to
+                        Establish the brand's mission, vision, and values to
                         ensure alignment with eco-conscious travelers.
                     </li>
                     <li>

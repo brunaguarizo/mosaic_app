@@ -3,13 +3,15 @@
     font-size: var(--font-size-regular);
     font-weight: var(--font-weight-bold);
     width: 100%;
-    padding-top: var(--space-small);
-    padding-left: var(--space-regular);
-    padding-right: var(--space-regular);
-    padding-bottom: var(--space-small);
+    height: 48px;
+    padding: 0;
     border-radius: 100px;
-    align-items: center;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 48px;
 
     &:hover {
         background-color: var(--blue-900);
@@ -41,17 +43,21 @@
 
 .small {
     font-size: var(--font-size-small);
-    padding: var(--space-small);
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .large {
-    justify-content: center;
     height: 48px;
-    display: flex;
-    font-size: var(--font-size-regular);
-    font-weight: var(--font-weight-bold);
-    padding: 0 auto;
+    line-height: 48px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .error {

@@ -16,7 +16,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/WanderWorks/Task3");
+        router.replace("/ProjectSteps/Trendsetter/Task3");
     };
     const handleLater = () => {
         router.replace("/Dashboard");
@@ -41,8 +41,8 @@ export default function ProjectName() {
             />
             {/* Progress */}
             <ProjectTitle
-                title='WanderWorks'
-                description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
+                title='Trendsetter'
+                description='A set of social media advertisements for a new fashion brand for the upcoming spring/summer season.'
                 percentage={66}
                 variant='secondary'
                 className={styles.project_title}
@@ -51,9 +51,11 @@ export default function ProjectName() {
             {/* Content */}
             <DescriptionBox
                 title='Description'
-                description={
-                    "- Sustainability  \n - Adventure \n- Empowerment through travel  \n - Community building \n- Education on environmental conservation"
-                }
+                description={`- Sustainability
+- Adventure
+- Empowerment through travel
+- Community building
+- Education on environmental conservation`}
                 useCase='secondary'
             />
 
@@ -68,17 +70,17 @@ export default function ProjectName() {
                 <h2>2. Design the Visual Assets</h2>
                 <ul className={styles.task_item}>
                     <li>
-                        Create a logo that represents sustainability and
-                        adventure (e.g., mountains, leaves, waves, or minimalist
-                        nature icons).
+                        Create a logo that represents the brand's commitment to
+                        sustainability and adventure (e.g., nature-inspired
+                        elements, eco-friendly symbols).
                     </li>
                     <li>
                         Design a brand pattern or graphic elements inspired by
-                        natural textures (wood grain, water ripples, etc.).
+                        natural landscapes and sustainable materials.
                     </li>
                     <li>
-                        Develop iconography and secondary visuals to maintain
-                        consistency across digital and print materials.
+                        Develop iconography and secondary visuals that emphasize
+                        environmental consciousness and outdoor exploration.
                     </li>
                 </ul>
             </div>

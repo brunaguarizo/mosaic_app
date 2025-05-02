@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import styles from "./Task2.module.css";
+import styles from "./Done.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Headingbar from "@/app/_ui/Heading_Bar/Heading_Bar";
 import DescriptionBox from "@/app/_ui/Description_Box/Description_Box";
@@ -16,7 +16,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/WanderWorks/Task3");
+        router.replace("/Dashboard");
     };
     const handleLater = () => {
         router.replace("/Dashboard");
@@ -37,13 +37,13 @@ export default function ProjectName() {
             {/* heading */}
             <Headingbar
                 type='navigation'
-                pagination='2/3'
+                pagination='3/3'
             />
             {/* Progress */}
             <ProjectTitle
-                title='WanderWorks'
-                description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
-                percentage={66}
+                title='Trendsetter'
+                description='A set of social media advertisements for a new fashion brand for the upcoming spring/summer season.'
+                percentage={100}
                 variant='secondary'
                 className={styles.project_title}
             />
@@ -51,9 +51,11 @@ export default function ProjectName() {
             {/* Content */}
             <DescriptionBox
                 title='Description'
-                description={
-                    "- Sustainability  \n - Adventure \n- Empowerment through travel  \n - Community building \n- Education on environmental conservation"
-                }
+                description={`- Sustainability
+- Adventure
+- Empowerment through travel
+- Community building
+- Education on environmental conservation`}
                 useCase='secondary'
             />
 
@@ -65,29 +67,20 @@ export default function ProjectName() {
 
             {/* Task */}
             <div className={styles.task_content}>
-                <h2>2. Design the Visual Assets</h2>
-                <ul className={styles.task_item}>
-                    <li>
-                        Create a logo that represents sustainability and
-                        adventure (e.g., mountains, leaves, waves, or minimalist
-                        nature icons).
-                    </li>
-                    <li>
-                        Design a brand pattern or graphic elements inspired by
-                        natural textures (wood grain, water ripples, etc.).
-                    </li>
-                    <li>
-                        Develop iconography and secondary visuals to maintain
-                        consistency across digital and print materials.
-                    </li>
-                </ul>
+                <h2>Project Completed!</h2>
+                <p className={styles.task_item}>
+                    Congratulations! You have successfully completed all tasks
+                    for the Trendsetter project. The brand's visual identity and
+                    marketing materials are now ready for the upcoming
+                    spring/summer season.
+                </p>
             </div>
 
             {/* Button */}
             <Button
                 type='primary'
                 size='large'
-                value='Task Completed'
+                value='Back to Dashboard'
                 onClick={handleNext}
             />
             <div className={styles.buttons}>

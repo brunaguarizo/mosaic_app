@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import styles from "./Task2.module.css";
+import styles from "./Task1.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Headingbar from "@/app/_ui/Heading_Bar/Heading_Bar";
 import DescriptionBox from "@/app/_ui/Description_Box/Description_Box";
@@ -16,7 +16,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/WanderWorks/Task3");
+        router.replace("/ProjectSteps/EggsAndBacon/Task2");
     };
     const handleLater = () => {
         router.replace("/Dashboard");
@@ -37,13 +37,13 @@ export default function ProjectName() {
             {/* heading */}
             <Headingbar
                 type='navigation'
-                pagination='2/3'
+                pagination='1/3'
             />
             {/* Progress */}
             <ProjectTitle
-                title='WanderWorks'
-                description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
-                percentage={66}
+                title='Eggs and Bacon'
+                description="A set of logos and posters for a new, trendy brunch cafe who's main market is millennials in Vancouver."
+                percentage={33}
                 variant='secondary'
                 className={styles.project_title}
             />
@@ -51,9 +51,7 @@ export default function ProjectName() {
             {/* Content */}
             <DescriptionBox
                 title='Description'
-                description={
-                    "- Sustainability  \n - Adventure \n- Empowerment through travel  \n - Community building \n- Education on environmental conservation"
-                }
+                description='Eggs and Bacon is a new, trendy brunch cafe in Vancouver who employed you to create a set of logos and posters to advertise their opening and brunch menu.'
                 useCase='secondary'
             />
 
@@ -65,20 +63,20 @@ export default function ProjectName() {
 
             {/* Task */}
             <div className={styles.task_content}>
-                <h2>2. Design the Visual Assets</h2>
+                <h2>1. Define Brand Elements</h2>
                 <ul className={styles.task_item}>
                     <li>
-                        Create a logo that represents sustainability and
-                        adventure (e.g., mountains, leaves, waves, or minimalist
-                        nature icons).
+                        Establish the brand's mission, vision, and values to
+                        ensure alignment with millennial market.
                     </li>
                     <li>
-                        Design a brand pattern or graphic elements inspired by
-                        natural textures (wood grain, water ripples, etc.).
+                        Choose a brand name, tagline, and tone of voice that
+                        convey trendiness and brunch culture.
                     </li>
                     <li>
-                        Develop iconography and secondary visuals to maintain
-                        consistency across digital and print materials.
+                        Identify a color palette (warm breakfast colors, modern
+                        neutrals) that reflects the cafe's vibe. Select
+                        typography that is clean, modern, and food-friendly.
                     </li>
                 </ul>
             </div>
