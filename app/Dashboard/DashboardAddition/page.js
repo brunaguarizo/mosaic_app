@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import styles from "../Dashboard.module.css";
+import styles from "@/app/Dashboard/DashboardRegular/Dashboard.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Profile_Cover_Box from "../../_ui/Profile_Cover_Box/Profile_Cover_Box";
 import SingleInput from "../../_ui/Input_Box/Input_Box";
