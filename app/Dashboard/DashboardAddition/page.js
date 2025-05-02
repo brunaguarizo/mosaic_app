@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import styles from "../Dashboard.module.css";
+import styles from "@/app/Dashboard/DashboardRegular/Dashboard.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Profile_Cover_Box from "../../_ui/Profile_Cover_Box/Profile_Cover_Box";
 import SingleInput from "../../_ui/Input_Box/Input_Box";
@@ -19,23 +19,19 @@ import Searchbar from "../../_ui/Search_Bar/Search_Bar";
 
 export default function DashboardAddition() {
     const router = useRouter();
+
     const handleEggsAndBaconClick = () => {
         router.push("/ProjectSteps/EggsAndBacon/Task1");
     };
     const handleTrendsetterClick = () => {
         router.push("/ProjectSteps/Trendsetter/Task1");
     };
-    const handleWanderWorksClick = () => {
-        router.push("/ProjectSteps/WanderWorks/Task1");
-    };
 
     const handleDeleteProject = (projectName) => {
-        // TODO: Implement project deletion logic
         console.log(`Deleting project: ${projectName}`);
     };
 
     const handleAddToPortfolio = (projectName) => {
-        // TODO: Implement add to portfolio logic
         console.log(`Adding project to portfolio: ${projectName}`);
     };
 
@@ -73,12 +69,12 @@ export default function DashboardAddition() {
                 MenuItem2='Delete Project'
             />
             <ProjectCard
-                ProjectDescription='A travel app that helps users discover and book unique local experiences around the world.'
-                ProjectName='WanderWorks'
-                Interest='ux/ui'
-                onClick={handleWanderWorksClick}
-                onDelete={() => handleDeleteProject("WanderWorks")}
-                onAddToPortfolio={() => handleAddToPortfolio("WanderWorks")}
+                ProjectDescription='A social media campaign for a new fashion brand for the upcoming spring/summer season.'
+                ProjectName='Trendsetter'
+                Interest='marketing'
+                onClick={handleTrendsetterClick}
+                onDelete={() => handleDeleteProject("Trendsetter")}
+                onAddToPortfolio={() => handleAddToPortfolio("Trendsetter")}
                 MenuItem1='Add to Portfolio'
                 MenuItem2='Delete Project'
             />
