@@ -30,7 +30,7 @@ function Headingbar({ heading, type }) {
         [styles.hidden]: !isVisible("pagination"),
     });
     const handleSearchIconClick = () => {
-        router.replace("/Onboarding/StepTwo");
+        
     };
 
     return (
