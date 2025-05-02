@@ -1,8 +1,15 @@
 import styles from "./Create_Project_Button.module.css";
+import { useRouter } from "next/navigation";
 
-function CreateProject() {
+function CreateProject(onClick) {
+    const router = useRouter();
+    const handleCreateProjectClick = () => {
+        router.push("/CreateProject/Intro");
+    };
     return (
-        <button className={styles.button_background}>
+        <button
+            className={styles.button_background}
+            onClick={handleCreateProjectClick}>
             <div>
                 <svg
                     className={styles.button_icon}

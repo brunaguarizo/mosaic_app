@@ -25,8 +25,8 @@ function ProjectCard({
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     //control visibility of pop-ups
-    const [showAddedToPortfolio, setShowAddedToPortfolio] = useState("false");
-    const [showDeleteProject, setShowDeleteProject] = useState("false");
+    const [showAddedToPortfolio, setShowAddedToPortfolio] = useState(false);
+    const [showDeleteProject, setShowDeleteProject] = useState(false);
     const [showAddedToPortfolioPopup, setShowAddedToPortfolioPopup] =
         useState(false);
     const [showDeleteProjectPopup, setShowDeleteProjectPopup] = useState(false);
