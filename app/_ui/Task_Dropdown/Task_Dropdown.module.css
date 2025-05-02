@@ -1,8 +1,11 @@
 .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
     padding: var(--space-regular);
     border-radius: var(--space-small);
     font-family: var(--font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-regular);
     width: 361px;
 }
 
@@ -15,7 +18,7 @@
     align-items: center;
     font-weight: bold;
     padding: var(--space-small);
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-medium);
     font-family: var(--font-family);
 }
 

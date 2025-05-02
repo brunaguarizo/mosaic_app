@@ -26,10 +26,14 @@ function ProgressBar({ CompletionAmount }) {
             </div>
             <div className={styles.content_row}>
                 <div className={styles.bar_text}>
-                    <h1 className={styles.bar_amount}>{CompletionAmount} %</h1>
+                    <h1 className={styles.bar_amount}>{CompletionAmount}%</h1>
                     <p className={styles.bar_completion}>Completed</p>
                 </div>
-                <div className={styles.bar}></div>
+                <div className={styles.bar_container}>
+                    <div
+                        className={styles.bar}
+                        style={{ width: `${CompletionAmount}%` }}></div>
+                </div>
             </div>
         </div>
     );

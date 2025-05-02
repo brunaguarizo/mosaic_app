@@ -11,7 +11,7 @@
     max-height: 852px;
     box-sizing: border-box;
     overflow-y: auto;
-    margin: 0;
+    margin-top: 100px;
 }
 
 .skipButton {
@@ -103,10 +103,24 @@
     border: none;
     background: none;
     color: var(--blue-primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 361px;
+    margin: 0 auto;
+    padding: 0;
+    cursor: pointer;
 }
 
 .nextButton:hover {
     color: var(--blue-900);
+}
+
+.right {
+    width: 44px;
+    height: 52px;
+    margin-left: auto;
 }
 
 .backButton {

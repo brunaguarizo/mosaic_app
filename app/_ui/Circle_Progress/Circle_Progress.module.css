@@ -18,11 +18,11 @@
 }
 
 .progressCircleBg {
-    stroke: white;
+    stroke: var(--blue-100);
 }
 
 .progressCircleIndicator {
-    stroke: var(--blue-primary);
+    stroke: var(--white);
     transition: stroke-dashoffset 0.5s ease-in-out;
 }
 
@@ -35,7 +35,7 @@
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-regular);
     font-family: var(--font-family);
-    color: black;
+    color: var(--white);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
