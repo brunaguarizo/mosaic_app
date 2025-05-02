@@ -2,13 +2,26 @@
 import classNames from "classnames";
 import styles from "./Heading_Bar.module.css";
 import Searchbar from "../Search_Bar/Search_Bar";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 function Headingbar({ heading, type, pagination }) {
     const router = useRouter();
+    const pathname = usePathname();
 
     const handleBack = () => {
-        router.back();
+        const currentPage = pathname.split("/").pop();
+
+        if (currentPage === "Task1") {
+            router.push("/ProjectSteps/WanderWorks/ProjectName");
+        } else if (currentPage === "Task2") {
+            router.push("/ProjectSteps/WanderWorks/Task1");
+        } else if (currentPage === "Task3") {
+            router.push("/ProjectSteps/WanderWorks/Task2");
+        } else if (currentPage === "Done") {
+            router.push("/ProjectSteps/WanderWorks/Task3");
+        } else {
+            router.back();
+        }
     };
 
     if (type === "navigation") {

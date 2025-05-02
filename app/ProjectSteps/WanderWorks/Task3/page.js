@@ -45,6 +45,7 @@ export default function ProjectName() {
                 description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
                 percentage={75}
                 variant='secondary'
+                className={styles.project_title}
             />
 
             {/* Content */}

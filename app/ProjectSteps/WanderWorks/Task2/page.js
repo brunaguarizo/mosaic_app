@@ -43,8 +43,9 @@ export default function ProjectName() {
             <ProjectTitle
                 title='WanderWorks'
                 description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
-                percentage={35}
+                percentage={66}
                 variant='secondary'
+                className={styles.project_title}
             />
 
             {/* Content */}
