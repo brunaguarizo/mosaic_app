@@ -66,6 +66,7 @@ export default function DashboardAddition() {
                 MenuItem1='Add to Portfolio'
                 MenuItem2='Delete Project'
             />
+
             <ProjectCard
                 ProjectName='WanderWorks'
                 Interest='marketing'
@@ -75,6 +76,7 @@ export default function DashboardAddition() {
                 MenuItem1='Add to Portfolio'
                 MenuItem2='Delete Project'
             />
+
 
             <div className={styles.navigation_bar}>
                 <Navbar />

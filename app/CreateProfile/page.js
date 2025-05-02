@@ -22,6 +22,7 @@ export default function CreateProfile() {
     const [location, setLocation] = useState("");
     const [selectedInterests, setSelectedInterests] = useState([]);
     const [showCancelPopup, setShowCancelPopup] = useState(false);
+    const [showSavePopup, setShowSavePopup] = useState(false);
     const [showIncompleteProfilePopup, setShowIncompleteProfilePopup] =
         useState(false);
     const [showAvatarPickerPopup, setShowAvatarPickerPopup] = useState(false);
@@ -41,15 +42,22 @@ export default function CreateProfile() {
         ) {
             setShowIncompleteProfilePopup(true);
             return;
-        } else router.push("/Dashboard");
+        } else {
+            setShowSavePopup(true);
+            // router.push("/Dashboard");
+        }
     };
 
     const handleCancel = () => {
         setShowCancelPopup(false);
+
+        setShowSavePopup(false);
+
     };
 
     const handleCancelPopup = () => {
         setShowCancelPopup(false);
+        setShowSavePopup(false);
     };
 
     const handleCloseIncompleteProfilePopup = () => {
@@ -58,6 +66,9 @@ export default function CreateProfile() {
 
     const handleConfirm = () => {
         router.push("/SignIn");
+    };
+    const handleConfirmSave = () => {
+        router.push("/Dashboard/DashboardRegular");
     };
 
     const handleInterestClick = (interest) => {
@@ -200,6 +211,24 @@ export default function CreateProfile() {
                     </p>
                 </PopUp>
             )}
+            {/* Save Profile Creation PopUp */}
+            {showSavePopup && (
+                <PopUp
+                    onClose={handleConfirmSave}
+                    buttonText='Confirm'
+                    buttonType='primary'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='secondary'
+                    onSecondaryButtonClick={handleCancel}>
+                    <h2 className={popupStyles.popup_header}>
+                        Profile changes successfully saved
+                    </h2>
+                    <p className={popupStyles.popup_text}>
+                        You have successfully saved the changes to your profile
+                    </p>
+                </PopUp>
+            )}
+
             {/* Incomplete profile data popup */}
             {showIncompleteProfilePopup && (
                 <PopUp
