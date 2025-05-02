@@ -1,13 +1,13 @@
 import Tag from "../Tag/Tag";
 import styles from "./Portfolio_Card.module.css";
 
-const PortfolioCard = () => {
+const PortfolioCard = ({ ProjectName, ProjectImage, interest }) => {
     return (
         <div className={styles.container}>
             <div className={styles.top}>
                 <img
                     className={styles.image}
-                    src='/portfolio/fish.png'
+                    src={ProjectImage}
                     alt='Fish'
                 />
                 <svg
@@ -21,8 +21,8 @@ const PortfolioCard = () => {
                 </svg>
             </div>
             <div className={styles.bottom}>
-                <p className={styles.text}>Fish Friends</p>
-                <Tag interest='uxui' />
+                <p className={styles.text}>{ProjectName}</p>
+                <Tag interest={interest} />
             </div>
         </div>
     );
