@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import styles from "./Completed.module.css";
+import styles from "./Done.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Headingbar from "@/app/_ui/Heading_Bar/Heading_Bar";
 import DescriptionBox from "@/app/_ui/Description_Box/Description_Box";
@@ -10,14 +10,9 @@ import { useState } from "react";
 import PopUp from "@/app/_ui/PopUp/PopUp";
 import ProjectTitle from "@/app/_ui/Project_Title/Project_Title";
 import DateCard from "@/app/_ui/Date_Card/Date_Card";
-
 export default function ProjectName() {
     const router = useRouter();
     const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    const handleNext = () => {
-        router.replace("/ProjectSteps/WanderWorks/Done");
-    };
 
     const handlePortfolio = () => {
         setIsPopupOpen(true);
@@ -31,7 +26,6 @@ export default function ProjectName() {
         setIsPopupOpen(false);
         router.replace("/");
     };
-
     return (
         <div className={styles.container}>
             {/* Status Bar */}
@@ -44,11 +38,13 @@ export default function ProjectName() {
             />
             {/* Progress */}
             <ProjectTitle
-                title='WanderWorks'
-                description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
+                title='Eggs and Bacon'
+                description="A set of logos and posters for a new, trendy brunch cafe who's main market is millennials in Vancouver."
                 percentage={100}
                 variant='secondary'
+                className={styles.project_title}
             />
+
             {/* Congrats */}
             <div className={styles.task_content}>
                 <h2>Congratulations!</h2>
@@ -56,12 +52,11 @@ export default function ProjectName() {
                     You completed all the tasksand finished your project.
                 </p>
             </div>
+
             {/* Content */}
             <DescriptionBox
                 title='Description'
-                description={
-                    "- Sustainability  \n - Adventure \n- Empowerment through travel  \n - Community building \n- Education on environmental conservation"
-                }
+                description='Eggs and Bacon is a new, trendy brunch cafe in Vancouver who employed you to create a set of logos and posters to advertise their opening and brunch menu.'
                 useCase='secondary'
             />
 
@@ -71,22 +66,9 @@ export default function ProjectName() {
                 endDate={13}
             />
 
-            {/* Task */}
-            <div className={styles.task_content}>
-                <h2>1. Define Brand Elements </h2>
-                <h2>2. Design the Visual Assets</h2>
-                <h2>3. Apply Branding to Marketing Materials</h2>
-            </div>
-
             {/* Button */}
             <Button
                 type='primary'
-                size='large'
-                value='View Project'
-                onClick={handleNext}
-            />
-            <Button
-                type='secondary'
                 size='large'
                 value='Add to Portfolio'
                 onClick={handlePortfolio}
@@ -98,23 +80,23 @@ export default function ProjectName() {
 
             {isPopupOpen && (
                 <PopUp
-                    isOpen={isPopupOpen}
-                    onClose={() => setIsPopupOpen(false)}
-                    title='Project added to portfolio'
-                    description='You have successfully added this project to your portfolio'
-                    buttons={[
-                        {
-                            text: "Undo",
-                            variant: "tertiary",
-                            onClick: handleUndo,
-                        },
-                        {
-                            text: "Confirm",
-                            variant: "primary",
-                            onClick: handleConfirm,
-                        },
-                    ]}
-                />
+                    onClose={() => {
+                        setIsPopupOpen(false);
+                        router.replace("/Dashboard");
+                    }}
+                    buttonText='Confirm'
+                    buttonType='primary'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='terciary'
+                    onSecondaryButtonClick={() => setIsPopupOpen(false)}>
+                    <h2 className={styles.popup_header}>
+                        Project added to portfolio
+                    </h2>
+                    <p>
+                        You have successfully added this project to your
+                        portfolio{" "}
+                    </p>
+                </PopUp>
             )}
         </div>
     );
