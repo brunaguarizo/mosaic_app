@@ -22,6 +22,8 @@ export default function CreateProfile() {
     const [location, setLocation] = useState("");
     const [selectedInterests, setSelectedInterests] = useState([]);
     const [showCancelPopup, setShowCancelPopup] = useState(false);
+    const [showIncompleteProfilePopup, setShowIncompleteProfilePopup] =
+        useState(false);
     const [showAvatarPickerPopup, setShowAvatarPickerPopup] = useState(false);
     const [selectedAvatar, setSelectedAvatar] = useState(null);
 
@@ -37,9 +39,7 @@ export default function CreateProfile() {
             selectedInterests.length === 0 ||
             !selectedAvatar
         ) {
-            alert(
-                "Please fill out all fields and select an avatar before proceeding."
-            );
+            setShowIncompleteProfilePopup(true);
             return;
         } else router.push("/Dashboard");
     };
@@ -48,11 +48,15 @@ export default function CreateProfile() {
         setShowCancelPopup(true);
     };
 
-    const UndoPopup = () => {
+    const handleCancelPopup = () => {
         setShowCancelPopup(false);
     };
 
-    const ConfirmPopup = () => {
+    const handleCloseIncompleteProfilePopup = () => {
+        setShowIncompleteProfilePopup(false);
+    };
+
+    const handleConfirm = () => {
         router.push("/SignIn");
     };
 
@@ -181,12 +185,12 @@ export default function CreateProfile() {
             {/* Cancel Profile Creation PopUp */}
             {showCancelPopup && (
                 <PopUp
-                    onClose={ConfirmPopup}
+                    onClose={handleConfirm}
                     buttonText='Confirm'
                     buttonType='primary'
                     secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
-                    onSecondaryButtonClick={UndoPopup}>
+                    onSecondaryButtonClick={handleCancelPopup}>
                     <h2 className={popupStyles.popup_header}>
                         Do you wish to cancel your profile creation?
                     </h2>
@@ -194,6 +198,17 @@ export default function CreateProfile() {
                         To continue using Mosaic App, you must have a profile to
                         save your projects.
                     </p>
+                </PopUp>
+            )}
+            {/* Incomplete profile data popup */}
+            {showIncompleteProfilePopup && (
+                <PopUp
+                    onClose={handleCloseIncompleteProfilePopup}
+                    buttonText='Ok'
+                    buttonType='primary'>
+                    <h2 className={popupStyles.popup_header}>
+                        Please fill out all fields and select an avatar before
+                    </h2>
                 </PopUp>
             )}
             {/* Avatar Picker Popup */}
