@@ -12,6 +12,7 @@ import Button from "../_ui/Button/Button";
 import LongInput from "../_ui/Long_Input_Box/Long_Input_Box";
 import PopUp from "../_ui/PopUp/PopUp";
 import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
+import AvatarPicker from "../_ui/Profile_Avatar_PopUp/Profile_Avatar_PopUp";
 
 export default function CreateProfile() {
     const [firstName, setFirstName] = useState("");
@@ -21,6 +22,8 @@ export default function CreateProfile() {
     const [location, setLocation] = useState("");
     const [selectedInterests, setSelectedInterests] = useState([]);
     const [showCancelPopup, setShowCancelPopup] = useState(false);
+    const [showAvatarPickerPopup, setShowAvatarPickerPopup] = useState(false);
+    const [selectedAvatar, setSelectedAvatar] = useState(null);
 
     const router = useRouter();
 
@@ -31,21 +34,28 @@ export default function CreateProfile() {
             !username ||
             !aboutMe ||
             !location ||
-            selectedInterests.length === 0
+            selectedInterests.length === 0 ||
+            !selectedAvatar
         ) {
-            alert("Please fill out all fields before proceeding.");
+            alert(
+                "Please fill out all fields and select an avatar before proceeding."
+            );
             return;
         } else router.push("/Dashboard");
     };
+
     const handleCancel = () => {
         setShowCancelPopup(true);
     };
+
     const UndoPopup = () => {
         setShowCancelPopup(false);
     };
+
     const ConfirmPopup = () => {
-        router.push(".../SignIn");
+        router.push("/SignIn");
     };
+
     const handleInterestClick = (interest) => {
         setSelectedInterests((prev) => {
             if (prev.includes(interest)) {
@@ -55,11 +65,25 @@ export default function CreateProfile() {
             }
         });
     };
+
+    const handleAvatarClick = () => {
+        setShowAvatarPickerPopup(true);
+    };
+
+    const handleAvatarSelect = (avatarSrc) => {
+        setSelectedAvatar(avatarSrc);
+        setShowAvatarPickerPopup(false);
+    };
+
     return (
         <div className={styles.container}>
             {/* Status Bar */}
             <StatusBar />
-            <Profile_Cover_Box type='secondary' />
+            <Profile_Cover_Box
+                type='secondary'
+                onClick={handleAvatarClick}
+                avatarSrc={selectedAvatar}
+            />
             <SingleInput
                 type='secondary'
                 placeholder='First Name'
@@ -171,6 +195,14 @@ export default function CreateProfile() {
                         save your projects.
                     </p>
                 </PopUp>
+            )}
+            {/* Avatar Picker Popup */}
+            {showAvatarPickerPopup && (
+                <AvatarPicker
+                    isOpen={showAvatarPickerPopup}
+                    onClose={() => setShowAvatarPickerPopup(false)}
+                    onSelect={handleAvatarSelect}
+                />
             )}
         </div>
     );

@@ -3,7 +3,15 @@ import AvatarPicker from "../Profile_Avatar_PopUp/Profile_Avatar_PopUp";
 import { useState } from "react";
 import classNames from "classnames";
 
-function ProfileCover({ username, city, province, location, type }) {
+function ProfileCover({
+    username,
+    city,
+    province,
+    location,
+    type,
+    onClick,
+    avatarSrc,
+}) {
     const ContainerClasses = classNames(styles.container, {
         [styles.secondary]: type === "secondary",
     });
@@ -23,10 +31,11 @@ function ProfileCover({ username, city, province, location, type }) {
         <div className={ContainerClasses}>
             <div className={styles.background_cover}></div>
             <img
-                src='/Avatars/Purple_Avatar.svg'
+                src={avatarSrc || "/Avatars/Purple_Avatar.svg"}
                 className={AvatarClasses}
+                alt='Profile Avatar'
             />
-            <a href='/'>
+            <div onClick={onClick}>
                 <svg
                     viewBox='0 0 20 21'
                     fill='none'
@@ -37,7 +46,7 @@ function ProfileCover({ username, city, province, location, type }) {
                         fill='#141414'
                     />
                 </svg>
-            </a>
+            </div>
             <div />
             <div className={ProfileInfoClasses}>
                 <p className={styles.username}>{username}</p>
