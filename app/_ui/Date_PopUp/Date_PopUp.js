@@ -21,10 +21,19 @@ const months = [
 
 const years = [2025, 2026, 2027, 2028, 2029, 2020];
 
-export default function DatePicker() {
-    const [selectedMonth, setSelectedMonth] = useState(4); // May
-    const [selectedYear, setSelectedYear] = useState(2025);
-    const [selectedDates, setSelectedDates] = useState([3, 13]);
+export default function DatePicker({
+    startDate,
+    endDate,
+    onChange,
+    onSave,
+    onCancel,
+}) {
+    const [selectedMonth, setSelectedMonth] = useState(startDate.getMonth());
+    const [selectedYear, setSelectedYear] = useState(startDate.getFullYear());
+    const [selectedDates, setSelectedDates] = useState([
+        startDate.getDate(),
+        endDate.getDate(),
+    ]);
     const [showMonthList, setShowMonthList] = useState(false);
     const [showYearList, setShowYearList] = useState(false);
 
@@ -48,6 +57,20 @@ export default function DatePicker() {
         if (updated.length === 2) updated.length = 0;
         updated.push(day);
         setSelectedDates(updated.sort((a, b) => a - b));
+
+        if (updated.length === 2) {
+            const newStartDate = new Date(
+                selectedYear,
+                selectedMonth,
+                updated[0]
+            );
+            const newEndDate = new Date(
+                selectedYear,
+                selectedMonth,
+                updated[1]
+            );
+            onChange([newStartDate, newEndDate]);
+        }
     };
 
     const isInRange = (day) => {
@@ -133,12 +156,12 @@ export default function DatePicker() {
                     <Button
                         type='secondary'
                         value='Cancel'
-                        onClick={() => {}}
+                        onClick={onCancel}
                     />
                     <Button
                         type='primary'
                         value='Save'
-                        onClick={() => {}}
+                        onClick={onSave}
                     />
                 </div>
             </div>

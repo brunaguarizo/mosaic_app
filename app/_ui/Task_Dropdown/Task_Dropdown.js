@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Task_Dropdown.module.css";
 
-function TaskDropDown({ sections }) {
+function TaskDropDown({ children }) {
     const [openIndex, setOpenIndex] = useState(null);
 
     const handleToggle = (idx) => {
@@ -10,15 +10,17 @@ function TaskDropDown({ sections }) {
 
     return (
         <div className={styles.dropdown}>
-            {sections.map((section, idx) => (
+            {React.Children.map(children, (child, idx) => (
                 <div
                     key={idx}
                     className={styles.section}>
                     <div
                         className={styles.header}
                         onClick={() => handleToggle(idx)}>
-                        <span className={styles.index}>{section.index}.</span>
-                        <span className={styles.title}>{section.title}</span>
+                        <span className={styles.index}>{idx + 1}.</span>
+                        <span className={styles.title}>
+                            {child.props.title}
+                        </span>
                         <span className={styles.arrow}>
                             {openIndex === idx ? (
                                 <svg
@@ -81,13 +83,7 @@ function TaskDropDown({ sections }) {
                         </span>
                     </div>
                     {openIndex === idx && (
-                        <div className={styles.content}>
-                            <ul>
-                                {section.items.map((item, i) => (
-                                    <li key={i}>{item}</li>
-                                ))}
-                            </ul>
-                        </div>
+                        <div className={styles.content}>{child}</div>
                     )}
                     <div className={styles.divider}></div>
                 </div>
