@@ -50,6 +50,11 @@
 .dropdown__item:hover {
     background-color: var(--blue-50);
 }
+.project_chips {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: var(--space-regular);
+}
 
 .card__icon {
     fill: var(--blue-primary);

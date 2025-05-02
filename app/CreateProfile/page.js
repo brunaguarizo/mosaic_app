@@ -50,7 +50,9 @@ export default function CreateProfile() {
 
     const handleCancel = () => {
         setShowCancelPopup(false);
+
         setShowSavePopup(false);
+
     };
 
     const handleCancelPopup = () => {

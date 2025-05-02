@@ -24,6 +24,28 @@ function Headingbar({ heading, type, pagination }) {
         }
     };
 
+    const isVisible = (rowType) => type === rowType;
+
+    const navigationRowClasses = classNames(styles.row, styles.navigationRow, {
+        [styles.visible]: isVisible("navigation"),
+        [styles.hidden]: !isVisible("navigation"),
+    });
+
+    const headingRowClasses = classNames(styles.row, styles.headingRow, {
+        [styles.visible]: isVisible("heading"),
+        [styles.hidden]: !isVisible("heading"),
+    });
+
+    const searchRowClasses = classNames(styles.row, styles.searchRow, {
+        [styles.visible]: isVisible("search"),
+        [styles.hidden]: !isVisible("search"),
+    });
+
+    const paginationRowClasses = classNames(styles.row, styles.paginationRow, {
+        [styles.visible]: isVisible("pagination"),
+        [styles.hidden]: !isVisible("pagination"),
+    });
+
     if (type === "navigation") {
         return (
             <div className={styles.contentInner}>
