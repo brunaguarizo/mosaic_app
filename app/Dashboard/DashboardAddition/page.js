@@ -49,7 +49,6 @@ export default function DashboardAddition() {
             </div>
 
             <ProjectCard
-                ProjectDescription="A set of logos and posters for a new, trendy brunch cafe who's main market is millennials in Vancouver."
                 ProjectName='Eggs and Bacon'
                 Interest='design'
                 onClick={handleEggsAndBaconClick}
@@ -59,7 +58,6 @@ export default function DashboardAddition() {
                 MenuItem2='Delete Project'
             />
             <ProjectCard
-                ProjectDescription='A social media campaign for a new fashion brand for the upcoming spring/summer season.'
                 ProjectName='Trendsetter'
                 Interest='marketing'
                 onClick={handleTrendsetterClick}
@@ -69,7 +67,6 @@ export default function DashboardAddition() {
                 MenuItem2='Delete Project'
             />
             <ProjectCard
-                ProjectDescription='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
                 ProjectName='WanderWorks'
                 Interest='marketing'
                 onClick={handleTrendsetterClick}
