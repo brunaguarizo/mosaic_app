@@ -1,17 +1,57 @@
 "use client";
+
 import { useState } from "react";
 import styles from "./Project_card.module.css";
 import Button from "../Button/Button";
 import Tag from "../Tag/Tag";
 import ProgressCircle from "../Circle_Progress/Circle_Progress";
+import PopUp from "../PopUp/PopUp";
+import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
+import { useRouter } from "next/navigation";
 
-function ProjectCard() {
+function ProjectCard({
+    ProjectName,
+    ProjectDescription,
+    Interest,
+    onClick,
+    onAddToPortfolioClick,
+    onDeleteProjectClick,
+    MenuItem1,
+    MenuItem2,
+}) {
+    const router = useRouter();
+
     // Control visibility - menu dropdown
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    //control visibility of pop-ups
+    const [showAddedToPortfolio, setShowAddedToPortfolio] = useState("false");
+    const [showDeleteProject, setShowDeleteProject] = useState("false");
+    const [showAddedToPortfolioPopup, setShowAddedToPortfolioPopup] =
+        useState(false);
+    const [showDeleteProjectPopup, setShowDeleteProjectPopup] = useState(false);
 
     // Switch visibility - menu dropdown
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    //Handle pop-up actions
+    const handleConfirm = () => {
+        router.push("/Portfolio");
+    };
+
+    const handleCancel = () => {
+        setShowAddedToPortfolioPopup(false);
+        setShowDeleteProject(false);
+    };
+
+    const handleAddToPortfolio = () => {
+        setShowAddedToPortfolioPopup(true);
+    };
+
+    const handleDeleteProject = () => {
+        setShowDeleteProject(true);
     };
 
     return (
@@ -33,11 +73,15 @@ function ProjectCard() {
                 {isMenuOpen && (
                     <div className={styles.dropdown__menu}>
                         <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                                Add to Portfolio
+                            <li
+                                className={styles.dropdown__item}
+                                onClick={handleAddToPortfolio}>
+                                {MenuItem1}
                             </li>
-                            <li className={styles.dropdown__item}>
-                                Delete Project
+                            <li
+                                className={styles.dropdown__item}
+                                onClick={handleDeleteProject}>
+                                {MenuItem2}
                             </li>
                         </ul>
                     </div>
@@ -45,13 +89,12 @@ function ProjectCard() {
             </div>
             <ProgressCircle percentage={30} />
 
-            <p className={styles.card__title}>Eggs and Bacon</p>
-            <Tag />
+            <p className={styles.card__title}>{ProjectName}</p>
+            <div className={styles.project_chips}>
+                <Tag interest={Interest} />
+            </div>
 
-            <p className={styles.card__text}>
-                A set of logos and posters for a new, trendy brunch cafe who's
-                main market is millennials in Vancouver.
-            </p>
+            <p className={styles.card__text}>{ProjectDescription}</p>
             <div className={styles.date}>
                 <svg
                     className={styles.date__icon}
@@ -65,10 +108,40 @@ function ProjectCard() {
                 <p className={styles.card__text}>01 May, 2025 - 15 May, 2025</p>
             </div>
             <Button
-                value='Primary Button'
+                value='Open Project'
                 type='primary'
-                //onClick={}
+                onClick={onClick}
             />
+            {showAddedToPortfolioPopup && (
+                <PopUp
+                    onClose={handleConfirm}
+                    buttonText='Confirm'
+                    buttonType='primary'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='secondary'
+                    onSecondaryButtonClick={handleCancel}>
+                    <h2 className={popupStyles.popup_header}>
+                        Project added to portfolio
+                    </h2>
+                    <p className={popupStyles.popup_text}>
+                        You have successfully added this project to your
+                        portfolio
+                    </p>
+                </PopUp>
+            )}
+            {showDeleteProject && (
+                <PopUp
+                    onClose={handleCancel}
+                    buttonText='Confirm'
+                    buttonType='primary'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='secondary'
+                    onSecondaryButtonClick={handleCancel}>
+                    <h2 className={popupStyles.popup_header}>
+                        Do you wish to delete this project permanently?
+                    </h2>
+                </PopUp>
+            )}
         </div>
     );
 }

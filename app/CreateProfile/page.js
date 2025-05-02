@@ -45,7 +45,7 @@ export default function CreateProfile() {
     };
 
     const handleCancel = () => {
-        setShowCancelPopup(true);
+        setShowCancelPopup(false);
     };
 
     const handleCancelPopup = () => {
