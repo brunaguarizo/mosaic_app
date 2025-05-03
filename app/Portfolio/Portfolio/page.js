@@ -9,6 +9,7 @@ import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import { useState } from "react";
 
 export default function PortfolioHome() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <>
             <div className={styles.container}>
@@ -68,6 +69,22 @@ export default function PortfolioHome() {
                         interest='backend'
                     />
                 </div>
+                {isMenuOpen && (
+                    <div className={styles.dropdown__menu}>
+                        <ul className={styles.dropdown__list}>
+                            <li
+                                className={styles.dropdown__item}
+                                onClick={handleAddToPortfolio}>
+                                {MenuItem1}
+                            </li>
+                            <li
+                                className={styles.dropdown__item}
+                                onClick={handleDeleteProject}>
+                                {MenuItem2}
+                            </li>
+                        </ul>
+                    </div>
+                )}
                 <Navbar className={styles.navigation_bar} />
             </div>
         </>
