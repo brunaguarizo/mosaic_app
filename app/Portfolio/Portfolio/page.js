@@ -7,9 +7,30 @@ import Tag from "@/app/_ui/Tag/Tag";
 import InterestChip from "@/app/_ui/Interest_Chip/Interest_Chip";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function PortfolioHome() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const router = useRouter();
+
+    const handleFishFriendsClick = () => {
+        router.push("/Portfolio/Portfolio");
+    };
+    const handleSodaSummerClick = () => {
+        router.push("/Portfolio/Portfolio");
+    };
+    const handlePiannatoClick = () => {
+        router.push("/Portfolio/Portfolio");
+    };
+    const handleTreeRootClick = () => {
+        router.push("/Portfolio/Portfolio");
+    };
+    const handleWeatherLikeClick = () => {
+        router.push("/Portfolio/Portfolio");
+    };
+    const handleCapiCafeClick = () => {
+        router.push("/Portfolio/Portfolio");
+    };
+
     return (
         <>
             <div className={styles.container}>
@@ -42,49 +63,40 @@ export default function PortfolioHome() {
                         ProjectName='FishFriends'
                         ProjectImage='../Portfolio/fish.png'
                         interest='uxui'
+                        onClick={handleFishFriendsClick}
                     />
                     <PortfolioCard
                         ProjectName='Soda Summer'
                         ProjectImage='../Portfolio/soda.png'
                         interest='design'
+                        onClick={handleSodaSummerClick}
                     />
                     <PortfolioCard
                         ProjectName='Piannato'
                         ProjectImage='../Portfolio/piannato.png'
                         interest='design'
+                        onClick={handlePiannatoClick}
                     />
                     <PortfolioCard
                         ProjectName='Tree Roots'
                         ProjectImage='../Portfolio/rootbeer.png'
                         interest='marketing'
+                        onClick={handleTreeRootClick}
                     />
                     <PortfolioCard
                         ProjectName='Weather Like'
                         ProjectImage='../Portfolio/weather.png'
                         interest='frontend'
+                        onClick={handleWeatherLikeClick}
                     />
                     <PortfolioCard
                         ProjectName='Capi Cafe'
                         ProjectImage='../Portfolio/capicafe.png'
                         interest='backend'
+                        onClick={handleCapiCafeClick}
                     />
                 </div>
-                {isMenuOpen && (
-                    <div className={styles.dropdown__menu}>
-                        <ul className={styles.dropdown__list}>
-                            <li
-                                className={styles.dropdown__item}
-                                onClick={handleAddToPortfolio}>
-                                {MenuItem1}
-                            </li>
-                            <li
-                                className={styles.dropdown__item}
-                                onClick={handleDeleteProject}>
-                                {MenuItem2}
-                            </li>
-                        </ul>
-                    </div>
-                )}
+
                 <Navbar className={styles.navigation_bar} />
             </div>
         </>
