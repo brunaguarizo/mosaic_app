@@ -21,7 +21,6 @@ export default function SignIn() {
         } else {
             router.replace("/SignIn/VerificationCode");
         }
-        r;
     };
     const handleCloseIncompleteProfilePopup = () => {
         setShowIncompleteProfilePopup(false);
@@ -93,7 +92,7 @@ export default function SignIn() {
             <SingleInput
                 type='secondary'
                 placeholder='Email'
-                onChange={(e) => setAboutMe(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
             />
             {/* Button */}
             <Button
