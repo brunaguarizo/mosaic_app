@@ -26,7 +26,7 @@ export default function ProjectName() {
 
     const handleConfirm = () => {
         setIsPopupOpen(false);
-        router.replace("/");
+        router.replace("/Portfolio/Portfolio");
     };
 
     return (
@@ -126,7 +126,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setIsPopupOpen(false);
-                        router.replace("/Dashboard");
+                        router.replace("/Portfolio/Portfolio");
                     }}
                     buttonText='Confirm'
                     buttonType='primary'

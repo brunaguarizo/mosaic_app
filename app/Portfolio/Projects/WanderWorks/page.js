@@ -33,10 +33,10 @@ export default function WanderworksInfo() {
                 <DescriptionBox
                     title='Desciption'
                     description='Sustainability
-Adventure
-Empowerment through travel
-Community building
-Education on environmental conservation'
+                Adventure
+                Empowerment through travel
+                Community building
+                Education on environmental conservation'
                     useCase='secondary'
                 />
                 <DescriptionBox
