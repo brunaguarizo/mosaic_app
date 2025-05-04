@@ -16,7 +16,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/");
+        router.replace("/Dashboard/DashboardAddition");
     };
     const handleEdit = () => {
         router.replace("/CreateProject/Step1");

@@ -17,7 +17,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/");
+        router.replace("/ProjectScenario");
     };
     const handleLater = () => {
         router.replace("/Dashboard");

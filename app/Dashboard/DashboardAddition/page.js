@@ -27,6 +27,10 @@ export default function DashboardAddition() {
         router.push("/ProjectSteps/Trendsetter/Task1");
     };
 
+    const handleWanderworksClick = () => {
+        router.push("/ProjectSteps/WanderWorks/Task1");
+    };
+
     const handleDeleteProject = (projectName) => {
         console.log(`Deleting project: ${projectName}`);
     };
@@ -47,6 +51,15 @@ export default function DashboardAddition() {
             <div>
                 <p>Archived Projects</p>
             </div>
+            <ProjectCard
+                ProjectName='WanderWorks'
+                Interest='design'
+                onClick={handleWanderworksClick}
+                onDelete={() => handleDeleteProject("Wanderworks")}
+                onAddToPortfolio={() => handleAddToPortfolio("Wanderworks")}
+                MenuItem1='Add to Portfolio'
+                MenuItem2='Delete Project'
+            />
 
             <ProjectCard
                 ProjectName='Eggs and Bacon'
@@ -66,17 +79,6 @@ export default function DashboardAddition() {
                 MenuItem1='Add to Portfolio'
                 MenuItem2='Delete Project'
             />
-
-            <ProjectCard
-                ProjectName='WanderWorks'
-                Interest='marketing'
-                onClick={handleTrendsetterClick}
-                onDelete={() => handleDeleteProject("Trendsetter")}
-                onAddToPortfolio={() => handleAddToPortfolio("Trendsetter")}
-                MenuItem1='Add to Portfolio'
-                MenuItem2='Delete Project'
-            />
-
 
             <div className={styles.navigation_bar}>
                 <Navbar />

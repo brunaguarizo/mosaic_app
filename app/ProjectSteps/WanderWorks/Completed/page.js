@@ -29,7 +29,7 @@ export default function ProjectName() {
 
     const handleConfirm = () => {
         setIsPopupOpen(false);
-        router.replace("/");
+        router.replace("/Portfolio/Portfolio");
     };
 
     return (

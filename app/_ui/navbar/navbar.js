@@ -5,7 +5,7 @@ function Navbar() {
         <nav className={styles.nav}>
             <a
                 className={styles.navbar__item}
-                href='/Dashboard'>
+                href='/Dashboard/DashboardRegular'>
                 <svg
                     className={styles.navbar__icon}
                     width='16'
@@ -21,7 +21,7 @@ function Navbar() {
 
             <a
                 className={styles.navbar__item}
-                href='/portfolio'>
+                href='/Portfolio/Portfolio'>
                 <svg
                     className={styles.navbar__icon}
                     width='16'

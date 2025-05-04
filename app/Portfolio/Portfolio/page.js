@@ -97,7 +97,9 @@ export default function PortfolioHome() {
                     />
                 </div>
 
-                <Navbar className={styles.navigation_bar} />
+                <div className={styles.navigation_bar}>
+                    <Navbar />
+                </div>
             </div>
         </>
     );
