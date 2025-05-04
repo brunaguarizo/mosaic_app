@@ -1,5 +1,5 @@
 .list_item {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-regular);
     font-family: var(--font-family);
     color: var(--black);
 }
