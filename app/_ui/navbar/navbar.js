@@ -37,7 +37,7 @@ function Navbar() {
 
             <a
                 className={styles.navbar__item}
-                href='/profile'>
+                href='/Profile/Profile'>
                 <svg
                     className={styles.navbar__icon}
                     width='17'

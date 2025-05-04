@@ -14,7 +14,7 @@ export default function SignIn() {
     const [showResendPopup, setShowResendPopup] = useState(false);
 
     const handleSubmit = () => {
-        router.replace("/CreateProfile");
+        router.replace("/Profile/CreateProfile");
     };
 
     const handleResend = () => {

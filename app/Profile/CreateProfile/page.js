@@ -2,17 +2,17 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import styles from "@/app/CreateProfile/CreateProfile.module.css";
+import styles from "./CreateProfile.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
-import Profile_Cover_Box from "../_ui/Profile_Cover_Box/Profile_Cover_Box";
-import SingleInput from "../_ui/Input_Box/Input_Box";
-import InterestChip from "../_ui/Interest_Chip/Interest_Chip";
-import SocialMedia from "../_ui/SocialMedia/SocialMedia";
-import Button from "../_ui/Button/Button";
-import LongInput from "../_ui/Long_Input_Box/Long_Input_Box";
-import PopUp from "../_ui/PopUp/PopUp";
+import Profile_Cover_Box from "../../_ui/Profile_Cover_Box/Profile_Cover_Box";
+import SingleInput from "../../_ui/Input_Box/Input_Box";
+import InterestChip from "../../_ui/Interest_Chip/Interest_Chip";
+import SocialMedia from "../../_ui/SocialMedia/SocialMedia";
+import Button from "../../_ui/Button/Button";
+import LongInput from "../../_ui/Long_Input_Box/Long_Input_Box";
+import PopUp from "../../_ui/PopUp/PopUp";
 import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
-import AvatarPicker from "../_ui/Profile_Avatar_PopUp/Profile_Avatar_PopUp";
+import AvatarPicker from "../../_ui/Profile_Avatar_PopUp/Profile_Avatar_PopUp";
 
 export default function CreateProfile() {
     const [firstName, setFirstName] = useState("");
@@ -30,6 +30,22 @@ export default function CreateProfile() {
 
     const router = useRouter();
 
+    const saveProfileData = () => {
+        const profileData = {
+            firstName,
+            lastName,
+            username,
+            aboutMe,
+            location,
+            interests: selectedInterests,
+            avatar: selectedAvatar,
+            socialMedia: {
+                // Add social media data if needed
+            },
+        };
+        localStorage.setItem("userProfile", JSON.stringify(profileData));
+    };
+
     const handleSave = () => {
         if (
             !firstName ||
@@ -43,8 +59,8 @@ export default function CreateProfile() {
             setShowIncompleteProfilePopup(true);
             return;
         } else {
+            saveProfileData();
             setShowSavePopup(true);
-            // router.push("/Dashboard");
         }
     };
 
@@ -68,7 +84,7 @@ export default function CreateProfile() {
         router.push("/SignIn");
     };
     const handleConfirmSave = () => {
-        router.push("/Dashboard/DashboardRegular");
+        router.push("/Profile/Profile");
     };
 
     const handleInterestClick = (interest) => {
