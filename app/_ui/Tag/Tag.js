@@ -8,7 +8,7 @@ const labels = {
     backend: "Backend",
 };
 
-export default function Tag({ interest = "design" }) {
+export default function Tag({ interest }) {
     const className = `${styles.chip} ${styles[interest]}`;
 
     return (
