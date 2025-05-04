@@ -1,0 +1,26 @@
+.descriptions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.cover_image {
+    width: 361px;
+    height: 189px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-regular);
+    padding: var(--space-regular);
+    max-width: 393px;
+    min-width: 393px;
+    min-height: 852px;
+    max-height: 852px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin-top: 100px;
+}

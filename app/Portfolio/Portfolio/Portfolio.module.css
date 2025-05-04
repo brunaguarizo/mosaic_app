@@ -1,7 +1,36 @@
-.list_item {
-    font-size: var(--font-size-regular);
-    font-family: var(--font-family);
-    color: var(--black);
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-regular);
+    padding: var(--space-regular);
+    max-width: 393px;
+    min-width: 393px;
+    min-height: 852px;
+    max-height: 852px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin-top: 50%;
+}
+.projects_rows {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-regular);
+}
+
+.navigation_bar {
+    background-color: var(--white);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+.interests {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-extra-small);
+    margin-left: var(--space-regular);
+    margin-right: var(--space-regular);
 }
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {
@@ -36,9 +65,13 @@
     --line-height-small: 20px;
 
     /* ----- SPACING ----- */
+    --space-extra-small: 4px;
     --space-small: 8px;
     --space-regular: 16px;
     --space-medium: 32px;
     --space-large: 48px;
     --space-extra-large: 140px;
+
+    /* ----- BORDER RADIUS ----- */
+    --border-radius-large: 100px;
 }
