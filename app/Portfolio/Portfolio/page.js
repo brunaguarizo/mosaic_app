@@ -6,11 +6,18 @@ import Navbar from "@/app/_ui/navbar/navbar";
 import Tag from "@/app/_ui/Tag/Tag";
 import InterestChip from "@/app/_ui/Interest_Chip/Interest_Chip";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 export default function PortfolioHome() {
     const router = useRouter();
+    const [profile, setProfile] = useState(null);
+    useEffect(() => {
+        const savedProfile = localStorage.getItem("userProfile");
+        if (savedProfile) {
+            setProfile(JSON.parse(savedProfile));
+        }
+    }, []);
 
     const handleFishFriendsClick = () => {
         router.push("/Portfolio/Projects/FishFriends");
@@ -37,9 +44,11 @@ export default function PortfolioHome() {
                 {/* Status Bar */}
                 <StatusBar />
                 <ProfileCover
-                    username='Justin Pham'
-                    city='Surrey'
-                    province='BC'
+                    firstName={profile?.firstName || "Justin"}
+                    lastName={profile?.lastName || "Phum"}
+                    city={profile?.city || "Surrey"}
+                    province={profile?.province || "BC"}
+                    avatarSrc={profile?.avatar || "/Avatars/Purple_Avatar.svg"}
                 />
                 <div className={styles.interests}>
                     <InterestChip

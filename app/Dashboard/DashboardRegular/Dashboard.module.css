@@ -12,6 +12,7 @@
     box-sizing: border-box;
     overflow-y: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 .navigation_bar {
     background-color: var(--white);

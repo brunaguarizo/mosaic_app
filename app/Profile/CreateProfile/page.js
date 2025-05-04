@@ -83,7 +83,7 @@ export default function CreateProfile() {
         router.push("/SignIn");
     };
     const handleConfirmSave = () => {
-        router.push("/Profile/Profile");
+        router.push("/Dashboard/DashboardRegular");
     };
 
     const handleInterestClick = (interest) => {

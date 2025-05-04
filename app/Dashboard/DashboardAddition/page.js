@@ -31,14 +31,6 @@ export default function DashboardAddition() {
         router.push("/ProjectSteps/WanderWorks/Task1");
     };
 
-    const handleDeleteProject = (projectName) => {
-        console.log(`Deleting project: ${projectName}`);
-    };
-
-    const handleAddToPortfolio = (projectName) => {
-        console.log(`Adding project to portfolio: ${projectName}`);
-    };
-
     return (
         <div className={styles.container}>
             {/* Status Bar */}
@@ -55,8 +47,6 @@ export default function DashboardAddition() {
                 ProjectName='WanderWorks'
                 Interest='design'
                 onClick={handleWanderworksClick}
-                onDelete={() => handleDeleteProject("Wanderworks")}
-                onAddToPortfolio={() => handleAddToPortfolio("Wanderworks")}
                 MenuItem1='Add to Portfolio'
                 MenuItem2='Delete Project'
             />
@@ -65,8 +55,6 @@ export default function DashboardAddition() {
                 ProjectName='Eggs and Bacon'
                 Interest='design'
                 onClick={handleEggsAndBaconClick}
-                onDelete={() => handleDeleteProject("Eggs and Bacon")}
-                onAddToPortfolio={() => handleAddToPortfolio("Eggs and Bacon")}
                 MenuItem1='Add to Portfolio'
                 MenuItem2='Delete Project'
             />
@@ -74,8 +62,6 @@ export default function DashboardAddition() {
                 ProjectName='Trendsetter'
                 Interest='marketing'
                 onClick={handleTrendsetterClick}
-                onDelete={() => handleDeleteProject("Trendsetter")}
-                onAddToPortfolio={() => handleAddToPortfolio("Trendsetter")}
                 MenuItem1='Add to Portfolio'
                 MenuItem2='Delete Project'
             />

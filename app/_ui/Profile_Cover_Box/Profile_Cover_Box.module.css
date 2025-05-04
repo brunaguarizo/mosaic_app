@@ -14,12 +14,12 @@
 .edit_icon {
     width: 20px;
     position: relative;
-    bottom: 160px;
-    left: 360px;
+    bottom: 190px;
+    left: 340px;
 }
 .profile_info {
     margin-top: -110px;
-
+    margin-left: 10px;
     /* position: relative;
         top: -100px;  */
 }

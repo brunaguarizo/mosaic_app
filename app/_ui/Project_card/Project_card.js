@@ -14,8 +14,7 @@ function ProjectCard({
     ProjectDescription,
     Interest,
     onClick,
-    onAddToPortfolioClick,
-    onDeleteProjectClick,
+
     MenuItem1,
     MenuItem2,
 }) {
@@ -38,7 +37,7 @@ function ProjectCard({
 
     //Handle pop-up actions
     const handleConfirm = () => {
-        router.push("/Portfolio");
+        router.push("/Portfolio/Portfolio");
     };
 
     const handleCancel = () => {

@@ -24,10 +24,14 @@ function PortfolioCard({ ProjectName, ProjectImage, interest, onClick }) {
     };
 
     const handleConfirm = () => {
-        router.push("/Portfolio");
+        setIsMenuOpen(false);
+        setShowArchivedPopup(false);
+        router.push("/Portfolio/Portfolio");
     };
     const handleConfirmDelete = () => {
-        router.push("/Portfolio");
+        setIsMenuOpen(false);
+        setShowArchivedPopup(false);
+        router.push("/Portfolio/Portfolio");
     };
     const handleCancel = () => {
         setShowArchivedPopup(false);
@@ -35,14 +39,13 @@ function PortfolioCard({ ProjectName, ProjectImage, interest, onClick }) {
     };
 
     return (
-        <div
-            className={styles.container}
-            onClick={onClick}>
+        <div className={styles.container}>
             <div className={styles.top}>
                 <img
                     className={styles.image}
                     src={ProjectImage}
                     alt='Fish'
+                    onClick={onClick}
                 />
                 <svg
                     className={styles.icon}

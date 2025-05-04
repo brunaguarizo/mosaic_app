@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 
 import styles from "@/app/Profile/CreateProfile/CreateProfile.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
+import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
 import Profile_Cover_Box from "../../_ui/Profile_Cover_Box/Profile_Cover_Box";
 import SingleInput from "../../_ui/Input_Box/Input_Box";
 import InterestChip from "../../_ui/Interest_Chip/Interest_Chip";
@@ -67,7 +68,7 @@ export default function Profile() {
                 <div className={styles.content_info}>
                     <h1 className={styles.content_header}>Interests</h1>
                     <p className={styles.content_description}>
-                        Your selected interests
+                        Your main interests
                     </p>
                 </div>
                 <div className={styles.chips_container}>

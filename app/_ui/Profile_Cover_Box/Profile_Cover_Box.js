@@ -4,7 +4,8 @@ import { useState } from "react";
 import classNames from "classnames";
 
 function ProfileCover({
-    username,
+    firstName,
+    lastName,
     city,
     province,
     location,
@@ -50,7 +51,9 @@ function ProfileCover({
 
             <div />
             <div className={ProfileInfoClasses}>
-                <p className={styles.username}>{username}</p>
+                <p className={styles.username}>
+                    {firstName} {lastName}
+                </p>
                 <p className={styles.location}>
                     {city}, {province}
                 </p>
