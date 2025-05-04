@@ -30,6 +30,22 @@ export default function CreateProfile() {
 
     const router = useRouter();
 
+    const saveProfileData = () => {
+        const profileData = {
+            firstName,
+            lastName,
+            username,
+            aboutMe,
+            location,
+            interests: selectedInterests,
+            avatar: selectedAvatar,
+            socialMedia: {
+                // Add social media data if needed
+            },
+        };
+        localStorage.setItem("userProfile", JSON.stringify(profileData));
+    };
+
     const handleSave = () => {
         if (
             !firstName ||
@@ -43,8 +59,8 @@ export default function CreateProfile() {
             setShowIncompleteProfilePopup(true);
             return;
         } else {
+            saveProfileData();
             setShowSavePopup(true);
-            // router.push("/Dashboard");
         }
     };
 
@@ -66,7 +82,7 @@ export default function CreateProfile() {
         router.push("/SignIn");
     };
     const handleConfirmSave = () => {
-        router.push("/app/Dashboard/DashboardRegular");
+        router.push("/Profile/Profile");
     };
 
     const handleInterestClick = (interest) => {
