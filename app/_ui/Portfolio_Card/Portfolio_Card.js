@@ -26,11 +26,13 @@ function PortfolioCard({ ProjectName, ProjectImage, interest, onClick }) {
     const handleConfirm = () => {
         setIsMenuOpen(false);
         setShowArchivedPopup(false);
+        setShowDeletePopup(false);
         router.push("/Portfolio/Portfolio");
     };
     const handleConfirmDelete = () => {
         setIsMenuOpen(false);
         setShowArchivedPopup(false);
+        setShowDeletePopup(false);
         router.push("/Portfolio/Portfolio");
     };
     const handleCancel = () => {
