@@ -42,25 +42,24 @@ export default function Profile() {
             />
             <Profile_Cover_Box
                 type='secondary'
-                username={profile.username}
                 location={profile.location}
                 avatarSrc={profile.avatar}
             />
             <SingleInput
                 type='secondary'
-                placeholder='First Name'
+                placeholder={profile.firstName}
                 defaultValue={profile.firstName}
                 readOnly
             />
             <SingleInput
                 type='secondary'
-                placeholder='Last Name'
+                placeholder={profile.lastName}
                 defaultValue={profile.lastName}
                 readOnly
             />
             <SingleInput
                 type='secondary'
-                placeholder='Username'
+                placeholder={profile.username}
                 defaultValue={profile.username}
                 readOnly
             />
@@ -85,13 +84,13 @@ export default function Profile() {
                 </div>
             </div>
             <LongInput
-                placeholder='About me'
+                placeholder={profile.aboutMe}
                 defaultValue={profile.aboutMe}
                 readOnly
             />
             <SingleInput
                 inputName='Location'
-                placeholder='Location'
+                placeholder={profile.location}
                 defaultValue={profile.location}
                 readOnly
             />
