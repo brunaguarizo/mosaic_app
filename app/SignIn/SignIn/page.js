@@ -1,15 +1,29 @@
 "use client";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./SignIn.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import SingleInput from "@/app/_ui/Input_Box/Input_Box";
 import Button from "@/app/_ui/Button/Button";
 import InfoBanner from "@/app/_ui/Info_Banner/Info_Banner";
+import PopUp from "@/app/_ui/PopUp/PopUp";
+import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
 
 export default function SignIn() {
     const router = useRouter();
+    const [Email, setEmail] = useState("");
+    const [showIncompleteProfilePopup, setShowIncompleteProfilePopup] =
+        useState(false);
     const handleCode = () => {
-        router.replace("/SignIn/VerificationCode");
+        if (!Email) {
+            setShowIncompleteProfilePopup(true);
+            return;
+        } else {
+            router.replace("/SignIn/VerificationCode");
+        }
+    };
+    const handleCloseIncompleteProfilePopup = () => {
+        setShowIncompleteProfilePopup(false);
     };
 
     return (
@@ -78,6 +92,7 @@ export default function SignIn() {
             <SingleInput
                 type='secondary'
                 placeholder='Email'
+                onChange={(e) => setEmail(e.target.value)}
             />
             {/* Button */}
             <Button
@@ -86,6 +101,17 @@ export default function SignIn() {
                 value='Submit'
                 onClick={handleCode}
             />
+            {/* Incomplete profile data popup */}
+            {showIncompleteProfilePopup && (
+                <PopUp
+                    onClose={handleCloseIncompleteProfilePopup}
+                    buttonText='Ok'
+                    buttonType='primary'>
+                    <h2 className={popupStyles.popup_header}>
+                        Please fill out all fields before submitting
+                    </h2>
+                </PopUp>
+            )}
             <div className={styles.terms}>
                 <InfoBanner
                     prefix={"By signing up to Mosaic, you agree to our "}

@@ -19,16 +19,16 @@ export default function PortfolioHome() {
         router.push("/Portfolio/Projects/SodaSummer");
     };
     const handlePiannatoClick = () => {
-        router.push("/Portfolio/Portfolio");
+        router.push("/Portfolio/Projects/Piannato");
     };
     const handleTreeRootClick = () => {
-        router.push("/Portfolio/Portfolio");
+        router.push("/Portfolio/Projects/TreeRoots");
     };
     const handleWeatherLikeClick = () => {
-        router.push("/Portfolio/Portfolio");
+        router.push("/Portfolio/Projects/WeatherLike");
     };
     const handleCapiCafeClick = () => {
-        router.push("/Portfolio/Portfolio");
+        router.push("/Portfolio/Projects/CapiCafe");
     };
 
     return (
