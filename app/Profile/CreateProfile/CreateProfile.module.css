@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--space-regular);
     padding: var(--space-regular);
     max-width: 393px;
@@ -11,8 +11,9 @@
     max-height: 852px;
     box-sizing: border-box;
     overflow-y: auto;
-    margin-top: 50%;
+    margin-top: 100px;
 }
+
 .chips_container {
     display: grid;
     grid-template-rows: 1fr;
@@ -57,12 +58,6 @@
 .button {
     width: 361px;
     height: 48px;
-}
-.navigation_bar {
-    background-color: var(--white);
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
 }
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
 :root {

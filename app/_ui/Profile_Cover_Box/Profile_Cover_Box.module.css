@@ -8,18 +8,20 @@
 .background_cover {
     background-color: var(--blue-primary);
     width: 393px;
-    height: 160px;
+    height: 192px;
+    width: 361px;
 }
 .edit_icon {
     width: 20px;
     position: relative;
-    bottom: 140px;
-    left: 170px;
+    bottom: 160px;
+    left: 360px;
 }
 .profile_info {
-    position: relative;
-    bottom: 100px;
-    left: 8px;
+    margin-top: -110px;
+
+    /* position: relative;
+        top: -100px;  */
 }
 .username {
     font-size: var(--font-size-regular);
@@ -36,13 +38,15 @@
 }
 
 .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 361px;
-    height: 320;
 }
 
 .secondary {
     background-color: var(--blue-primary);
-    width: 361px;
+    height: 320px;
 }
 .hidden {
     display: none;
