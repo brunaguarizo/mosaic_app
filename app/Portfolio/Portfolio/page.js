@@ -13,10 +13,10 @@ export default function PortfolioHome() {
     const router = useRouter();
 
     const handleFishFriendsClick = () => {
-        router.push("/Portfolio/Portfolio");
+        router.push("/Portfolio/Projects/FishFriends");
     };
     const handleSodaSummerClick = () => {
-        router.push("/Portfolio/Portfolio");
+        router.push("/Portfolio/Projects/SodaSummer");
     };
     const handlePiannatoClick = () => {
         router.push("/Portfolio/Portfolio");
