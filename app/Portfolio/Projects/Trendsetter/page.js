@@ -12,7 +12,7 @@ export default function FishFriendsInfo() {
     return (
         <div className={styles.container}>
             <Headingbar
-                heading='Tree Roots'
+                heading='Trendsetter'
                 type='navigation'
             />
             <div>
@@ -23,8 +23,8 @@ export default function FishFriendsInfo() {
             </div>
             <div className={styles.descriptions}>
                 <ProjectTitle
-                    title='Tree Roots'
-                    description='Tree Roots is an eco-friendly brand of root beer that is based in North America. They are planning on expanding into Europe and want to have an effective marketing plan to help increase the success of their expansion.'
+                    title='Trendsetter'
+                    description='Create a social media campaign for a new fashion brand for the upcoming spring/summer season.'
                     percentage={100}
                     variant='secondary'
                     className={styles.project_title}
@@ -32,9 +32,11 @@ export default function FishFriendsInfo() {
 
                 <DescriptionBox
                     title='Desciption'
-                    description='SWOT Analysis - Get an overview of the business
-Competitive Analysis - Understand the European market
-Document Presentation - The document should be presentable to anyone in the company'
+                    description='Modern
+                    Warm Weather
+                    Cooling Technology
+                    Trendy
+                    Luxury Fashion'
                     useCase='secondary'
                 />
                 <DescriptionBox
