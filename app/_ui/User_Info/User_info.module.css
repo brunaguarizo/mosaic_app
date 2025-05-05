@@ -4,7 +4,11 @@
     align-items: center;
     gap: var(--space-regular);
     width: 361px;
+    height: 67px;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
 }
 
 .user {
@@ -12,10 +16,14 @@
     flex-direction: row;
     align-items: center;
     gap: var(--space-regular);
+    padding: 0;
+    margin: 0;
 }
 
 .avatar {
     width: 67px;
+    padding: 0;
+    margin: 0;
 }
 
 .content {
@@ -43,10 +51,14 @@
 
 .icon {
     fill: var(--blue-primary);
+    padding: 0;
+    margin: 0;
 }
 
 .icon:hover {
     fill: var(--blue-900);
+    padding: 0;
+    margin: 0;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
