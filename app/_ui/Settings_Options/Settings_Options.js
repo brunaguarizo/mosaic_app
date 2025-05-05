@@ -1,16 +1,31 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./Settings_Options.module.css";
 import Toggle from "../Toggle/Toggle";
 
 const SettingsOptions = () => {
     const [colourBlindMode, setColourBlindMode] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+    const router = useRouter();
+
+    const handleAccountInformationClick=()=>{
+        router.push('/AccountInformation')
+    }
+    const handleHelpAndSupportClick=()=>{
+        router.push('/TextInformation/HelpAndSupport')
+    }
+    const handleSecurityAndPrivacyClick=()=>{
+        router.push('/TextInformation/SecurityAndPrivacy')
+    }
+    const handleAboutUsClick=()=>{
+        router.push('/TextInformation/AboutUs')
+    }
 
     return (
         <div className={styles.settingsContainer}>
-            <div className={styles.settingsList}>
+            <div className={styles.settingsList} onClick={handleAccountInformationClick}>
                 <div className={styles.left}>
                     <svg
                         className={styles.icon}
@@ -99,7 +114,7 @@ const SettingsOptions = () => {
                 </div>
                 <Toggle />
             </div>
-            <div className={styles.settingsList}>
+            <div className={styles.settingsList} onClick={handleHelpAndSupportClick}>
                 <div className={styles.left}>
                     <svg
                         width='24'
@@ -127,7 +142,7 @@ const SettingsOptions = () => {
                     />
                 </svg>
             </div>
-            <div className={styles.settingsList}>
+            <div className={styles.settingsList} onClick={handleSecurityAndPrivacyClick}>
                 <div className={styles.left}>
                     <svg
                         width='24'
@@ -154,7 +169,7 @@ const SettingsOptions = () => {
                     />
                 </svg>
             </div>
-            <div className={styles.settingsList}>
+            <div className={styles.settingsList} onClick={handleAboutUsClick}>
                 <div className={styles.left}>
                     <svg
                         width='24'
