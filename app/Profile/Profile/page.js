@@ -39,7 +39,7 @@ export default function Profile() {
             <StatusBar />
             <Headingbar
                 heading='Profile'
-                type='heading'
+                type='settings'
             />
             <Profile_Cover_Box
                 type='secondary'
