@@ -79,7 +79,7 @@ export default function AccountInformation() {
                 value='Delete Your Account'
                 onClick={handleDeleteAccount}
             />
-            {/* Resend Code PopUp */}
+            {/* DeletePopUp */}
             {showDeletePopup && (
                 <PopUp
                     onClose={handleClose}
@@ -97,7 +97,7 @@ export default function AccountInformation() {
                     </p>
                 </PopUp>
             )}
-            {/* Resend Code PopUp */}
+            {/* Show request sent PopUp */}
             {showRequestSentPopup && (
                 <PopUp
                     onClose={handleCloseRequestSent}
