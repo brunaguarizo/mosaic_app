@@ -1,4 +1,4 @@
-import styles from "@/app/TexInformation/TextInformation.module.css"
+import styles from "@/app/TextInformation/TextInformation.module.css"
 import DescriptionBox from "@/app/_ui/Description_Box/Description_Box";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import Headingbar from "@/app/_ui/Heading_Bar/Heading_Bar";
