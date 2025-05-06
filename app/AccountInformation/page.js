@@ -14,14 +14,21 @@ import PopUp from "../_ui/PopUp/PopUp";
 export default function AccountInformation() {
     const router = useRouter();
     const [AccountInfo, setAccountInfo] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
     const [showDeletePopup, setShowDeletePopup] = useState(false);
     const [showRequestSentPopup, setRequestSentPopup] = useState(false);
 
     useEffect(() => {
         const savedProfile = localStorage.getItem("userProfile");
         if (savedProfile) {
-            setAccountInfo(JSON.parse(savedProfile));
+            try {
+                const parsedProfile = JSON.parse(savedProfile);
+                setAccountInfo(parsedProfile);
+            } catch (error) {
+                console.error("Error parsing profile data:", error);
+            }
         }
+        setIsLoading(false);
     }, []);
 
     const handleDeleteAccount = () => {
@@ -41,6 +48,32 @@ export default function AccountInformation() {
         setRequestSentPopup(true);
     };
 
+    if (isLoading) {
+        return (
+            <div className={styles.container}>
+                <StatusBar />
+                <Headingbar
+                    heading='Account Information'
+                    type='navigation'
+                />
+                <div>Loading...</div>
+            </div>
+        );
+    }
+
+    if (!AccountInfo) {
+        return (
+            <div className={styles.container}>
+                <StatusBar />
+                <Headingbar
+                    heading='Account Information'
+                    type='navigation'
+                />
+                <div>No profile data found. Please create a profile first.</div>
+            </div>
+        );
+    }
+
     return (
         <div className={styles.container}>
             {/* Status Bar */}
@@ -52,25 +85,27 @@ export default function AccountInformation() {
 
             <SingleInput
                 inputName='Name'
-                placeholder={AccountInformation.firstName}
-                defaultValue={AccountInformation.firstName}
+                placeholder={AccountInfo?.firstName || ""}
+                defaultValue={AccountInfo?.firstName || ""}
                 readOnly
             />
             <SingleInput
                 type='secondary'
-                placeholder={AccountInformation.FirstName}
-                defaultValue={AccountInformation.firstName}
+                placeholder={AccountInfo?.lastName || ""}
+                defaultValue={AccountInfo?.lastName || ""}
                 readOnly
             />
             <SingleInput
                 inputName='Username'
-                placeholder={AccountInformation.username}
-                defaultValue={AccountInformation.username}
+                placeholder={AccountInfo?.username || ""}
+                defaultValue={AccountInfo?.username || ""}
+                readOnly
             />
             <SingleInput
                 inputName='Email'
-                placeholder={AccountInformation.email}
-                defaultValue={AccountInformation.email}
+                placeholder={AccountInfo?.email || ""}
+                defaultValue={AccountInfo?.email || ""}
+                readOnly
             />
             <SocialMedia />
             <Button
