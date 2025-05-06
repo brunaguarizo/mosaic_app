@@ -1,9 +1,20 @@
 "use client";
 import { useState, useEffect } from "react";
+import classNames from "classnames";
 import styles from "./Circle_Progress.module.css";
 
-export default function ProgressCircle({ percentage = 30 }) {
+export default function ProgressCircle({ percentage = 30, type }) {
     const [progress, setProgress] = useState(0);
+    const IndicatorClasses = classNames(styles.progressCircleIndicator, {
+        [styles.projectCardIndicator]: type === "card",
+    });
+
+    const BackgroundClasses = classNames(styles.progressCircleBg, {
+        [styles.projectCircleBg]: type === "card",
+    });
+    const PercentageClasses = classNames(styles.progressPercentage, {
+        [styles.projectPercentage]: type === "card",
+    });
 
     // Calcular circunferência do círculo
     const radius = 45;
@@ -28,7 +39,7 @@ export default function ProgressCircle({ percentage = 30 }) {
                     className={styles.progressCircle}
                     viewBox='0 0 100 100'>
                     <circle
-                        className={styles.progressCircleBg}
+                        className={BackgroundClasses}
                         cx='50'
                         cy='50'
                         r={radius}
@@ -36,7 +47,7 @@ export default function ProgressCircle({ percentage = 30 }) {
                         fill='transparent'
                     />
                     <circle
-                        className={styles.progressCircleIndicator}
+                        className={IndicatorClasses}
                         cx='50'
                         cy='50'
                         r={radius}
@@ -47,7 +58,7 @@ export default function ProgressCircle({ percentage = 30 }) {
                         strokeDashoffset={strokeDashoffset}
                     />
                 </svg>
-                <div className={styles.progressPercentage}>{progress}%</div>
+                <div className={PercentageClasses}>{progress}%</div>
             </div>
         </div>
     );
