@@ -45,10 +45,10 @@ export default function PortfolioHome() {
                 <StatusBar />
                 <ProfileCover
                     firstName={profile?.firstName || "Justin"}
-                    lastName={profile?.lastName || "Phum"}
+                    lastName={profile?.lastName || "Pham"}
                     city={profile?.city || "Surrey"}
                     province={profile?.province || "BC"}
-                    avatarSrc={profile?.avatar || "/Avatars/Purple_Avatar.svg"}
+                    avatarSrc={profile?.avatar || "/Avatars/Yellow_Avatar.svg"}
                 />
                 <div className={styles.interests}>
                     <InterestChip

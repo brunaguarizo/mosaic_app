@@ -86,7 +86,10 @@ function ProjectCard({
                     </div>
                 )}
             </div>
-            <ProgressCircle percentage={30} />
+            <ProgressCircle
+                percentage={30}
+                type='card'
+            />
 
             <p className={styles.card__title}>{ProjectName}</p>
             <div className={styles.project_chips}>

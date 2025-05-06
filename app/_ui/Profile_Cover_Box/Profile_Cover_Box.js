@@ -32,7 +32,7 @@ function ProfileCover({
         <div className={ContainerClasses}>
             <div className={styles.background_cover}></div>
             <img
-                src={avatarSrc || "/Avatars/Purple_Avatar.svg"}
+                src={avatarSrc || "/Avatars/Unselected_Avatar.svg"}
                 className={AvatarClasses}
                 alt='Profile Avatar'
             />

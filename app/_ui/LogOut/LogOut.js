@@ -2,10 +2,17 @@
 
 import React from "react";
 import styles from "./LogOut.module.css";
+import { useRouter } from "next/navigation";
 
-const LogOut = () => {
+function LogOut({}) {
+    const router = useRouter();
+    const handleLogOut = () => {
+        router.push("/SignIn/SignIn");
+    };
     return (
-        <div className={styles.container}>
+        <div
+            className={styles.container}
+            onClick={handleLogOut}>
             <div className={styles.left}>
                 <svg
                     className={styles.icon}
@@ -35,6 +42,6 @@ const LogOut = () => {
             </svg>
         </div>
     );
-};
+}
 
 export default LogOut;

@@ -74,7 +74,7 @@ export default function ProjectName() {
                 onClick={handlePortfolio}
             />
 
-            <div className={styles.nav}>
+            <div className={styles.nav_bar}>
                 <Navbar />
             </div>
 
@@ -82,7 +82,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setIsPopupOpen(false);
-                        router.replace("/Dashboard");
+                        router.replace("/Portfolio/Portfolio");
                     }}
                     buttonText='Confirm'
                     buttonType='primary'
