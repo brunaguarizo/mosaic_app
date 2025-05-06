@@ -44,13 +44,15 @@
     gap: var(--space-small);
     width: 100%;
 }
-
-.nav {
+.nav_bar {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     padding: var(--space-small);
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
 }
 
 .popup_header {

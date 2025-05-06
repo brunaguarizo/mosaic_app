@@ -61,19 +61,6 @@ export default function AccountInformation() {
         );
     }
 
-    if (!AccountInfo) {
-        return (
-            <div className={styles.container}>
-                <StatusBar />
-                <Headingbar
-                    heading='Account Information'
-                    type='navigation'
-                />
-                <div>No profile data found. Please create a profile first.</div>
-            </div>
-        );
-    }
-
     return (
         <div className={styles.container}>
             {/* Status Bar */}
@@ -85,25 +72,25 @@ export default function AccountInformation() {
 
             <SingleInput
                 inputName='Name'
-                placeholder={AccountInfo?.firstName || ""}
+                placeholder={AccountInfo?.firstName || "Justin"}
                 defaultValue={AccountInfo?.firstName || ""}
                 readOnly
             />
             <SingleInput
                 type='secondary'
-                placeholder={AccountInfo?.lastName || ""}
+                placeholder={AccountInfo?.lastName || "Pham"}
                 defaultValue={AccountInfo?.lastName || ""}
                 readOnly
             />
             <SingleInput
                 inputName='Username'
-                placeholder={AccountInfo?.username || ""}
+                placeholder={AccountInfo?.username || " justinpham"}
                 defaultValue={AccountInfo?.username || ""}
                 readOnly
             />
             <SingleInput
                 inputName='Email'
-                placeholder={AccountInfo?.email || ""}
+                placeholder={AccountInfo?.email || "justinpham@gmail.com"}
                 defaultValue={AccountInfo?.email || ""}
                 readOnly
             />

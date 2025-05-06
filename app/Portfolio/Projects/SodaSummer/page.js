@@ -7,10 +7,15 @@ import DescriptionBox from "@/app/_ui/Description_Box/Description_Box";
 import TaskDropDown from "@/app/_ui/Task_Dropdown/Task_Dropdown";
 import ProjectTitle from "@/app/_ui/Project_Title/Project_Title";
 import TaskList from "@/app/_ui/Task_List/Task_List";
+import StatusBar from "@/app/_ui/StatusBar/StatusBar";
+import Navbar from "@/app/_ui/navbar/navbar";
 
 export default function SodaSummerInfo() {
     return (
         <div className={styles.container}>
+            {/* Status Bar */}
+            <StatusBar />
+
             <Headingbar
                 heading='SodaSummer'
                 type='navigation'
@@ -78,6 +83,9 @@ Website & Social Media UI – A cohesive digital experience for the brand'
                     />
                 </div>
             </TaskDropDown>
+            <div className={styles.nav_bar}>
+                <Navbar />
+            </div>
         </div>
     );
 }

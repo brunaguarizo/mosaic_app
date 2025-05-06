@@ -29,9 +29,9 @@ export default function Profile() {
         router.push("/Profile/CreateProfile");
     };
 
-    if (!profile) {
-        return <div>Loading...</div>;
-    }
+    // if (!profile) {
+    //     return <div>Loading...</div>;
+    // }
 
     return (
         <div className={styles.container}>
@@ -43,25 +43,25 @@ export default function Profile() {
             />
             <Profile_Cover_Box
                 type='secondary'
-                location={profile.location}
-                avatarSrc={profile.avatar}
+                location={profile?.location || "Surrey , BC"}
+                avatarSrc={profile?.avatar || "/Avatars/Yellow_Avatar.svg"}
             />
             <SingleInput
                 type='secondary'
-                placeholder={profile.firstName}
-                defaultValue={profile.firstName}
+                placeholder={profile?.firstName || "Justin"}
+                defaultValue={profile?.firstName}
                 readOnly
             />
             <SingleInput
                 type='secondary'
-                placeholder={profile.lastName}
-                defaultValue={profile.lastName}
+                placeholder={profile?.lastName || "Pham"}
+                defaultValue={profile?.lastName}
                 readOnly
             />
             <SingleInput
                 type='secondary'
-                placeholder={profile.username}
-                defaultValue={profile.username}
+                placeholder={profile?.username || "justinpham"}
+                defaultValue={profile?.username}
                 readOnly
             />
             <div className={styles.content_box}>
@@ -73,26 +73,35 @@ export default function Profile() {
                 </div>
                 <div className={styles.chips_container}>
                     <div className={styles.Three_column}>
-                        {profile.interests.map((interest, index) => (
+                        {profile?.interests.map((interest, index) => (
                             <InterestChip
                                 key={index}
                                 type='icon'
                                 interest={interest}
                                 isSelected={true}
                             />
-                        ))}
+                        )) || (
+                            <InterestChip
+                                type='icon'
+                                interest='design'
+                                isSelected={true}
+                            />
+                        )}
                     </div>
                 </div>
             </div>
             <LongInput
-                placeholder={profile.aboutMe}
-                defaultValue={profile.aboutMe}
+                placeholder={
+                    profile?.aboutMe ||
+                    "I am a 24 year old designer from Surrey, BC."
+                }
+                defaultValue={profile?.aboutMe}
                 readOnly
             />
             <SingleInput
                 inputName='Location'
-                placeholder={profile.location}
-                defaultValue={profile.location}
+                placeholder={profile?.location || "Surrey, BC, Canada"}
+                defaultValue={profile?.location}
                 readOnly
             />
             <div className={styles.social_media}>
