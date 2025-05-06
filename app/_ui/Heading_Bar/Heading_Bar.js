@@ -25,7 +25,7 @@ function Headingbar({ heading, type, pagination }) {
     };
 
     const handleSettingsClick = () => {
-        router.push("/AccountInformation");
+        router.push("/Settings");
     };
 
     const isVisible = (rowType) => type === rowType;

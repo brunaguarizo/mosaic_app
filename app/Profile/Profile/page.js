@@ -43,25 +43,24 @@ export default function Profile() {
             />
             <Profile_Cover_Box
                 type='secondary'
-                location={profile?.location || "Surrey , BC"}
                 avatarSrc={profile?.avatar || "/Avatars/Yellow_Avatar.svg"}
             />
             <SingleInput
                 type='secondary'
                 placeholder={profile?.firstName || "Justin"}
-                defaultValue={profile?.firstName}
+                defaultValue={profile?.firstName || "Justin"}
                 readOnly
             />
             <SingleInput
                 type='secondary'
                 placeholder={profile?.lastName || "Pham"}
-                defaultValue={profile?.lastName}
+                defaultValue={profile?.lastName || "Pham"}
                 readOnly
             />
             <SingleInput
                 type='secondary'
                 placeholder={profile?.username || "justinpham"}
-                defaultValue={profile?.username}
+                defaultValue={profile?.username || "justinpham"}
                 readOnly
             />
             <div className={styles.content_box}>
@@ -101,7 +100,7 @@ export default function Profile() {
             <SingleInput
                 inputName='Location'
                 placeholder={profile?.location || "Surrey, BC, Canada"}
-                defaultValue={profile?.location}
+                defaultValue={profile?.location || "Surrey, BC, Canada"}
                 readOnly
             />
             <div className={styles.social_media}>
