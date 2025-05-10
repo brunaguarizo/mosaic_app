@@ -26,7 +26,7 @@ export default function Profile() {
     }, []);
 
     const handleEditProfile = () => {
-        router.push("/Profile/CreateProfile");
+        router.push("/Profile/EditProfile");
     };
 
     // if (!profile) {
@@ -43,6 +43,7 @@ export default function Profile() {
             />
             <Profile_Cover_Box
                 type='secondary'
+                onClick={handleEditProfile}
                 avatarSrc={profile?.avatar || "/Avatars/Yellow_Avatar.svg"}
             />
             <SingleInput

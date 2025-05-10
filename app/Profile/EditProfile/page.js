@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import styles from "@/app/Profile/CreateProfile/CreateProfile.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
@@ -27,41 +27,19 @@ export default function CreateProfile() {
         useState(false);
     const [showAvatarPickerPopup, setShowAvatarPickerPopup] = useState(false);
     const [selectedAvatar, setSelectedAvatar] = useState(null);
+    const [profile, setProfile] = useState(null);
 
     const router = useRouter();
 
-    const saveProfileData = () => {
-        const profileData = {
-            firstName,
-            lastName,
-            username,
-            aboutMe,
-            location,
-            interests: selectedInterests,
-            avatar: selectedAvatar,
-            socialMedia: {
-                // Add social media data if needed
-            },
-        };
-        localStorage.setItem("userProfile", JSON.stringify(profileData));
-    };
+    useEffect(() => {
+        const savedProfile = localStorage.getItem("userProfile");
+        if (savedProfile) {
+            setProfile(JSON.parse(savedProfile));
+        }
+    }, []);
 
     const handleSave = () => {
-        if (
-            !firstName ||
-            !lastName ||
-            !username ||
-            !aboutMe ||
-            !location ||
-            selectedInterests.length === 0 ||
-            !selectedAvatar
-        ) {
-            setShowIncompleteProfilePopup(true);
-            return;
-        } else {
-            saveProfileData();
-            setShowSavePopup(true);
-        }
+        setShowSavePopup(true);
     };
 
     const handleCancel = () => {
@@ -112,24 +90,24 @@ export default function CreateProfile() {
             <Profile_Cover_Box
                 type='secondary'
                 onClick={handleAvatarClick}
-                avatarSrc={selectedAvatar}
+                avatarSrc={profile?.avatar || "/Avatars/Yellow_Avatar.svg"}
             />
             <SingleInput
                 type='secondary'
-                placeholder='First Name'
-                value={firstName}
+                placeholder={profile?.firstName || "Justin"}
+                defaultValue={profile?.firstName || "Justin"}
                 onChange={(e) => setFirstName(e.target.value)}
             />
             <SingleInput
                 type='secondary'
-                placeholder='Last Name'
-                value={lastName}
+                placeholder={profile?.lastName || "Pham"}
+                defaultValue={profile?.lastName || "Pham"}
                 onChange={(e) => setLastName(e.target.value)}
             />
             <SingleInput
                 type='secondary'
-                placeholder='Username'
-                value={username}
+                placeholder={profile?.username || "justinpham"}
+                defaultValue={profile?.username || "justinpham"}
                 onChange={(e) => setUsername(e.target.value)}
             />
             <div className={styles.content_box}>
@@ -142,12 +120,20 @@ export default function CreateProfile() {
 
                 <div className={styles.chips_container}>
                     <div className={styles.Three_column}>
-                        <InterestChip
-                            type='icon'
-                            interest='design'
-                            isSelected={selectedInterests.includes("design")}
-                            onClick={() => handleInterestClick("design")}
-                        />
+                        {profile?.interests.map((interest, index) => (
+                            <InterestChip
+                                key={index}
+                                type='icon'
+                                interest={interest}
+                                isSelected={true}
+                            />
+                        )) || (
+                            <InterestChip
+                                type='icon'
+                                interest='design'
+                                isSelected={true}
+                            />
+                        )}
                         <InterestChip
                             type='icon'
                             interest='uxui'
@@ -178,14 +164,12 @@ export default function CreateProfile() {
                 </div>
             </div>
             <LongInput
-                placeholder='About me'
-                onChange={(e) => setAboutMe(e.target.value)}
+                placeholder={profile?.aboutMe || "justinpham"}
+                defaultValue={profile?.aboutMe || "justinpham"}
             />
             <SingleInput
-                inputName='Location'
-                placeholder='Location'
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
+                placeholder={profile?.location || "justinpham"}
+                defaultValue={profile?.username || "justinpham"}
             />
             <div className={styles.social_media}>
                 <SocialMedia />
