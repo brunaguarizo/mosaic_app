@@ -7,9 +7,9 @@
     padding: var(--space-regular);
     max-width: 393px;
     min-width: 393px;
-    min-height: 100vh;
-    max-height: 100vh;
-    height: 100vh;
+    min-height: 852px;
+    max-height: 852px;
+    height: 852px;
     box-sizing: border-box;
     overflow-y: hidden;
     margin-top: 0;

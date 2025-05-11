@@ -9,9 +9,10 @@
     min-width: 393px;
     min-height: 852px;
     max-height: 852px;
+    height: 852px;
     box-sizing: border-box;
-    overflow-y: auto;
-    margin-top: 100px;
+    overflow-y: hidden;
+    margin-top: 0;
 }
 
 .content {
@@ -49,7 +50,7 @@
 }
 
 .terms {
-    margin-top: var(--space-extra-large);
+    margin-top: auto;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
