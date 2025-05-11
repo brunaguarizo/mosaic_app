@@ -8,10 +8,130 @@
     max-width: 393px;
     min-width: 393px;
     min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
-    overflow-y: auto;
-    margin-top: 100px;
-    background-color: var(--grey-400);
+    overflow-y: hidden;
+    margin-top: 0;
+}
+
+.skipButton {
+    background: none;
+    border: none;
+    color: var(--blue-primary);
+    font-size: var(--font-size-small);
+    text-decoration: underline;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--space-extra-small);
+    margin-left: auto;
+}
+
+.skipButton:hover {
+    font-weight: var(--font-weight-bold);
+}
+
+.icon {
+    width: var(--space-small);
+}
+
+.illustrationWrapper {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration {
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    display: block;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-small);
+}
+
+.dot {
+    width: var(--space-small);
+    height: var(--space-small);
+    border-radius: var(--border-radius-large);
+    background: var(--blue-100);
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.active {
+    background: var(--blue-primary);
+}
+
+.content {
+    text-align: center;
+    margin: 0 8px 0 8px;
+}
+
+.title {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-small);
+    color: var(--black);
+}
+
+.text {
+    font-size: var(--font-size-regular);
+    color: var(--black);
+    margin-bottom: 0;
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 361px;
+    border: none;
+    background: none;
+    margin: 0;
+}
+
+.nextButton {
+    border: none;
+    background: none;
+    color: var(--blue-primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 361px;
+    margin: 0 auto;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nextButton:hover {
+    color: var(--blue-900);
+}
+
+.right {
+    width: 44px;
+    height: 52px;
+    margin-left: auto;
+}
+
+.backButton {
+    border: none;
+    background: none;
+    color: var(--blue-primary);
+}
+
+.backButton:hover {
+    color: var(--blue-900);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
@@ -47,9 +167,13 @@
     --line-height-small: 20px;
 
     /* ----- SPACING ----- */
+    --space-extra-small: 4px;
     --space-small: 8px;
     --space-regular: 16px;
     --space-medium: 32px;
     --space-large: 48px;
     --space-extra-large: 140px;
+
+    /* ----- BORDER RADIUS ----- */
+    --border-radius-large: 100px;
 }

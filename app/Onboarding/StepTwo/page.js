@@ -64,9 +64,10 @@ export default function StepTwo() {
                     Personalized scenarios, <br /> just for you
                 </h1>
                 <p className={styles.text}>
-                    Get a custom-tailored experience with step-by-step guidance
-                    to create a unique creative portfolio or professional
-                    showcase.
+                    Get a custom-tailored experience <br />
+                    with step-by-step guidance to create
+                    <br /> a unique creative portfolio <br />
+                    or professional showcase.
                 </p>
             </div>
 
