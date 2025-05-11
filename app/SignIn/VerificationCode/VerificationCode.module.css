@@ -5,13 +5,15 @@
     align-items: center;
     gap: var(--space-regular);
     padding: var(--space-regular);
+    width: 100%;
     max-width: 393px;
-    min-width: 393px;
     min-height: 852px;
     max-height: 852px;
+    height: 852px;
     box-sizing: border-box;
-    overflow-y: auto;
-    margin-top: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 0;
 }
 
 .content {
@@ -20,6 +22,8 @@
     display: grid;
     align-items: center;
     gap: var(--space-regular);
+    width: 100%;
+    padding: 0 var(--space-regular);
 }
 
 .header {
@@ -49,7 +53,10 @@
 }
 
 .terms {
-    margin-top: var(--space-extra-large);
+    margin-top: auto;
+    width: 100%;
+    padding: 0 var(--space-regular);
+    box-sizing: border-box;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */

@@ -10,6 +10,10 @@
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-regular);
     cursor: pointer;
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid;
+    transition: background 0.2s, color 0.2s, border 0.2s;
 }
 
 .label {
@@ -24,39 +28,78 @@
     opacity: 1;
 }
 
-.unselected {
-    opacity: 0.4;
-}
-
 .chip svg {
     width: 14px;
     height: auto;
     fill: var(--black);
 }
 
-.design {
-    background-color: var(--orange-secondary);
-    color: var(--black);
+.chip:not(.selected) svg {
+    fill: var(--black) !important;
 }
 
-.marketing {
+/* Selecionados */
+.design.selected {
+    background-color: var(--orange-secondary);
+    color: var(--white);
+    fill: var(--white);
+    border: 2px solid var(--orange-secondary);
+}
+.marketing.selected {
     background-color: var(--yellow-secondary);
     color: var(--black);
+    border: 2px solid var(--yellow-secondary);
 }
-
-.uxui {
+.uxui.selected {
     background-color: var(--green-secondary);
     color: var(--black);
+    border: 2px solid var(--green-secondary);
 }
-
-.frontend {
+.frontend.selected {
     background-color: var(--blue-primary);
     color: var(--white);
+    border: 2px solid var(--blue-primary);
 }
-
-.backend {
+.backend.selected {
     background-color: var(--purple-secondary);
     color: var(--white);
+    border: 2px solid var(--purple-secondary);
+}
+
+/* Deselecionados */
+.design:not(.selected) {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--orange-secondary);
+}
+.marketing:not(.selected) {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--yellow-secondary);
+}
+.uxui:not(.selected) {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--green-secondary);
+}
+.frontend:not(.selected) {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--blue-primary);
+}
+.backend:not(.selected) {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--purple-secondary);
+}
+
+.frontend.selected svg,
+.backend.selected svg {
+    fill: var(--white) !important;
+}
+
+.design.selected svg {
+    fill: var(--white) !important;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
