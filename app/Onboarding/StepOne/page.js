@@ -1,10 +1,10 @@
 "use client";
-import styles from "./StepOne.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
 import { useRouter } from "next/navigation";
+import styles from "./StepOne.module.css";
 import Image from "next/image";
 
-export default function StepOne() {
+export default function Home() {
     const router = useRouter();
     const handleNext = () => {
         router.replace("/Onboarding/StepTwo");
@@ -65,9 +65,10 @@ export default function StepOne() {
                     step by step
                 </h1>
                 <p className={styles.text}>
-                    Easily create a professional portfolio with our guided
-                    process. Follow clear steps to showcase your skills,
-                    projects, and experience effortlessly.
+                    Easily create a professional portfolio with
+                    <br /> our guided process. Follow clear steps <br />
+                    to showcase your skills, projects, and experience
+                    effortlessly.
                 </p>
             </div>
 

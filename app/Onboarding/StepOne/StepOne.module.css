@@ -7,11 +7,12 @@
     padding: var(--space-regular);
     max-width: 393px;
     min-width: 393px;
-    min-height: 852px;
-    max-height: 852px;
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
-    overflow-y: auto;
-    margin-top: 100px;
+    overflow-y: hidden;
+    margin-top: 0;
 }
 
 .skipButton {
@@ -37,7 +38,7 @@
 
 .illustrationWrapper {
     width: 100%;
-    max-width: 361px;
+    max-width: 220px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -47,8 +48,8 @@
 .illustration {
     width: 100%;
     height: auto;
+    max-width: 220px;
     display: block;
-    max-width: 100%;
 }
 
 .dots {
@@ -73,13 +74,13 @@
 
 .content {
     text-align: center;
-    margin: 0 var(--space-regular) 0 var(--space-regular);
+    margin: 0 8px 0 8px;
 }
 
 .title {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
-    margin-bottom: var(--space-regular);
+    margin-bottom: var(--space-small);
     color: var(--black);
 }
 
