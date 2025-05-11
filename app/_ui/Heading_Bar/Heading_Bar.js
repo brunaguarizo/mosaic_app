@@ -82,12 +82,6 @@ function Headingbar({ heading, type, pagination }) {
             <div className={styles.contentInner}>
                 <div className={styles.row}>
                     <div className={styles.heading}>{heading}</div>
-                    <button className={styles.iconButton}>
-                        <Searchbar
-                            type='secondary'
-                            inputView={"invisible"}
-                        />
-                    </button>
                 </div>
             </div>
         );

@@ -5,12 +5,13 @@
     align-items: center;
     gap: var(--space-regular);
     padding: var(--space-regular);
+    width: 100%;
     max-width: 393px;
-    min-width: 393px;
     min-height: 852px;
     max-height: 852px;
     height: 852px;
     box-sizing: border-box;
+    overflow-x: hidden;
     overflow-y: hidden;
     margin-top: 0;
 }
@@ -21,6 +22,8 @@
     display: grid;
     align-items: center;
     gap: var(--space-regular);
+    width: 100%;
+    padding: 0 var(--space-regular);
 }
 
 .header {
@@ -51,6 +54,9 @@
 
 .terms {
     margin-top: auto;
+    width: 100%;
+    padding: 0 var(--space-regular);
+    box-sizing: border-box;
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */

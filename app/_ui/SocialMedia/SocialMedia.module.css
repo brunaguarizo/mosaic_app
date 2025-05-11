@@ -1,9 +1,8 @@
 .container {
     display: flex;
     flex-direction: column;
-
     width: 100%;
-    max-width: 361px;
+    box-sizing: border-box;
     font-family: var(--font-family);
 }
 
@@ -18,13 +17,15 @@
     margin: 0;
     cursor: pointer;
     transition: color 0.2s ease, background 0.2s ease;
+    box-sizing: border-box;
 }
 
 .left {
     display: flex;
     align-items: center;
-    padding-right: 180px;
     gap: var(--space-small);
+    padding: 0 var(--space-regular);
+    box-sizing: border-box;
 }
 
 .icon {

@@ -5,12 +5,14 @@
     align-items: center;
     gap: var(--space-regular);
     padding: var(--space-regular);
+    width: 100%;
     max-width: 393px;
-    min-width: 393px;
+    min-width: unset;
     min-height: 852px;
     max-height: 852px;
     box-sizing: border-box;
     overflow-y: auto;
+    overflow-x: hidden;
     margin-top: 100px;
 }
 .navigation_bar {
