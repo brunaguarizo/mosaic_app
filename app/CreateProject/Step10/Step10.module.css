@@ -9,6 +9,7 @@
     min-width: 393px;
     min-height: 852px;
     max-height: 852px;
+    height: 852px;
     box-sizing: border-box;
     overflow-y: auto;
     margin-top: 100px;
@@ -66,4 +67,15 @@
     font-weight: var(--font-weight-bold);
     color: var(--black);
     margin-bottom: var(--space-regular);
+}
+
+.nav_bar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-small);
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
 }

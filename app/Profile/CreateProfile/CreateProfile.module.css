@@ -59,7 +59,7 @@
 .Three_column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-regular);
+    gap: var(--space-small);
     width: 100%;
     box-sizing: border-box;
 }
@@ -67,7 +67,7 @@
 .Two_column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-regular);
+    gap: var(--space-small);
     width: 100%;
     box-sizing: border-box;
 }
@@ -108,4 +108,9 @@
     position: fixed;
     bottom: 0px;
     left: 0px;
+}
+
+.save_button {
+    background: var(--blue-primary);
+    color: var(--white);
 }

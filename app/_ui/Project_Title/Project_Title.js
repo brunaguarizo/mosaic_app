@@ -17,7 +17,7 @@ function ProjectTitle({
             </div>
             <ProgressCircle
                 percentage={percentage}
-                variant='secondary'
+                type='card'
                 hideText={percentage === 0}
             />
         </div>

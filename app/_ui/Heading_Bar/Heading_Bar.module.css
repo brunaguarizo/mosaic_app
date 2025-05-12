@@ -1,7 +1,8 @@
 .contentInner {
     display: flex;
     flex-direction: column;
-    width: 361px;
+    width: 100%;
+    max-width: 393px;
 }
 
 .row {

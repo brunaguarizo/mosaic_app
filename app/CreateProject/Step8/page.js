@@ -83,7 +83,7 @@ export default function ProjectName() {
                 />
             </div>
 
-            <div className={styles.nav}>
+            <div className={styles.nav_bar}>
                 <Navbar />
             </div>
 

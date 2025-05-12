@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import classNames from "classnames";
 import styles from "./Circle_Progress.module.css";
 
-export default function ProgressCircle({ percentage = 30, type }) {
+export default function ProgressCircle({ percentage = 30, type, textColor }) {
     const [progress, setProgress] = useState(0);
     const IndicatorClasses = classNames(styles.progressCircleIndicator, {
         [styles.projectCardIndicator]: type === "card",
@@ -32,6 +32,19 @@ export default function ProgressCircle({ percentage = 30, type }) {
         return () => clearTimeout(timer);
     }, [percentage]);
 
+    // Função para definir a cor do indicador conforme a porcentagem
+    function getIndicatorColor(percentage) {
+        if (percentage <= 30) return "var(--orange-secondary)";
+        if (percentage > 30 && percentage <= 70) return "var(--blue-primary)";
+        return "var(--green-secondary)";
+    }
+
+    const indicatorColor = getIndicatorColor(percentage);
+
+    // Definir cor do texto
+    let percentTextColor =
+        textColor || (type === "card" ? "var(--black)" : "var(--white)");
+
     return (
         <div className={styles.progressContainerWrapper}>
             <div className={styles.progressContainer}>
@@ -56,9 +69,14 @@ export default function ProgressCircle({ percentage = 30, type }) {
                         strokeLinecap='round'
                         strokeDasharray={circumference}
                         strokeDashoffset={strokeDashoffset}
+                        style={{ stroke: indicatorColor }}
                     />
                 </svg>
-                <div className={PercentageClasses}>{progress}%</div>
+                <div
+                    className={PercentageClasses}
+                    style={{ color: percentTextColor }}>
+                    {progress}%
+                </div>
             </div>
         </div>
     );

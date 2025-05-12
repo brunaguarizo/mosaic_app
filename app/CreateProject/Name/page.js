@@ -58,7 +58,7 @@ export default function ProjectName() {
                 onClick={handleNext}
             />
 
-            <div className={styles.nav}>
+            <div className={styles.nav_bar}>
                 <Navbar />
             </div>
         </div>

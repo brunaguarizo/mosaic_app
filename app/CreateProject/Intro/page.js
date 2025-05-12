@@ -57,7 +57,7 @@ export default function CreateProject() {
                 onClick={handleCancel}
             />
 
-            <div className={styles.nav}>
+            <div className={styles.nav_bar}>
                 <Navbar />
             </div>
         </div>

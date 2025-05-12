@@ -5,7 +5,7 @@ import styles from "./Date_Card.module.css";
 import DatePicker from "../Date_PopUp/Date_PopUp";
 
 export default function DateCard({
-    label = "Start and End Date",
+    label = "Project Start and End Date",
     onDateChange = () => {},
 }) {
     const [isOpen, setIsOpen] = useState(false);

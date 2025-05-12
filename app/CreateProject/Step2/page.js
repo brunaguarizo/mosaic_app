@@ -86,7 +86,7 @@ export default function ProjectName() {
                 />
             </div>
 
-            <div className={styles.nav}>
+            <div className={styles.nav_bar}>
                 <Navbar />
             </div>
 
@@ -95,7 +95,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setShowDeletePopup(false);
-                        router.replace("/Dashboard");
+                        router.replace("/Dashboard/DashboardRegular");
                     }}
                     buttonText='Delete'
                     buttonType='warning'

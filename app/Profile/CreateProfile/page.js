@@ -193,7 +193,7 @@ export default function CreateProfile() {
             <div className={styles.button_column}>
                 <div className={styles.button}>
                     <Button
-                        type='terciary'
+                        type='primary'
                         size='large'
                         value='Save'
                         onClick={handleSave}

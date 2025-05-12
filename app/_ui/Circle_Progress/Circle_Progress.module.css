@@ -24,12 +24,10 @@
     stroke: var(--white);
 }
 .progressCircleIndicator {
-    stroke: var(--white);
     transition: stroke-dashoffset 0.5s ease-in-out;
 }
 
 .projectCardIndicator {
-    stroke: var(--blue-primary);
     transition: stroke-dashoffset 0.5s ease-in-out;
 }
 .progressPercentage {

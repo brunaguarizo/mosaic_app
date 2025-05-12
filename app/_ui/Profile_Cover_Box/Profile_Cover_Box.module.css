@@ -22,8 +22,8 @@
     background: var(--white);
     border-radius: 8px;
     position: absolute;
-    right: 32px;
-    bottom: 32px;
+    right: 80px;
+    bottom: 80px;
     padding: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     cursor: pointer;
@@ -31,6 +31,12 @@
     align-items: center;
     justify-content: center;
     z-index: 2;
+    border: none;
+    outline: none;
+}
+.edit_icon:focus {
+    outline: none;
+    box-shadow: none;
 }
 .profile_info {
     margin-top: -110px;
@@ -75,4 +81,5 @@
     background-color: var(--white);
     padding: var(--space-small);
     border-radius: 4px;
+    border: none;
 }

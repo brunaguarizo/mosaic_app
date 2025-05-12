@@ -19,14 +19,14 @@ export default function ProjectName() {
         router.replace("/ProjectSteps/EggsAndBacon/Task2");
     };
     const handleLater = () => {
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
     const handleDelete = () => {
         setShowDeletePopup(true);
     };
     const handleConfirmDelete = () => {
         setShowDeletePopup(false);
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
 
     return (
@@ -112,7 +112,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setShowDeletePopup(false);
-                        router.replace("/Dashboard");
+                        router.replace("/Dashboard/DashboardRegular");
                     }}
                     buttonText='Delete'
                     buttonType='warning'

@@ -31,8 +31,8 @@
 }
 
 .terciary {
-    background: var(--blue-100);
-    color: var(--black);
+    background: var(--blue-50);
+    color: var(--blue-primary);
 }
 
 .disabled {
@@ -62,4 +62,5 @@
 
 .error {
     background-color: var(--orange-secondary);
+    color: var(--white);
 }

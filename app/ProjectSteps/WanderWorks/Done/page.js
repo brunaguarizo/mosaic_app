@@ -118,7 +118,7 @@ export default function ProjectName() {
                 onClick={handlePortfolio}
             />
 
-            <div className={styles.nav}>
+            <div className={styles.nav_bar}>
                 <Navbar />
             </div>
 

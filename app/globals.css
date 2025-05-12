@@ -48,12 +48,13 @@ html {
     /* ----- TYPE ----- */
     --font-family: "Open Sans", sans-serif;
 
-    --header-xxlarge-size: 88px;
-    --title-section-font-size: 30px;
-    --button-font-size: 24px;
-    --body-text-font-size: 20px;
-    --menu-font-size: 16px;
-    --label-font-size: 12px;
+    --font-size-extra-large: 88px;
+    --font-size-large: 30px;
+    --font-size-extra-medium: 24px;
+    --font-size-medium: 20px;
+    --font-size-regular: 16px;
+    --font-size-small: 12px;
+    --font-size-extra-small: 10px;
 
     --font-style-normal: normal;
     --font-weight-bold: bold;

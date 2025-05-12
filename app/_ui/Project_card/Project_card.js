@@ -17,6 +17,7 @@ function ProjectCard({
 
     MenuItem1,
     MenuItem2,
+    percentage = 30,
 }) {
     const router = useRouter();
 
@@ -87,7 +88,7 @@ function ProjectCard({
                 )}
             </div>
             <ProgressCircle
-                percentage={30}
+                percentage={percentage}
                 type='card'
             />
 

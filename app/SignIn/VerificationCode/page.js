@@ -68,6 +68,7 @@ export default function SignIn() {
                 <InfoBanner
                     prefix={"By signing up to Mosaic, you agree to our "}
                     linkText={"terms of use"}
+                    linkDirectory={"/TextInformation/TermsOfUse"}
                     suffix={
                         ", and to the collection of your personal information."
                     }

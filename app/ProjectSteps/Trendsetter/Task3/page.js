@@ -19,14 +19,14 @@ export default function ProjectName() {
         router.replace("/ProjectSteps/Trendsetter/Completed");
     };
     const handleLater = () => {
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
     const handleDelete = () => {
         setShowDeletePopup(true);
     };
     const handleConfirmDelete = () => {
         setShowDeletePopup(false);
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
 
     return (
@@ -109,7 +109,7 @@ export default function ProjectName() {
                 />
             </div>
 
-            <div className={styles.nav}>
+            <div className={styles.nav_bar}>
                 <Navbar />
             </div>
 
@@ -118,7 +118,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setShowDeletePopup(false);
-                        router.replace("/Dashboard");
+                        router.replace("/Dashboard/DashboardRegular");
                     }}
                     buttonText='Delete'
                     buttonType='warning'
