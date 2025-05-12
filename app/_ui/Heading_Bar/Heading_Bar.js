@@ -9,19 +9,7 @@ function Headingbar({ heading, type, pagination }) {
     const pathname = usePathname();
 
     const handleBack = () => {
-        const currentPage = pathname.split("/").pop();
-
-        if (currentPage === "Task1") {
-            router.push("/ProjectSteps/WanderWorks/ProjectName");
-        } else if (currentPage === "Task2") {
-            router.push("/ProjectSteps/WanderWorks/Task1");
-        } else if (currentPage === "Task3") {
-            router.push("/ProjectSteps/WanderWorks/Task2");
-        } else if (currentPage === "Done") {
-            router.push("/ProjectSteps/WanderWorks/Task3");
-        } else {
-            router.back();
-        }
+        router.back();
     };
 
     const handleSettingsClick = () => {
