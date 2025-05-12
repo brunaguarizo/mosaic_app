@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./Project_card.module.css";
-import Button from "../Button/Button";
-import Tag from "../Tag/Tag";
-import ProgressCircle from "../Circle_Progress/Circle_Progress";
-import PopUp from "../PopUp/PopUp";
+import styles from "@/app/_ui/Project_Card/Project_Card.module.css";
+import Button from "@/app/_ui/Button/Button";
+import Tag from "@/app/_ui/Tag/Tag";
+import ProgressCircle from "@/app/_ui/Circle_Progress/Circle_Progress";
+import PopUp from "@/app/_ui/PopUp/PopUp";
 import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
 import { useRouter } from "next/navigation";
 
@@ -15,11 +15,18 @@ function ProjectCard({
     Interest,
     onClick,
 
-    MenuItem1,
-    MenuItem2,
+    ActionText,
+    DeleteText,
     percentage = 30,
 }) {
     const router = useRouter();
+
+    //Popup states
+
+    // const PopUpStates = () => {
+    //  isAddedToPortfolioOpen:false,
+    //  isDeletedOpen:false,
+    // };
 
     // Control visibility - menu dropdown
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,12 +83,12 @@ function ProjectCard({
                             <li
                                 className={styles.dropdown__item}
                                 onClick={handleAddToPortfolio}>
-                                {MenuItem1}
+                                {ActionText}
                             </li>
                             <li
                                 className={styles.dropdown__item}
                                 onClick={handleDeleteProject}>
-                                {MenuItem2}
+                                {DeleteText}
                             </li>
                         </ul>
                     </div>

@@ -13,7 +13,7 @@ import LongInput from "../../_ui/Long_Input_Box/Long_Input_Box";
 import PopUp from "../../_ui/PopUp/PopUp";
 import Headingbar from "../../_ui/Heading_Bar/Heading_Bar";
 import CreateProject from "../../_ui/Create_Project_Button/Create_Project_Button";
-import ProjectCard from "../../_ui/Project_card/Project_card";
+import ProjectCard from "../../_ui/Project_Card/Project_Card";
 import Navbar from "../../_ui/navbar/navbar";
 import Searchbar from "../../_ui/Search_Bar/Search_Bar";
 
