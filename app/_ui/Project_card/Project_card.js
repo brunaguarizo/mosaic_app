@@ -8,6 +8,7 @@ import ProgressCircle from "@/app/_ui/Circle_Progress/Circle_Progress";
 import PopUp from "@/app/_ui/PopUp/PopUp";
 import popupStyles from "@/app/_ui/PopUp/PopUp.module.css";
 import { useRouter } from "next/navigation";
+import DropDownMenu from "@/app/_ui/DropDown_Menu/DropDown_Menu";
 
 function ProjectCard({
     ProjectName,
@@ -68,24 +69,16 @@ function ProjectCard({
 
                 {/* Menu dropdown */}
                 {isMenuOpen && (
-                    <div className={styles.dropdown__menu}>
-                        <ul className={styles.dropdown__list}>
-                            <li
-                                className={styles.dropdown__item}
-                                onClick={() =>
-                                    handlePopUp("isAddedToPortfolioOpen", true)
-                                }>
-                                {ActionText}
-                            </li>
-                            <li
-                                className={styles.dropdown__item}
-                                onClick={() =>
-                                    handlePopUp("isDeleteProjectOpen", true)
-                                }>
-                                {DeleteText}
-                            </li>
-                        </ul>
-                    </div>
+                    <DropDownMenu
+                        ActionText={ActionText}
+                        DeleteText={DeleteText}
+                        onActionClick={() =>
+                            handlePopUp("isAddedToPortfolioOpen", true)
+                        }
+                        onDeleteClick={() =>
+                            handlePopUp("isDeleteProjectOpen", true)
+                        }
+                    />
                 )}
             </div>
             <ProgressCircle
@@ -121,7 +114,7 @@ function ProjectCard({
                     onClose={handleConfirm}
                     buttonText='Confirm'
                     buttonType='primary'
-                    secondaryButtonText='Undo'
+                    secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={() =>
                         handlePopUp("isAddedToPortfolioOpen", false)
@@ -138,9 +131,9 @@ function ProjectCard({
             {popupState.isDeleteProjectOpen && (
                 <PopUp
                     onClose={() => handlePopUp("isDeleteProjectOpen", false)}
-                    buttonText='Confirm'
+                    buttonText='Delete'
                     buttonType='primary'
-                    secondaryButtonText='Undo'
+                    secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={() =>
                         handlePopUp("isDeleteProjectOpen", false)
