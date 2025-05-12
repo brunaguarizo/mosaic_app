@@ -99,7 +99,7 @@ function ProjectCard({
             </div>
 
             <p className={styles.card__text}>{ProjectDescription}</p>
-            <div className={styles.date}>
+            <div className={styles.project_date}>
                 <svg
                     className={styles.date__icon}
                     width='18'

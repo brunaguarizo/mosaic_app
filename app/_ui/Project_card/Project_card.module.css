@@ -86,7 +86,7 @@
     max-width: 220px;
 }
 
-.date {
+.project_date {
     display: flex;
     align-items: center;
     gap: var(--space-small);
