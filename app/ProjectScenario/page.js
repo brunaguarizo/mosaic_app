@@ -26,7 +26,7 @@ export default function ProjectName() {
     };
     const handleConfirmDelete = () => {
         setShowDeletePopup(false);
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
 
     return (
@@ -113,7 +113,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setShowDeletePopup(false);
-                        router.replace("/Dashboard");
+                        router.replace("/Dashboard/DashboardRegular");
                     }}
                     buttonText='Delete'
                     buttonType='warning'
