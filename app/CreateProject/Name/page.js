@@ -24,39 +24,42 @@ export default function ProjectName() {
                 type='navigation'
                 pagination='0/10'
             />
-            {/* progress */}
-            <ProgressBar CompletionAmount={0} />
-            {/* Image */}
-            <img
-                className={styles.image}
-                src='/createproject/image_02.png'
-                quality={100}
-                width={361}
-                height={460}
-                alt='Graphics'
-            />
 
-            {/* Content */}
             <div className={styles.content}>
-                <p className={styles.title}>Project Name</p>
-                <p className={styles.description}>
-                    This will not be the name of the final scenario, but will be
-                    used as a placeholder name until you finish the
-                    questionnaire and have a scenario.
-                </p>
-            </div>
+                {/* progress */}
+                <ProgressBar CompletionAmount={0} />
+                {/* Image */}
+                <img
+                    className={styles.image}
+                    src='/createproject/image_02.png'
+                    quality={100}
+                    width={361}
+                    height={460}
+                    alt='Graphics'
+                />
 
-            {/* Button */}
-            <SingleInput
-                type='secondary'
-                placeholder='Project Name'
-            />
-            <Button
-                type='primary'
-                size='large'
-                value='Next'
-                onClick={handleNext}
-            />
+                {/* Content */}
+                <div className={styles.content}>
+                    <p className={styles.title}>Project Name</p>
+                    <p className={styles.description}>
+                        This will not be the name of the final scenario, but
+                        will be used as a placeholder name until you finish the
+                        questionnaire and have a scenario.
+                    </p>
+                </div>
+
+                {/* Button */}
+                <SingleInput
+                    type='secondary'
+                    placeholder='Project Name'
+                />
+                <Button
+                    type='primary'
+                    size='large'
+                    value='Next'
+                    onClick={handleNext}
+                />
+            </div>
 
             <div className={styles.nav_bar}>
                 <Navbar />

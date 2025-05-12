@@ -20,14 +20,14 @@ export default function ProjectName() {
         router.replace("/CreateProject/Step10");
     };
     const handleLater = () => {
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
     const handleDelete = () => {
         setShowDeletePopup(true);
     };
     const handleConfirmDelete = () => {
         setShowDeletePopup(false);
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
 
     const options = [
@@ -45,46 +45,46 @@ export default function ProjectName() {
                 type='navigation'
                 pagination='9/10'
             />
-            {/* progress */}
-            <ProgressBar CompletionAmount={90} />
-            {/* Image */}
-            <img
-                className={styles.image}
-                src='/createproject/image_11.png'
-                quality={100}
-                width={361}
-                height={460}
-                alt='Graphics'
-            />
-
-            {/* Content */}
             <div className={styles.content}>
+                {/* progress */}
+                <ProgressBar CompletionAmount={90} />
+                {/* Image */}
+                <img
+                    className={styles.image}
+                    src='/createproject/image_11.png'
+                    quality={100}
+                    width={361}
+                    height={460}
+                    alt='Graphics'
+                />
+
+                {/* Content */}
+
                 <p className={styles.title}>Do you prefer working with:</p>
                 <RadioItemList OptionTextArray={options} />
-            </div>
 
-            {/* Button */}
-            <Button
-                type='primary'
-                size='large'
-                value='Next'
-                onClick={handleNext}
-            />
-            <div className={styles.buttons}>
+                {/* Button */}
                 <Button
-                    type='secondary'
+                    type='primary'
                     size='large'
-                    value='Delete'
-                    onClick={handleDelete}
+                    value='Next'
+                    onClick={handleNext}
                 />
-                <Button
-                    type='secondary'
-                    size='large'
-                    value='Continue Later'
-                    onClick={handleLater}
-                />
+                <div className={styles.buttons}>
+                    <Button
+                        type='secondary'
+                        size='large'
+                        value='Delete'
+                        onClick={handleDelete}
+                    />
+                    <Button
+                        type='secondary'
+                        size='large'
+                        value='Continue Later'
+                        onClick={handleLater}
+                    />
+                </div>
             </div>
-
             <div className={styles.nav_bar}>
                 <Navbar />
             </div>
@@ -94,7 +94,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setShowDeletePopup(false);
-                        router.replace("/Dashboard");
+                        router.replace("/Dashboard/DashboardRegular");
                     }}
                     buttonText='Delete'
                     buttonType='warning'

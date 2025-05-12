@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: var(--space-regular);
     padding: var(--space-regular);
@@ -14,17 +14,23 @@
     overflow-y: auto;
 }
 
+.image {
+    width: 80%;
+    height: auto;
+    padding: 0;
+    align-self: center;
+}
+
 .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-regular);
+    justify-content: center;
+    align-items: left;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
-}
-
-.image {
-    width: 80%;
-    height: auto;
     padding: 0;
 }
 

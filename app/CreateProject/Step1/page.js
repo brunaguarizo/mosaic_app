@@ -20,7 +20,7 @@ export default function ProjectName() {
         router.replace("/CreateProject/Step2");
     };
     const handleLater = () => {
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
     const handleDelete = () => {
         setShowDeletePopup(true);
@@ -28,7 +28,7 @@ export default function ProjectName() {
     const handleConfirmDelete = () => {
         // Add any delete logic here if needed
         setShowDeletePopup(false);
-        router.replace("/Dashboard");
+        router.replace("/Dashboard/DashboardRegular");
     };
 
     const options = [
@@ -48,44 +48,46 @@ export default function ProjectName() {
                 type='navigation'
                 pagination='1/10'
             />
-            {/* progress */}
-            <ProgressBar CompletionAmount={10} />
-            {/* Image */}
-            <img
-                className={styles.image}
-                src='/createproject/image_03.png'
-                quality={100}
-                width={361}
-                height={460}
-                alt='Graphics'
-            />
 
-            {/* Content */}
             <div className={styles.content}>
+                {/* progress */}
+                <ProgressBar CompletionAmount={10} />
+                {/* Image */}
+                <img
+                    className={styles.image}
+                    src='/createproject/image_03.png'
+                    quality={100}
+                    width={361}
+                    height={460}
+                    alt='Graphics'
+                />
+
+                {/* Content */}
+
                 <p className={styles.title}>What is this project for?</p>
                 <RadioItemList OptionTextArray={options} />
-            </div>
 
-            {/* Button */}
-            <Button
-                type='primary'
-                size='large'
-                value='Next'
-                onClick={handleNext}
-            />
-            <div className={styles.buttons}>
+                {/* Button */}
                 <Button
-                    type='secondary'
+                    type='primary'
                     size='large'
-                    value='Delete'
-                    onClick={handleDelete}
+                    value='Next'
+                    onClick={handleNext}
                 />
-                <Button
-                    type='secondary'
-                    size='large'
-                    value='Continue Later'
-                    onClick={handleLater}
-                />
+                <div className={styles.buttons}>
+                    <Button
+                        type='secondary'
+                        size='large'
+                        value='Delete'
+                        onClick={handleDelete}
+                    />
+                    <Button
+                        type='secondary'
+                        size='large'
+                        value='Continue Later'
+                        onClick={handleLater}
+                    />
+                </div>
             </div>
 
             <div className={styles.nav_bar}>
