@@ -1,5 +1,5 @@
 .dropdown__menu {
-    position: absolute;
+    position: absolute; /*absolu to the project card */
     top: var(--space-medium);
     right: 0;
     background-color: white;

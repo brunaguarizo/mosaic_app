@@ -16,7 +16,7 @@
     justify-content: flex-end;
     padding: 0;
     margin: 0;
-    position: relative;
+    position: relative; /*relative to the dropdown menu */
 }
 
 .project_chips {
