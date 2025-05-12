@@ -39,15 +39,17 @@ export default function StepTwo() {
             </button>
 
             {/* Illustration */}
-            <div>
-                <Image
-                    src='/onboarding/Image_02.png'
-                    quality={100}
-                    unoptimized={true}
-                    width={361}
-                    height={460}
-                    alt='Graphics'
-                />
+            <div className={styles.illustration}>
+                <div className={styles.illustrationWrapper}>
+                    <Image
+                        src='/onboarding/Image_02.png'
+                        quality={100}
+                        unoptimized={true}
+                        width={361}
+                        height={460}
+                        alt='Graphics'
+                    />
+                </div>
             </div>
 
             {/* Progress Dots */}

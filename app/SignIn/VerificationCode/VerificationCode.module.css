@@ -27,7 +27,7 @@
 }
 
 .header {
-    font-size: var(--font-size-extra-large);
+    font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
     padding: 0px;
     margin: 0px;
