@@ -47,23 +47,23 @@ export default function DashboardAddition() {
                 ProjectName='WanderWorks'
                 Interest='design'
                 onClick={handleWanderworksClick}
-                MenuItem1='Add to Portfolio'
-                MenuItem2='Delete Project'
+                ActionText='Add to Portfolio'
+                DeleteText='Delete Project'
             />
 
             <ProjectCard
                 ProjectName='Eggs and Bacon'
                 Interest='design'
                 onClick={handleEggsAndBaconClick}
-                MenuItem1='Add to Portfolio'
-                MenuItem2='Delete Project'
+                ActionText='Add to Portfolio'
+                DeleteText='Delete Project'
             />
             <ProjectCard
                 ProjectName='Trendsetter'
                 Interest='marketing'
                 onClick={handleTrendsetterClick}
-                MenuItem1='Add to Portfolio'
-                MenuItem2='Delete Project'
+                ActionText='Add to Portfolio'
+                DeleteText='Delete Project'
             />
 
             <div className={styles.navigation_bar}>

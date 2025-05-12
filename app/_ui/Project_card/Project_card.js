@@ -21,44 +21,34 @@ function ProjectCard({
 }) {
     const router = useRouter();
 
-    //Popup states
-
-    // const PopUpStates = () => {
-    //  isAddedToPortfolioOpen:false,
-    //  isDeletedOpen:false,
-    // };
-
     // Control visibility - menu dropdown
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    //control visibility of pop-ups
-    const [showAddedToPortfolio, setShowAddedToPortfolio] = useState(false);
-    const [showDeleteProject, setShowDeleteProject] = useState(false);
-    const [showAddedToPortfolioPopup, setShowAddedToPortfolioPopup] =
-        useState(false);
-    const [showDeleteProjectPopup, setShowDeleteProjectPopup] = useState(false);
+    // Combined modal states
+    let initialPopUpState = {
+        isAddedToPortfolioOpen: false,
+        isDeleteProjectOpen: false,
+    };
+    const [popupState, setPopupState] = useState(initialPopUpState);
 
     // Switch visibility - menu dropdown
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const handlePopUp = (popUpName, value) => {
+        setPopupState((prev) => ({
+            ...prev,
+            [popUpName]: value !== undefined ? value : !prev[popUpName],
+        }));
+    };
     //Handle pop-up actions
     const handleConfirm = () => {
         router.push("/Portfolio/Portfolio");
     };
 
     const handleCancel = () => {
-        setShowAddedToPortfolioPopup(false);
-        setShowDeleteProject(false);
-    };
-
-    const handleAddToPortfolio = () => {
-        setShowAddedToPortfolioPopup(true);
-    };
-
-    const handleDeleteProject = () => {
-        setShowDeleteProject(true);
+        setPopupState(initialPopUpState);
     };
 
     return (
@@ -82,12 +72,16 @@ function ProjectCard({
                         <ul className={styles.dropdown__list}>
                             <li
                                 className={styles.dropdown__item}
-                                onClick={handleAddToPortfolio}>
+                                onClick={() =>
+                                    handlePopUp("isAddedToPortfolioOpen", true)
+                                }>
                                 {ActionText}
                             </li>
                             <li
                                 className={styles.dropdown__item}
-                                onClick={handleDeleteProject}>
+                                onClick={() =>
+                                    handlePopUp("isDeleteProjectOpen", true)
+                                }>
                                 {DeleteText}
                             </li>
                         </ul>
@@ -122,14 +116,16 @@ function ProjectCard({
                 type='primary'
                 onClick={onClick}
             />
-            {showAddedToPortfolioPopup && (
+            {popupState.isAddedToPortfolioOpen && (
                 <PopUp
                     onClose={handleConfirm}
                     buttonText='Confirm'
                     buttonType='primary'
                     secondaryButtonText='Undo'
                     secondaryButtonType='secondary'
-                    onSecondaryButtonClick={handleCancel}>
+                    onSecondaryButtonClick={() =>
+                        handlePopUp("isAddedToPortfolioOpen", false)
+                    }>
                     <h2 className={popupStyles.popup_header}>
                         Project added to portfolio
                     </h2>
@@ -139,14 +135,16 @@ function ProjectCard({
                     </p>
                 </PopUp>
             )}
-            {showDeleteProject && (
+            {popupState.isDeleteProjectOpen && (
                 <PopUp
-                    onClose={handleCancel}
+                    onClose={() => handlePopUp("isDeleteProjectOpen", false)}
                     buttonText='Confirm'
                     buttonType='primary'
                     secondaryButtonText='Undo'
                     secondaryButtonType='secondary'
-                    onSecondaryButtonClick={handleCancel}>
+                    onSecondaryButtonClick={() =>
+                        handlePopUp("isDeleteProjectOpen", false)
+                    }>
                     <h2 className={popupStyles.popup_header}>
                         Do you wish to delete this project permanently?
                     </h2>
