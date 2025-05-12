@@ -15,7 +15,7 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
-            {/* Status Bar */}
+            {/* Sgittatus Bar */}
             <StatusBar />
             <button
                 className={styles.skipButton}
