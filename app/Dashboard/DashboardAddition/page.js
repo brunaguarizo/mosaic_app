@@ -13,7 +13,7 @@ import LongInput from "../../_ui/Long_Input_Box/Long_Input_Box";
 import PopUp from "../../_ui/PopUp/PopUp";
 import Headingbar from "../../_ui/Heading_Bar/Heading_Bar";
 import CreateProject from "../../_ui/Create_Project_Button/Create_Project_Button";
-import ProjectCard from "../../_ui/Project_card/Project_card";
+import ProjectCard from "../../_ui/Project_Card/Project_Card";
 import Navbar from "../../_ui/navbar/navbar";
 import Searchbar from "../../_ui/Search_Bar/Search_Bar";
 
@@ -47,23 +47,23 @@ export default function DashboardAddition() {
                 ProjectName='WanderWorks'
                 Interest='design'
                 onClick={handleWanderworksClick}
-                MenuItem1='Add to Portfolio'
-                MenuItem2='Delete Project'
+                ActionText='Add to Portfolio'
+                DeleteText='Delete Project'
             />
 
             <ProjectCard
                 ProjectName='Eggs and Bacon'
                 Interest='design'
                 onClick={handleEggsAndBaconClick}
-                MenuItem1='Add to Portfolio'
-                MenuItem2='Delete Project'
+                ActionText='Add to Portfolio'
+                DeleteText='Delete Project'
             />
             <ProjectCard
                 ProjectName='Trendsetter'
                 Interest='marketing'
                 onClick={handleTrendsetterClick}
-                MenuItem1='Add to Portfolio'
-                MenuItem2='Delete Project'
+                ActionText='Add to Portfolio'
+                DeleteText='Delete Project'
             />
 
             <div className={styles.navigation_bar}>
