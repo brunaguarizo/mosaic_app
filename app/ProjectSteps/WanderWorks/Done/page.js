@@ -11,6 +11,8 @@ import PopUp from "@/app/_ui/PopUp/PopUp";
 import ProjectTitle from "@/app/_ui/Project_Title/Project_Title";
 import DateCard from "@/app/_ui/Date_Card/Date_Card";
 import TaskDropDown from "@/app/_ui/Task_Dropdown/Task_Dropdown";
+import PopUpStyles from "@/app/_ui/PopUp/PopUp.module.css";
+import TaskList from "@/app/_ui/Task_List/Task_List";
 
 export default function ProjectName() {
     const router = useRouter();
@@ -33,44 +35,45 @@ export default function ProjectName() {
         <div className={styles.container}>
             {/* Status Bar */}
             <StatusBar />
-
-            {/* heading */}
             <Headingbar
+                heading='WanderWorks'
                 type='navigation'
-                pagination='3/3'
             />
-            {/* Progress */}
+            <div>
+                <img
+                    className={styles.cover_image}
+                    src='/portfolio/wanderworks.png'
+                    alt='Wanderworks cover image'></img>
+            </div>
+
             <ProjectTitle
                 title='WanderWorks'
                 description='Create a visual brand identity for an Eco-Friendly travel agency that focus on sustainability and adventure.'
                 percentage={100}
                 variant='secondary'
+                className={styles.project_title}
             />
 
-            {/* Congrats */}
-            <div className={styles.task_content}>
-                <h2>Congratulations!</h2>
-                <p className={styles.task_item}>
-                    You completed all the tasksand finished your project.
-                </p>
-            </div>
-
-            {/* Content */}
             <DescriptionBox
-                title='Description'
-                description={
-                    "- Sustainability  \n - Adventure \n- Empowerment through travel  \n - Community building \n- Education on environmental conservation"
-                }
+                title='Desciption'
+                description='Sustainability
+                Adventure
+                Empowerment through travel
+                Community building
+                Education on environmental conservation'
+                useCase='secondary'
+            />
+            <DescriptionBox
+                title='Roles'
+                description='UX Designer, UI Designer, Researcher'
+                useCase='secondary'
+            />
+            <DescriptionBox
+                title='Tools Used'
+                description='Figma, Adobe Illustrator, User Testing'
                 useCase='secondary'
             />
 
-            {/* Date */}
-            <DateCard
-                startDate={3}
-                endDate={13}
-            />
-
-            {/* Task Dropdown */}
             <TaskDropDown>
                 <div title='Define Brand Elements'>
                     <ul>
@@ -129,7 +132,7 @@ export default function ProjectName() {
                         router.replace("/Portfolio/Portfolio");
                     }}
                     buttonText='Confirm'
-                    buttonType='primary'
+                    buttonType='warning'
                     secondaryButtonText='Undo'
                     secondaryButtonType='terciary'
                     onSecondaryButtonClick={() => setIsPopupOpen(false)}>
