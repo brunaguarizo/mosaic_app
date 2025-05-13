@@ -16,10 +16,10 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/WanderWorks/Completed");
+        router.push("/ProjectSteps/WanderWorks/Completed");
     };
     const handleLater = () => {
-        router.replace("/Dashboard/DashboardAddition");
+        router.push("/Dashboard/DashboardAddition");
     };
     const handleDelete = () => {
         setShowDeletePopup(true);
@@ -113,7 +113,7 @@ export default function ProjectName() {
                 <PopUp
                     onClose={() => {
                         setShowDeletePopup(false);
-                        router.replace("/Dashboard/DashboardRegular");
+                        router.push("/Dashboard/DashboardRegular");
                     }}
                     buttonText='Delete'
                     buttonType='warning'
