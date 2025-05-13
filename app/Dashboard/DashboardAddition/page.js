@@ -46,6 +46,7 @@ export default function DashboardAddition() {
             <ProjectCard
                 ProjectName='WanderWorks'
                 Interest='design'
+                type='card'
                 onClick={handleWanderworksClick}
                 ActionText='Add to Portfolio'
                 DeleteText='Delete Project'
@@ -54,6 +55,7 @@ export default function DashboardAddition() {
             <ProjectCard
                 ProjectName='Eggs and Bacon'
                 Interest='design'
+                type='card'
                 onClick={handleEggsAndBaconClick}
                 ActionText='Add to Portfolio'
                 DeleteText='Delete Project'
@@ -61,6 +63,7 @@ export default function DashboardAddition() {
             <ProjectCard
                 ProjectName='Trendsetter'
                 Interest='marketing'
+                type='card'
                 onClick={handleTrendsetterClick}
                 ActionText='Add to Portfolio'
                 DeleteText='Delete Project'

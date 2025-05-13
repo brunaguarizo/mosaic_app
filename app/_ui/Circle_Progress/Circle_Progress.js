@@ -3,17 +3,17 @@ import { useState, useEffect } from "react";
 import classNames from "classnames";
 import styles from "./Circle_Progress.module.css";
 
-export default function ProgressCircle({ percentage = 30, type, textColor }) {
+export default function ProgressCircle({ percentage = 30, type }) {
     const [progress, setProgress] = useState(0);
     const IndicatorClasses = classNames(styles.progressCircleIndicator, {
         [styles.projectCardIndicator]: type === "card",
     });
+    const percentageTextColor = classNames(styles.taskPercentage, {
+        [styles.projectPercentage]: type === "card",
+    });
 
     const BackgroundClasses = classNames(styles.progressCircleBg, {
         [styles.projectCircleBg]: type === "card",
-    });
-    const PercentageClasses = classNames(styles.progressPercentage, {
-        [styles.projectPercentage]: type === "card",
     });
 
     // Calcular circunferência do círculo
@@ -41,10 +41,6 @@ export default function ProgressCircle({ percentage = 30, type, textColor }) {
 
     const indicatorColor = getIndicatorColor(percentage);
 
-    // Definir cor do texto
-    let percentTextColor =
-        textColor || (type === "card" ? "var(--black)" : "var(--white)");
-
     return (
         <div className={styles.progressContainerWrapper}>
             <div className={styles.progressContainer}>
@@ -60,7 +56,6 @@ export default function ProgressCircle({ percentage = 30, type, textColor }) {
                         fill='transparent'
                     />
                     <circle
-                        className={IndicatorClasses}
                         cx='50'
                         cy='50'
                         r={radius}
@@ -73,8 +68,11 @@ export default function ProgressCircle({ percentage = 30, type, textColor }) {
                     />
                 </svg>
                 <div
-                    className={PercentageClasses}
-                    style={{ color: percentTextColor }}>
+                    className={percentageTextColor}
+                    style={{
+                        color:
+                            type === "card" ? "var(--black)" : "var(--white)",
+                    }}>
                     {progress}%
                 </div>
             </div>

@@ -15,7 +15,6 @@ function ProjectCard({
     ProjectName,
     Interest,
     onClick,
-
     ActionText,
     DeleteText,
     percentage = 30,

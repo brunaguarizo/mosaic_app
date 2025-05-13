@@ -18,11 +18,13 @@
 }
 
 .progressCircleBg {
-    stroke: var(--blue-100);
+    stroke: var(--white);
+    opacity: 0.5;
 }
 .projectCircleBg {
     stroke: var(--white);
 }
+
 .progressCircleIndicator {
     transition: stroke-dashoffset 0.5s ease-in-out;
 }
@@ -30,17 +32,7 @@
 .projectCardIndicator {
     transition: stroke-dashoffset 0.5s ease-in-out;
 }
-.progressPercentage {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-regular);
-    font-family: var(--font-family);
-    color: var(--white);
-}
+
 .projectPercentage {
     position: absolute;
     inset: 0;
@@ -51,4 +43,16 @@
     font-weight: var(--font-weight-regular);
     font-family: var(--font-family);
     color: var(--black);
+}
+
+.taskPercentage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family);
+    color: var(--white);
 }

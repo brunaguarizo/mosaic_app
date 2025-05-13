@@ -8,25 +8,19 @@ import Button from "@/app/_ui/Button/Button";
 import Navbar from "@/app/_ui/navbar/navbar";
 import { useState } from "react";
 import PopUp from "@/app/_ui/PopUp/PopUp";
+import PopUpStyles from "@/app/_ui/PopUp/PopUp.module.css";
 import ProjectTitle from "@/app/_ui/Project_Title/Project_Title";
 import DateCard from "@/app/_ui/Date_Card/Date_Card";
+import TaskDropDown from "@/app/_ui/Task_Dropdown/Task_Dropdown";
+import TaskList from "@/app/_ui/Task_List/Task_List";
 
 export default function ProjectName() {
     const router = useRouter();
     const [showDeletePopup, setShowDeletePopup] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    const handleNext = () => {
-        router.replace("/Dashboard/DashboardRegular");
-    };
-    const handleLater = () => {
-        router.replace("/Dashboard/DashboardRegular");
-    };
-    const handleDelete = () => {
-        setShowDeletePopup(true);
-    };
-    const handleConfirmDelete = () => {
-        setShowDeletePopup(false);
-        router.replace("/Dashboard/DashboardRegular");
+    const handlePortfolio = () => {
+        setIsPopupOpen(true);
     };
 
     return (
@@ -65,58 +59,75 @@ export default function ProjectName() {
                 endDate={13}
             />
 
-            {/* Task */}
-            <div className={styles.task_content}>
-                <h2>Project Completed!</h2>
-                <p className={styles.task_item}>
-                    Congratulations! You have successfully completed all tasks
-                    for the Trendsetter project. The brand's visual identity and
-                    marketing materials are now ready for the upcoming
-                    spring/summer season.
-                </p>
-            </div>
+            <TaskDropDown>
+                <div title='Define Brand Elements'>
+                    <ul>
+                        <li>
+                            Research eco-friendly travel agencies and their
+                            branding
+                        </li>
+                        <li>Define brand values and mission statement</li>
+                        <li>
+                            Create mood board with sustainable and adventurous
+                            themes
+                        </li>
+                        <li>Develop color palette inspired by nature</li>
+                        <li>
+                            Choose typography that reflects sustainability and
+                            adventure
+                        </li>
+                    </ul>
+                </div>
+                <div title='Design the Visual Assets'>
+                    <ul>
+                        <li>Design logo incorporating eco-friendly elements</li>
+                        <li>Create brand patterns using natural elements</li>
+                        <li>Develop icon set for travel and sustainability</li>
+                        <li>Design business cards and letterhead</li>
+                        <li>Create social media templates</li>
+                    </ul>
+                </div>
+                <div title='Apply Branding to Marketing Materials'>
+                    <ul>
+                        <li>Design travel brochure with sustainable focus</li>
+                        <li>Create website mockup with brand elements</li>
+                        <li>Develop email newsletter template</li>
+                        <li>Design promotional posters for eco-tours</li>
+                        <li>Create branded merchandise mockups</li>
+                    </ul>
+                </div>
+            </TaskDropDown>
 
             {/* Button */}
             <Button
                 type='primary'
                 size='large'
-                value='Back to Dashboard'
-                onClick={handleNext}
+                value='Add to Portfolio'
+                onClick={handlePortfolio}
             />
-            <div className={styles.buttons}>
-                <Button
-                    type='secondary'
-                    size='large'
-                    value='Delete'
-                    onClick={handleDelete}
-                />
-                <Button
-                    type='secondary'
-                    size='large'
-                    value='Continue Later'
-                    onClick={handleLater}
-                />
-            </div>
 
             <div className={styles.nav_bar}>
                 <Navbar />
             </div>
 
-            {/* Delete Confirmation Popup */}
-            {showDeletePopup && (
+            {isPopupOpen && (
                 <PopUp
                     onClose={() => {
-                        setShowDeletePopup(false);
-                        router.replace("/Dashboard/DashboardRegular");
+                        setIsPopupOpen(false);
+                        router.replace("/Portfolio/Portfolio");
                     }}
-                    buttonText='Delete'
+                    buttonText='Confirm'
                     buttonType='warning'
                     secondaryButtonText='Undo'
                     secondaryButtonType='terciary'
-                    onSecondaryButtonClick={() => setShowDeletePopup(false)}>
+                    onSecondaryButtonClick={() => setIsPopupOpen(false)}>
                     <h2 className={styles.popup_header}>
-                        Do you wish to delete this project permanently?
+                        Project added to portfolio
                     </h2>
+                    <p>
+                        You have successfully added this project to your
+                        portfolio{" "}
+                    </p>
                 </PopUp>
             )}
         </div>

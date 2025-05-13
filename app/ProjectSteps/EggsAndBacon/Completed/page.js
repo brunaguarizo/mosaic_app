@@ -10,23 +10,21 @@ import { useState } from "react";
 import PopUp from "@/app/_ui/PopUp/PopUp";
 import ProjectTitle from "@/app/_ui/Project_Title/Project_Title";
 import DateCard from "@/app/_ui/Date_Card/Date_Card";
+import TaskDropDown from "@/app/_ui/Task_Dropdown/Task_Dropdown";
+import TaskList from "@/app/_ui/Task_List/Task_List";
 
 export default function ProjectName() {
     const router = useRouter();
     const [showDeletePopup, setShowDeletePopup] = useState(false);
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    const handleNext = () => {
-        router.replace("/ProjectSteps/EggsAndBacon/Done");
+    const handleUndo = () => {
+        setIsPopupOpen(false);
     };
-    const handleLater = () => {
-        router.replace("/Dashboard/DashboardRegular");
-    };
-    const handleDelete = () => {
-        setShowDeletePopup(true);
-    };
-    const handleConfirmDelete = () => {
-        setShowDeletePopup(false);
-        router.replace("/Dashboard/DashboardRegular");
+
+    const handleConfirm = () => {
+        setIsPopupOpen(false);
+        router.replace("/Portfolio/Portfolio");
     };
 
     return (
@@ -34,88 +32,98 @@ export default function ProjectName() {
             {/* Status Bar */}
             <StatusBar />
 
-            {/* heading */}
             <Headingbar
+                heading='Eggs and Bacon'
                 type='navigation'
-                pagination='3/3'
             />
-            {/* Progress */}
+            <div>
+                <img
+                    className={styles.cover_image}
+                    src='/portfolio/eggsandbacon.png'
+                    alt='fish friends cover image'></img>
+            </div>
+
             <ProjectTitle
                 title='Eggs and Bacon'
-                description="A set of logos and posters for a new, trendy brunch cafe who's main market is millennials in Vancouver."
+                description='Create a set of logos and posters for a new, trendy brunch cafe who’s main market is millennials in Vancouver.'
                 percentage={100}
                 variant='secondary'
                 className={styles.project_title}
             />
 
-            {/* Content */}
             <DescriptionBox
-                title='Description'
-                description='Eggs and Bacon is a new, trendy brunch cafe in Vancouver who employed you to create a set of logos and posters to advertise their opening and brunch menu.'
+                title='Desciption'
+                description='Tasty Food
+                    Cool Place To Eat
+                    Fun For Everyone
+                    Vegan Friendly'
+                useCase='secondary'
+            />
+            <DescriptionBox
+                title='Roles'
+                description='Graphic Designer'
+                useCase='secondary'
+            />
+            <DescriptionBox
+                title='Tools Used'
+                description='Adobe Illustrator, Adobe Photoshop'
                 useCase='secondary'
             />
 
-            {/* Date */}
-            <DateCard
-                startDate={3}
-                endDate={13}
-            />
-
-            {/* Task */}
-            <div className={styles.task_content}>
-                <h2>Project Completed!</h2>
-                <p className={styles.task_item}>
-                    Congratulations! You have successfully completed all tasks
-                    for the Eggs and Bacon project. Your work includes:
-                </p>
-                <ul className={styles.task_item}>
-                    <li>Defined brand elements and identity</li>
-                    <li>Created visual assets including logo and patterns</li>
-                    <li>Developed marketing materials and style guide</li>
-                </ul>
-            </div>
-
-            {/* Button */}
+            <TaskDropDown>
+                <div title='Come Up with Ideas'>
+                    <TaskList
+                        Tasks={[
+                            "Look for images need to make the posters ",
+                            "Find typography to make the branding unique",
+                            "Find colours that will make these designs stand out in the best way possible",
+                        ]}
+                    />
+                </div>
+                <div title='Find all Needed Assets'>
+                    <TaskList
+                        Tasks={[
+                            "Come up with a list of ideas of what to use or create in the logos or posters",
+                            "Get inspiration based on the target market",
+                            "Takes notes on any word processing software, making sure to keep track of any sources",
+                        ]}
+                    />
+                </div>
+                <div title='Create the Posters'>
+                    <TaskList
+                        Tasks={[
+                            "Using Adobe Photoshop and Adobe Illustrator, create the posters for Eggs and Bacon ",
+                        ]}
+                    />
+                </div>
+            </TaskDropDown>
             <Button
                 type='primary'
                 size='large'
-                value='View Project'
-                onClick={handleNext}
+                value='Add Project to Portfolio'
+                onClick={() => setIsPopupOpen(true)}
             />
-            <div className={styles.buttons}>
-                <Button
-                    type='secondary'
-                    size='large'
-                    value='Delete'
-                    onClick={handleDelete}
-                />
-                <Button
-                    type='secondary'
-                    size='large'
-                    value='Continue Later'
-                    onClick={handleLater}
-                />
-            </div>
-
             <div className={styles.nav_bar}>
                 <Navbar />
             </div>
-
-            {/* Delete Confirmation Popup */}
-            {showDeletePopup && (
+            {isPopupOpen && (
                 <PopUp
                     onClose={() => {
-                        setShowDeletePopup(false);
-                        router.replace("/Dashboard/DashboardRegular");
+                        setIsPopupOpen(false);
+                        router.replace("/Portfolio/Portfolio");
                     }}
-                    buttonText='Delete'
+                    buttonText='Confirm'
                     buttonType='warning'
                     secondaryButtonText='Undo'
                     secondaryButtonType='terciary'
-                    onSecondaryButtonClick={() => setShowDeletePopup(false)}>
+                    onSecondaryButtonClick={() => setIsPopupOpen(false)}>
                     <h2 className={styles.popup_header}>
-                        Do you wish to delete this project permanently?
+                        Project added to portfolio
                     </h2>
+                    <p>
+                        You have successfully added this project to your
+                        portfolio{" "}
+                    </p>
                 </PopUp>
             )}
         </div>

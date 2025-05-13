@@ -71,18 +71,11 @@ export default function ProjectName() {
                 endDate={13}
             />
 
-            {/* Task */}
-            <div className={styles.task_content}>
-                <h2>1. Define Brand Elements </h2>
-                <h2>2. Design the Visual Assets</h2>
-                <h2>3. Apply Branding to Marketing Materials</h2>
-            </div>
-
             {/* Button */}
             <Button
                 type='primary'
                 size='large'
-                value='View Project'
+                value='View Project Details'
                 onClick={handleNext}
             />
             <Button
@@ -99,22 +92,23 @@ export default function ProjectName() {
             {isPopupOpen && (
                 <PopUp
                     isOpen={isPopupOpen}
-                    onClose={() => setIsPopupOpen(false)}
-                    title='Project added to portfolio'
-                    description='You have successfully added this project to your portfolio'
-                    buttons={[
-                        {
-                            text: "Undo",
-                            variant: "tertiary",
-                            onClick: handleUndo,
-                        },
-                        {
-                            text: "Confirm",
-                            variant: "primary",
-                            onClick: handleConfirm,
-                        },
-                    ]}
-                />
+                    onClose={() => {
+                        setIsPopupOpen(false);
+                        router.replace("/Portfolio/Portfolio");
+                    }}
+                    buttonText='Confirm'
+                    buttonType='warning'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='terciary'
+                    onSecondaryButtonClick={() => setIsPopupOpen(false)}>
+                    <h2 className={styles.popup_header}>
+                        Project added to portfolio
+                    </h2>
+                    <p>
+                        You have successfully added this project to your
+                        portfolio{" "}
+                    </p>
+                </PopUp>
             )}
         </div>
     );

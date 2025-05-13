@@ -43,6 +43,7 @@ export default function Dashboard() {
             <ProjectCard
                 ProjectName='Eggs and Bacon'
                 Interest='design'
+                type='card'
                 onClick={handleEggsAndBaconClick}
                 ActionText='Add to Portfolio'
                 DeleteText='Delete Project'
@@ -50,6 +51,7 @@ export default function Dashboard() {
             <ProjectCard
                 ProjectName='Trendsetter'
                 Interest='marketing'
+                type='card'
                 onClick={handleTrendsetterClick}
                 ActionText='Add to Portfolio'
                 DeleteText='Delete Project'

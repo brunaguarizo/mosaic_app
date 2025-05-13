@@ -16,7 +16,7 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/EggsAndBacon/Completed");
+        router.replace("/ProjectSteps/EggsAndBacon/Done");
     };
     const handleLater = () => {
         router.replace("/Dashboard/DashboardRegular");

@@ -18,7 +18,10 @@
 .project_title {
     width: 100%;
 }
-
+.cover_image {
+    width: 361px;
+    height: 189px;
+}
 .task_content {
     width: 100%;
     display: flex;
