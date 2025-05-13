@@ -99,8 +99,8 @@ function PortfolioCard({ ProjectName, ProjectImage, interest, onClick }) {
             {showDeletePopup && (
                 <PopUp
                     onClose={handleConfirmDelete}
-                    buttonText='Confirm'
-                    buttonType='primary'
+                    buttonText='Delete'
+                    buttonType='warning'
                     secondaryButtonText='Undo'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={handleCancel}>

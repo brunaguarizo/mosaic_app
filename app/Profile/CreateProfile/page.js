@@ -65,9 +65,7 @@ export default function CreateProfile() {
     };
 
     const handleCancel = () => {
-        setShowCancelPopup(false);
-
-        setShowSavePopup(false);
+        router.push("/SignIn/SignIn");
     };
 
     const handleCancelPopup = () => {

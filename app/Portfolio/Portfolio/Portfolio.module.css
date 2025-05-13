@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: var(--space-regular);
+    gap: var(--space-small);
     padding: var(--space-regular);
     max-width: 393px;
     min-width: 393px;
@@ -12,11 +12,13 @@
     box-sizing: border-box;
     overflow-y: auto;
     margin-top: 100px;
+    padding-bottom: var(--space-extra-large);
 }
 .projects_rows {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-regular);
+    margin-top: -20px;
 }
 
 .navigation_bar {
@@ -28,7 +30,7 @@
 .interests {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-extra-small);
+    gap: var(--space-regular);
     margin-left: var(--space-regular);
     margin-right: var(--space-regular);
 }
