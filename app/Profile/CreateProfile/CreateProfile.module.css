@@ -3,16 +3,16 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    align-items: center;
     gap: var(--space-regular);
     padding: var(--space-regular);
-    width: 100%;
     max-width: 393px;
+    min-width: 393px;
     min-height: 852px;
     max-height: 852px;
-    height: 852px;
     box-sizing: border-box;
-    overflow-x: auto;
     overflow-y: auto;
+    overflow-x: hidden;
     margin-top: 0;
 }
 
