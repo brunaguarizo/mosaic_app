@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "@/app/_ui/Project_Card/Project_Card.module.css";
+import styles from "./Project_Card.module.css";
 import Button from "@/app/_ui/Button/Button";
 import Tag from "@/app/_ui/Tag/Tag";
 import ProgressCircle from "@/app/_ui/Circle_Progress/Circle_Progress";
