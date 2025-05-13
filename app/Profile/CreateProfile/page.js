@@ -211,7 +211,7 @@ export default function CreateProfile() {
                 <PopUp
                     onClose={handleConfirm}
                     buttonText='Confirm'
-                    buttonType='primary'
+                    buttonType='warning'
                     secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={handleCancelPopup}>
@@ -229,7 +229,7 @@ export default function CreateProfile() {
                 <PopUp
                     onClose={handleConfirmSave}
                     buttonText='Confirm'
-                    buttonType='primary'
+                    buttonType='warning'
                     secondaryButtonText='Undo'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={handleCancel}>
