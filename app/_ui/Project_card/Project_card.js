@@ -13,7 +13,6 @@ import Project_Date from "@/app/_ui/Project_Date/Project_Date";
 
 function ProjectCard({
     ProjectName,
-    ProjectDescription,
     Interest,
     onClick,
 
@@ -102,7 +101,7 @@ function ProjectCard({
                 <PopUp
                     onClose={handleConfirm}
                     buttonText='Confirm'
-                    buttonType='primary'
+                    buttonType='warning'
                     secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={() =>
@@ -121,7 +120,7 @@ function ProjectCard({
                 <PopUp
                     onClose={() => handlePopUp("isDeleteProjectOpen", false)}
                     buttonText='Delete'
-                    buttonType='primary'
+                    buttonType='warning'
                     secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={() =>
