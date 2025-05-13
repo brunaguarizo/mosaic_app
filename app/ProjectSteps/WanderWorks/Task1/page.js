@@ -16,10 +16,10 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/WanderWorks/Task2");
+        router.push("/ProjectSteps/WanderWorks/Task2");
     };
     const handleLater = () => {
-        router.replace("/Dashboard/DashboardAddition");
+        router.push("/Dashboard/DashboardAddition");
     };
     const handleDelete = () => {
         setShowDeletePopup(true);

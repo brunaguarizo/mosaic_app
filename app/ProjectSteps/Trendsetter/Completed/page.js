@@ -100,7 +100,7 @@ export default function ProjectName() {
                     isOpen={isPopupOpen}
                     onClose={() => {
                         setIsPopupOpen(false);
-                        router.replace("/Portfolio/Portfolio");
+                        router.push("/Portfolio/Portfolio");
                     }}
                     buttonText='Confirm'
                     buttonType='warning'

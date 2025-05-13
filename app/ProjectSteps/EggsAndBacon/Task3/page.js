@@ -16,10 +16,10 @@ export default function ProjectName() {
     const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/EggsAndBacon/Done");
+        router.push("/ProjectSteps/EggsAndBacon/Done");
     };
     const handleLater = () => {
-        router.replace("/Dashboard/DashboardRegular");
+        router.push("/Dashboard/DashboardRegular");
     };
     const handleDelete = () => {
         setShowDeletePopup(true);

@@ -1,0 +1,117 @@
+.profile_avatar {
+    width: 173px;
+    height: 173px;
+    top: 100px;
+    position: relative;
+    margin: 0;
+}
+
+.background_cover {
+    background-color: var(--blue-primary);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80%;
+    margin-bottom: 60px;
+}
+
+.edit_icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0%;
+    bottom: -40px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: none !important;
+    border: none !important;
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    gap: var(--space-regular);
+    margin-bottom: -20px;
+    padding: 0;
+}
+
+.profile_name {
+    margin: 0;
+    padding: 0;
+}
+
+.profile_location {
+    margin: 0;
+    padding: 0;
+}
+
+.profile_interests {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-regular);
+}
+
+.profile_about {
+    margin: 0;
+    padding: 0;
+}
+
+.profile_socials {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: var(--space-large);
+    gap: var(--space-regular);
+}
+
+.username {
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.location {
+    font-size: var(--font-size-regular);
+    font-style: var(--font-style-normal);
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    max-width: 393px;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.social_icons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.social_icons svg {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.social_icons svg:hover {
+    opacity: 0.8;
+}

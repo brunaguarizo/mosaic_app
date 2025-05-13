@@ -1,7 +1,7 @@
 "use client";
 import styles from "@/app/Portfolio/Portfolio/Portfolio.module.css";
 import PortfolioCard from "@/app/_ui/Portfolio_Card/Portfolio_Card";
-import ProfileCover from "@/app/_ui/Profile_Cover_Box/Profile_Cover_Box";
+import PortfolioCover from "@/app/_ui/Portfolio_Cover_Box/Portfolio_Cover_Box";
 import Navbar from "@/app/_ui/navbar/navbar";
 import Tag from "@/app/_ui/Tag/Tag";
 import InterestChip from "@/app/_ui/Interest_Chip/Interest_Chip";
@@ -65,7 +65,7 @@ export default function PortfolioHome() {
                         </span>
                     }
                 />
-                <ProfileCover
+                <PortfolioCover
                     firstName='Justin'
                     lastName='Pham'
                     city='Surrey'
