@@ -1,5 +1,5 @@
 .dropdown__menu {
-    position: absolute; /*absolu to the project card */
+    position: absolute; /* Positioned relative to .card__menu in Project_Card.module.css */
     top: var(--space-medium);
     right: 0;
     background-color: white;

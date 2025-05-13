@@ -16,7 +16,7 @@
     justify-content: flex-end;
     padding: 0;
     margin: 0;
-    position: relative; /*relative to the dropdown menu */
+    position: relative; /* Relative positioning context for dropdown menu in DropDown_Menu.module.css */
 }
 
 .project_chips {
