@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./Project_Card.module.css";
+import styles from "@/app/_ui/Project_Card/Project_Card.module.css";
 import Button from "@/app/_ui/Button/Button";
 import Tag from "@/app/_ui/Tag/Tag";
 import ProgressCircle from "@/app/_ui/Circle_Progress/Circle_Progress";
@@ -13,10 +13,8 @@ import Project_Date from "@/app/_ui/Project_Date/Project_Date";
 
 function ProjectCard({
     ProjectName,
-    ProjectDescription,
     Interest,
     onClick,
-
     ActionText,
     DeleteText,
     percentage = 30,
@@ -102,7 +100,7 @@ function ProjectCard({
                 <PopUp
                     onClose={handleConfirm}
                     buttonText='Confirm'
-                    buttonType='primary'
+                    buttonType='warning'
                     secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={() =>
@@ -121,7 +119,7 @@ function ProjectCard({
                 <PopUp
                     onClose={() => handlePopUp("isDeleteProjectOpen", false)}
                     buttonText='Delete'
-                    buttonType='primary'
+                    buttonType='warning'
                     secondaryButtonText='Cancel'
                     secondaryButtonType='secondary'
                     onSecondaryButtonClick={() =>
