@@ -2,20 +2,20 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import styles from "./Dashboard.module.css";
+import styles from "@/app/Dashboard/DashboardRegular/Dashboard.module.css";
 import StatusBar from "@/app/_ui/StatusBar/StatusBar";
-import Profile_Cover_Box from "../../_ui/Profile_Cover_Box/Profile_Cover_Box";
-import SingleInput from "../../_ui/Input_Box/Input_Box";
-import InterestChip from "../../_ui/Interest_Chip/Interest_Chip";
-import SocialMedia from "../../_ui/SocialMedia/SocialMedia";
-import Button from "../../_ui/Button/Button";
-import LongInput from "../../_ui/Long_Input_Box/Long_Input_Box";
-import PopUp from "../../_ui/PopUp/PopUp";
-import Headingbar from "../../_ui/Heading_Bar/Heading_Bar";
-import CreateProject from "../../_ui/Create_Project_Button/Create_Project_Button";
-import ProjectCard from "../../_ui/Project_Card/Project_Card";
-import Navbar from "../../_ui/navbar/navbar";
-import Searchbar from "../../_ui/Search_Bar/Search_Bar";
+import Profile_Cover_Box from "@/app/_ui/Profile_Cover_Box/Profile_Cover_Box";
+import SingleInput from "@/app/_ui/Input_Box/Input_Box";
+import InterestChip from "@/app/_ui/Interest_Chip/Interest_Chip";
+import SocialMedia from "@/app/_ui/SocialMedia/SocialMedia";
+import Button from "@/app/_ui/Button/Button";
+import LongInput from "@/app/_ui/Long_Input_Box/Long_Input_Box";
+import PopUp from "@/app/_ui/PopUp/PopUp";
+import Headingbar from "@/app/_ui/Heading_Bar/Heading_Bar";
+import CreateProject from "@/app/_ui/Create_Project_Button/Create_Project_Button";
+import ProjectCard from "@/app/_ui/Project_Card/Project_Card";
+import Navbar from "@/app/_ui/navbar/navbar";
+import Searchbar from "@/app/_ui/Search_Bar/Search_Bar";
 
 export default function Dashboard() {
     const router = useRouter();
@@ -43,6 +43,7 @@ export default function Dashboard() {
             <ProjectCard
                 ProjectName='Eggs and Bacon'
                 Interest='design'
+                type='card'
                 onClick={handleEggsAndBaconClick}
                 ActionText='Add to Portfolio'
                 DeleteText='Delete Project'
@@ -50,6 +51,7 @@ export default function Dashboard() {
             <ProjectCard
                 ProjectName='Trendsetter'
                 Interest='marketing'
+                type='card'
                 onClick={handleTrendsetterClick}
                 ActionText='Add to Portfolio'
                 DeleteText='Delete Project'
