@@ -1,10 +1,8 @@
-"use client";
-
 import React from "react";
-import styles from "./LogOut.module.css";
+import styles from "./LogOutDark.module.css";
 import { useRouter } from "next/navigation";
 
-function LogOut() {
+function LogOutDark() {
     const router = useRouter();
     const handleLogOut = () => {
         router.push("/SignIn/SignIn");
@@ -44,4 +42,4 @@ function LogOut() {
     );
 }
 
-export default LogOut;
+export default LogOutDark;

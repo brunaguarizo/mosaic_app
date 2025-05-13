@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Settings_Options.module.css";
 import Toggle from "../Toggle/Toggle";
 
-const SettingsOptions = () => {
-    const [colourBlindMode, setColourBlindMode] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+const SettingsOptions = ({ setDarkMode }) => {
+    const [colourBlindMode, setColourBlindMode] = React.useState(false);
     const router = useRouter();
 
     const handleAccountInformationClick = () => {
@@ -71,7 +70,10 @@ const SettingsOptions = () => {
                     </svg>
                     <p className={styles.text}>Color Blind Mode</p>
                 </div>
-                <Toggle />
+                <Toggle
+                    isToggled={colourBlindMode}
+                    setIsToggled={setColourBlindMode}
+                />
             </div>
             <div className={styles.settingsList}>
                 <div className={styles.left}>
@@ -88,7 +90,10 @@ const SettingsOptions = () => {
                     </svg>
                     <p className={styles.text}>Dark Mode</p>
                 </div>
-                <Toggle />
+                <Toggle
+                    isToggled={false}
+                    setIsToggled={setDarkMode}
+                />
             </div>
             <div
                 className={styles.settingsList}

@@ -22,9 +22,6 @@ html {
     margin: var(--space-regular);
 }
 
-.container {
-}
-
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;

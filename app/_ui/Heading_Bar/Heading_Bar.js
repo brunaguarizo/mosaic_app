@@ -13,7 +13,7 @@ function Headingbar({ heading, type, pagination }) {
     };
 
     const handleSettingsClick = () => {
-        router.push("/Settings");
+        router.push("/Settings/Original");
     };
 
     const isVisible = (rowType) => type === rowType;

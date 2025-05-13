@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--blue-100);
+    background-color: var(--blue-primary);
     border-radius: var(--space-small);
     padding: var(--space-small) var(--space-regular);
     width: 100%;
@@ -11,18 +11,14 @@
     font-family: var(--font-family);
     font-size: var(--font-size-regular);
     font-weight: var(--font-weight-bold);
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
     transition: color 0.2s ease, background 0.2s ease;
     margin: 0;
 }
 
-.logoutContainer.dark {
-    background-color: var(--blue-primary);
-    color: var(--white);
-    width: 100%;
-    max-width: 361px;
-    margin: 0;
+.logoutContainer:hover {
+    color: var(--blue-100);
 }
 
 .left {
@@ -32,7 +28,7 @@
 }
 
 .icon {
-    fill: currentColor;
+    fill: var(--white);
     transition: fill 0.2s ease;
 }
 

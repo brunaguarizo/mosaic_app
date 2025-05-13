@@ -1,18 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Toggle.module.css";
 
-const Toggle = () => {
-    const [isToggled, setIsToggled] = useState(false);
+const Toggle = ({ isToggled, setIsToggled }) => {
+    const [internalToggled, setInternalToggled] = React.useState(false);
+    const toggled =
+        typeof isToggled === "boolean" ? isToggled : internalToggled;
+    const setToggled = setIsToggled || setInternalToggled;
 
     const handleToggle = () => {
-        setIsToggled((prev) => !prev);
+        const newValue = !toggled;
+        if (typeof isToggled === "boolean" && setIsToggled) {
+            setIsToggled(newValue);
+        } else {
+            setToggled(newValue);
+        }
     };
 
     return (
         <div className={styles.toggleContainer}>
             <button
                 className={`${styles.toggleButton} ${
-                    isToggled ? styles.toggled : styles.untoggled
+                    toggled ? styles.toggled : styles.untoggled
                 }`}
                 onClick={handleToggle}>
                 <div className={styles.circle}></div>

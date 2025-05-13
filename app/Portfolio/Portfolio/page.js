@@ -50,7 +50,7 @@ export default function PortfolioHome() {
                     pagination={
                         <span
                             style={{ cursor: "pointer" }}
-                            onClick={() => router.push("/Settings")}>
+                            onClick={() => router.push("/Settings/Original")}>
                             <svg
                                 width='20'
                                 height='21'

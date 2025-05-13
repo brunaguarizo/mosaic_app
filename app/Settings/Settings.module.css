@@ -13,6 +13,23 @@
     margin-top: 100px;
 }
 
+.containerdark {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-regular);
+    padding: var(--space-regular);
+    max-width: 393px;
+    min-width: 393px;
+    min-height: 852px;
+    max-height: 852px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    color: var(--white);
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -20,4 +37,32 @@
     align-items: center;
     flex: 1;
     width: 100%;
+}
+
+.dark {
+    background: var(--black);
+    color: var(--white);
+}
+
+.dark .content {
+    background: var(--black);
+    color: var(--white);
+}
+
+.dark .settingsContainer {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.dark .settingsList {
+    color: var(--white) !important;
+}
+
+.dark .settingsList:hover {
+    color: var(--blue-primary) !important;
+    fill: var(--blue-primary) !important;
+}
+
+.dark .icon {
+    fill: var(--white) !important;
 }
