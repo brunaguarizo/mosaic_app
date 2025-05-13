@@ -20,6 +20,9 @@
     margin: 0;
 }
 .description_heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-align: left;
     font-family: "Open Sans", sans-serif;
     font-size: var(--font-size-regular);
@@ -47,4 +50,20 @@
     text-align: center;
     background-color: var(--blue-50);
     margin-top: var(--space-regular);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    height: 1em;
+}
+
+.description_subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--font-size-regular);
+    font-weight: var(--font-weight-bold);
+    color: var(--black);
+    margin: 8px 0 0 0;
+    padding: 0;
+    padding-bottom: var(--space-small);
 }

@@ -36,6 +36,7 @@ html {
     /* ----- COLORS ----- */
     --blue-primary: rgb(43, 95, 252);
     --blue-50: rgb(234, 239, 255);
+    --blue-100: #bdcdfe;
     --blue-900: rgb(18, 40, 106);
     --white: #ffffff;
     --black: rgb(20, 20, 20);
@@ -65,6 +66,7 @@ html {
     --line-height-small: 20px;
 
     /* ----- SPACING ----- */
+    --space-extra-small: 4px;
     --space-small: 8px;
     --space-regular: 16px;
     --space-medium: 32px;
