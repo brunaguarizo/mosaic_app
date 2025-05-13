@@ -18,6 +18,10 @@ export default function ProjectName() {
         setIsPopupOpen(true);
     };
 
+    const handleViewProject = () => {
+        router.replace("/ProjectSteps/EggsAndBacon/Completed");
+    };
+
     const handleUndo = () => {
         setIsPopupOpen(false);
     };
@@ -70,7 +74,13 @@ export default function ProjectName() {
             <Button
                 type='primary'
                 size='large'
-                value='Add to Portfolio'
+                value='View Project Details'
+                onClick={handleViewProject}
+            />
+            <Button
+                type='secondary'
+                size='large'
+                value='Add Project to Portfolio'
                 onClick={handlePortfolio}
             />
 

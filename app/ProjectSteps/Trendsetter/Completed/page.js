@@ -8,6 +8,7 @@ import Button from "@/app/_ui/Button/Button";
 import Navbar from "@/app/_ui/navbar/navbar";
 import { useState } from "react";
 import PopUp from "@/app/_ui/PopUp/PopUp";
+import PopUpStyles from "@/app/_ui/PopUp/PopUp.module.css";
 import ProjectTitle from "@/app/_ui/Project_Title/Project_Title";
 import DateCard from "@/app/_ui/Date_Card/Date_Card";
 
@@ -16,7 +17,7 @@ export default function ProjectName() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const handleNext = () => {
-        router.replace("/ProjectSteps/WanderWorks/Done");
+        router.replace("/ProjectSteps/Trendsetter/Done");
     };
 
     const handlePortfolio = () => {
@@ -80,7 +81,7 @@ export default function ProjectName() {
             <Button
                 type='primary'
                 size='large'
-                value='View Project'
+                value='View Project Details'
                 onClick={handleNext}
             />
             <Button
@@ -97,22 +98,23 @@ export default function ProjectName() {
             {isPopupOpen && (
                 <PopUp
                     isOpen={isPopupOpen}
-                    onClose={() => setIsPopupOpen(false)}
-                    title='Project added to portfolio'
-                    description='You have successfully added this project to your portfolio'
-                    buttons={[
-                        {
-                            text: "Undo",
-                            variant: "tertiary",
-                            onClick: handleUndo,
-                        },
-                        {
-                            text: "Confirm",
-                            variant: "primary",
-                            onClick: handleConfirm,
-                        },
-                    ]}
-                />
+                    onClose={() => {
+                        setIsPopupOpen(false);
+                        router.replace("/Portfolio/Portfolio");
+                    }}
+                    buttonText='Confirm'
+                    buttonType='warning'
+                    secondaryButtonText='Undo'
+                    secondaryButtonType='terciary'
+                    onSecondaryButtonClick={() => setIsPopupOpen(false)}>
+                    <h2 className={styles.popup_header}>
+                        Project added to portfolio
+                    </h2>
+                    <p>
+                        You have successfully added this project to your
+                        portfolio{" "}
+                    </p>
+                </PopUp>
             )}
         </div>
     );
