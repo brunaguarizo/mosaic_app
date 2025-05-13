@@ -88,7 +88,7 @@ function ProjectCard({
             />
 
             <p className={styles.card__title}>{ProjectName}</p>
-            <div className={styles.project_chips}>
+            <div className={styles.chips_container}>
                 <Tag interest={Interest} />
             </div>
 

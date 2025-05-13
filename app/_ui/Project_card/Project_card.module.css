@@ -19,7 +19,7 @@
     position: relative; /* Relative positioning context for dropdown menu in DropDown_Menu.module.css */
 }
 
-.project_chips {
+.chips_container {
     display: grid;
     grid-template-rows: 1fr;
     gap: var(--space-regular);
