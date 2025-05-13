@@ -1,6 +1,6 @@
 .statusBar {
     width: 100%;
-    background: var(--black);
+
     color: var(--white);
     display: flex;
     justify-content: space-between;

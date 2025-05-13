@@ -30,6 +30,23 @@
     color: var(--white);
 }
 
+.containerblind {
+    background-color: #1c1c1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-regular);
+    padding: var(--space-regular);
+    max-width: 393px;
+    min-width: 393px;
+    min-height: 852px;
+    max-height: 852px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    color: var(--white);
+}
+
 .content {
     display: flex;
     flex-direction: column;

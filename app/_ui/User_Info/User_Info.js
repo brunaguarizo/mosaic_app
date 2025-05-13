@@ -1,6 +1,6 @@
 import styles from "./User_info.module.css";
 
-export default function UserInfo() {
+export default function UserInfo({ colorBlind = false }) {
     return (
         <div className={styles.container}>
             <div className={styles.user}>
@@ -46,7 +46,11 @@ export default function UserInfo() {
                 </div>
             </div>
             <svg
-                className={styles.icon}
+                className={
+                    colorBlind
+                        ? `${styles.icon} ${styles.iconColorBlind}`
+                        : styles.icon
+                }
                 width='32'
                 height='33'
                 viewBox='0 0 32 33'

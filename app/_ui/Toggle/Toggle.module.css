@@ -22,6 +22,10 @@
     background-color: var(--blue-primary);
 }
 
+.toggledColorBlind {
+    background-color: #067490;
+}
+
 .circle {
     width: 16px;
     height: 16px;
@@ -31,6 +35,7 @@
     transform: translateX(0);
 }
 
-.toggled .circle {
+.toggled .circle,
+.toggledColorBlind .circle {
     transform: translateX(21px); /* 45 - 16 - 4x2 = 21 */
 }

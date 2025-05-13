@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "./LogOutDark.module.css";
 import { useRouter } from "next/navigation";

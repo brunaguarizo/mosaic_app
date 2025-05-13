@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Toggle.module.css";
 
-const Toggle = ({ isToggled, setIsToggled }) => {
+const Toggle = ({ isToggled, setIsToggled, toggledClassName }) => {
     const [internalToggled, setInternalToggled] = React.useState(false);
     const toggled =
         typeof isToggled === "boolean" ? isToggled : internalToggled;
@@ -16,12 +16,14 @@ const Toggle = ({ isToggled, setIsToggled }) => {
         }
     };
 
+    const buttonClass = `${styles.toggleButton} ${
+        toggled ? styles.toggled : ""
+    } ${toggled && toggledClassName ? styles[toggledClassName] : ""}`;
+
     return (
         <div className={styles.toggleContainer}>
             <button
-                className={`${styles.toggleButton} ${
-                    toggled ? styles.toggled : styles.untoggled
-                }`}
+                className={buttonClass}
                 onClick={handleToggle}>
                 <div className={styles.circle}></div>
             </button>
