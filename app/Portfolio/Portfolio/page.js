@@ -83,37 +83,37 @@ export default function PortfolioHome() {
                 <div className={styles.projects_rows}>
                     <PortfolioCard
                         ProjectName='FishFriends'
-                        ProjectImage='../Portfolio/fish.png'
+                        ProjectImage='/portfolio/fish.png'
                         interest='uxui'
                         onClick={handleFishFriendsClick}
                     />
                     <PortfolioCard
                         ProjectName='Soda Summer'
-                        ProjectImage='../Portfolio/soda.png'
+                        ProjectImage='/portfolio/soda.png'
                         interest='design'
                         onClick={handleSodaSummerClick}
                     />
                     <PortfolioCard
                         ProjectName='Piannato'
-                        ProjectImage='../Portfolio/piannato.png'
+                        ProjectImage='/portfolio/piannato.png'
                         interest='design'
                         onClick={handlePiannatoClick}
                     />
                     <PortfolioCard
                         ProjectName='Tree Roots'
-                        ProjectImage='../Portfolio/rootbeer.png'
+                        ProjectImage='/portfolio/rootbeer.png'
                         interest='marketing'
                         onClick={handleTreeRootClick}
                     />
                     <PortfolioCard
                         ProjectName='Weather Like'
-                        ProjectImage='../Portfolio/weather.png'
+                        ProjectImage='/portfolio/weather.png'
                         interest='frontend'
                         onClick={handleWeatherLikeClick}
                     />
                     <PortfolioCard
                         ProjectName='Capi Cafe'
-                        ProjectImage='../Portfolio/capicafe.png'
+                        ProjectImage='/portfolio/capicafe.png'
                         interest='backend'
                         onClick={handleCapiCafeClick}
                     />
