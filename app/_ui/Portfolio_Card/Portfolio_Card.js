@@ -77,6 +77,7 @@ function PortfolioCard({ ProjectName, ProjectImage, interest, onClick }) {
                             handlePopUp("isArchivedOpen", true)
                         }
                         onDeleteClick={() => handlePopUp("isDeletedOpen", true)}
+                        onEditClick={() => router.push("/Profile")}
                     />
                 )}
             </div>
